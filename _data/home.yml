@@ -6,7 +6,7 @@ navbar_entries:
     url: blog
 
 project_entries:
-  - title: Repair Dog App  
+  - title: Useless Tools  
     url: coming soon
     desc: coming soon
     highlight: AI, Python
@@ -19,7 +19,7 @@ old_project_entries:
 
 footer_entries:
   - title: linkedin
-    url: https://www.linkedin.com/in/jae-finger/
+    url: https://www.linkedin.com/in/jonfinger/
 
   - title: github
     url: https://github.com/jae-finger
