@@ -7,48 +7,6 @@ A focused set of Python-forward projects. Each card links out to the live app or
 
 <div id="project-grid" class="project-grid"></div>
 
-<style>
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.25rem;
-}
-
-.project-card {
-  display: block;
-  padding: 1.25rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  text-decoration: none;
-  color: inherit;
-  background: #ffffff;
-}
-
-.project-card__title {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.project-card__summary {
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
-}
-
-.project-card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.project-tag {
-  font-size: 0.75rem;
-  padding: 0.2rem 0.5rem;
-  border-radius: 999px;
-  background: #f1f5f9;
-}
-</style>
-
 <script type="application/json" id="project-data">
 [
   {

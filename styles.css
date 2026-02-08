@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap");
+
+:root {
+  --ink: #0f172a;
+  --ink-muted: #475569;
+  --accent: #0ea5e9;
+  --accent-dark: #0369a1;
+  --surface: #ffffff;
+  --surface-alt: #f8fafc;
+  --border: #e2e8f0;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 10% 10%, #e0f2fe, transparent 40%),
+    radial-gradient(circle at 80% 0%, #fef9c3, transparent 40%),
+    #f8fafc;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--accent-dark);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+code, pre {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.navbar {
+  background: transparent;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar a {
+  font-weight: 600;
+}
+
+.page-layout-full .content {
+  max-width: 980px;
+}
+
+#project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.project-card {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  background: var(--surface);
+  box-shadow: 0 10px 30px -24px rgba(15, 23, 42, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px -24px rgba(15, 23, 42, 0.6);
+}
+
+.project-card__title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-card__summary {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin-bottom: 0.75rem;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: var(--surface-alt);
+  color: var(--ink);
+}
+
+.listing-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: 0 10px 30px -24px rgba(15, 23, 42, 0.4);
+}
+
+.listing-card .listing-title {
+  font-weight: 700;
+}
+
+.listing-card .listing-description {
+  color: var(--ink-muted);
+}
