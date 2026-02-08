@@ -1,0 +1,12 @@
+---
+title: "About"
+page-layout: full
+---
+
+## Jon Finger
+
+I am a Python data scientist who builds practical systems: analytics that answer real questions, ML pipelines that run reliably, and APIs that make models usable.
+
+My work blends applied machine learning, natural language processing, and MLOps. I care about shipping clean, documented solutions that are easy to maintain and extend.
+
+If you want to see how I work, start with the Projects page for FastAPI services, Dockerized pipelines, and end-to-end data products.
