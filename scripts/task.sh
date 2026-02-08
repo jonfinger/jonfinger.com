@@ -67,6 +67,9 @@ case "$cmd" in
     fi
 
     git checkout -B "$branch" "$base_ref"
+    if [[ "$(git rev-list --count "$base_ref"..HEAD)" -eq 0 ]]; then
+      git commit --allow-empty -m "chore: start PR"
+    fi
     git push -u origin "$branch"
     ensure_pr
     ;;
