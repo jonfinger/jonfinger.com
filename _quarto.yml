@@ -6,7 +6,6 @@ project:
   render:
     - index.qmd
     - about.qmd
-    - projects.qmd
     - blog.qmd
     - posts/*.qmd
 
@@ -14,12 +13,10 @@ website:
   title: "Jon Finger"
   navbar:
     left:
-      - text: Home
+      - text: Projects
         href: index.qmd
       - text: About
         href: about.qmd
-      - text: Projects
-        href: projects.qmd
       - text: Blog
         href: blog.qmd
 
