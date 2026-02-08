@@ -1,47 +1,44 @@
-# ---- build outputs / generated ----
-_site/
-.jekyll-cache/
-.sass-cache/
-.cache/
-.tmp/
-tmp/
+# .cursorignore - patterns for Cursor AI to ignore
+
+# === Dependency folders ===
+# These folders contain third‑party libraries installed by package managers.
+# They’re large and rarely useful for AI suggestions.
+node_modules/
+bower_components/
+vendor/
+
+# === Build artifacts ===
+# Compiled/transpiled output ends up here; excluding them avoids duplicate context.
 dist/
 build/
 out/
-coverage/
-*.log
+target/
 
-# ---- dependencies ----
-node_modules/
-vendor/
-.bundle/
-venv/
-.venv/
-__pypackages__/
-
-# ---- python caches ----
+# === Python caches ===
+# Python creates cache folders and byte‑code files; ignore them to reduce noise.
 __pycache__/
-*.pyc
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.pytype/
-.ipynb_checkpoints/
+*.py[cod]
+*.pyo
 
-# ---- ruby / bundler ----
-.ruby-version.local
-Gemfile.lock.bak
-vendor/bundle/
+# === Logs ===
+# Log files can grow quickly and don’t help with code generation.
+*.log
+logs/
 
-# ---- OS/editor noise ----
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# ---- secrets (shouldn't be in repo anyway) ----
+# === Secrets and environment ===
+# Store sensitive data (API keys, passwords, etc.) elsewhere and keep it out of AI context.
 .env
 .env.*
-.cursor/PR_URL
 *.pem
 *.key
+secrets.json
+credentials.*
+
+# === Editor and system files ===
+# Temporary files created by editors or the OS aren’t relevant to code context.
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
