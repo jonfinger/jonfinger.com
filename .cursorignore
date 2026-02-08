@@ -1,0 +1,47 @@
+# ---- build outputs / generated ----
+_site/
+.jekyll-cache/
+.sass-cache/
+.cache/
+.tmp/
+tmp/
+dist/
+build/
+out/
+coverage/
+*.log
+
+# ---- dependencies ----
+node_modules/
+vendor/
+.bundle/
+venv/
+.venv/
+__pypackages__/
+
+# ---- python caches ----
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.ipynb_checkpoints/
+
+# ---- ruby / bundler ----
+.ruby-version.local
+Gemfile.lock.bak
+vendor/bundle/
+
+# ---- OS/editor noise ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ---- secrets (shouldn't be in repo anyway) ----
+.env
+.env.*
+.cursor/PR_URL
+*.pem
+*.key
