@@ -112,7 +112,8 @@ code, pre {
   margin-top: 1.8rem;
 }
 
-.project-card {
+.project-card,
+.listing-card {
   display: block;
   padding: 1.5rem;
   border: 1px solid var(--line);
@@ -123,7 +124,8 @@ code, pre {
   position: relative;
 }
 
-.project-card::before {
+.project-card::before,
+.listing-card::before {
   content: "";
   position: absolute;
   inset: 0.75rem;
@@ -132,7 +134,8 @@ code, pre {
   pointer-events: none;
 }
 
-.project-card::after {
+.project-card::after,
+.listing-card::after {
   content: "ACME SPEC";
   position: absolute;
   top: 0.8rem;
@@ -169,12 +172,6 @@ code, pre {
   color: var(--accent);
   border: 1px solid var(--line);
   font-family: "IBM Plex Mono", monospace;
-}
-
-.listing-card {
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--panel-2);
 }
 
 .listing-card .listing-title {
