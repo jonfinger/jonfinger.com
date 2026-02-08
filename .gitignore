@@ -1,5 +1,26 @@
 *.gem
-.bundle
+.bundle/
 .jekyll-cache
 .sass-cache
 _site
+
+# secrets
+.env
+.env.*
+
+# cursor ephemeral
+.cursor/PR_URL
+.cursor/MR_URL
+
+# build/deps/caches (adjust to your stack)
+_site/
+.jekyll-cache/
+node_modules/
+vendor/
+dist/
+build/
+out/
+coverage/
+.venv/
+__pycache__/
+.DS_Store
