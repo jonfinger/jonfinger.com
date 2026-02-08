@@ -4,6 +4,7 @@ project:
   render:
     - index.qmd
     - about.qmd
+    - projects.qmd
 
 website:
   title: "Jon Finger"
@@ -13,6 +14,8 @@ website:
         href: index.qmd
       - text: About
         href: about.qmd
+      - text: Projects
+        href: projects.qmd
 
 format:
   html:

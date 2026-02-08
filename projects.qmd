@@ -1,0 +1,133 @@
+---
+title: "Projects"
+page-layout: full
+---
+
+A focused set of Python-forward projects. Each card links out to the live app or repo.
+
+<div id="project-grid" class="project-grid"></div>
+
+<style>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.project-card {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  background: #ffffff;
+}
+
+.project-card__title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-card__summary {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.project-tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  background: #f1f5f9;
+}
+</style>
+
+<script type="application/json" id="project-data">
+[
+  {
+    "title": "FastAPI Model Serving",
+    "summary": "Production-ready API for NLP inference with monitoring hooks.",
+    "tags": ["FastAPI", "Docker", "NLP"],
+    "url": "https://github.com/jae-finger"
+  },
+  {
+    "title": "Data Pipeline Orchestrator",
+    "summary": "Dockerized ETL pipeline with scheduling and data quality checks.",
+    "tags": ["Docker", "Python", "ETL"],
+    "url": "https://github.com/jae-finger"
+  },
+  {
+    "title": "MLOps Experiment Tracker",
+    "summary": "Lightweight tracking layer for experiments and model registry.",
+    "tags": ["MLops", "Python", "Tracking"],
+    "url": "https://github.com/jae-finger"
+  },
+  {
+    "title": "Vector Search Service",
+    "summary": "Fast semantic search with embeddings and API access.",
+    "tags": ["API", "Vector", "Search"],
+    "url": "https://github.com/jae-finger"
+  }
+]
+</script>
+
+<script>
+(function () {
+  var dataEl = document.getElementById("project-data");
+  var container = document.getElementById("project-grid");
+
+  if (!dataEl || !container) {
+    return;
+  }
+
+  var projects = [];
+  try {
+    projects = JSON.parse(dataEl.textContent);
+  } catch (err) {
+    return;
+  }
+
+  var fragment = document.createDocumentFragment();
+
+  projects.forEach(function (project) {
+    var card = document.createElement("a");
+    card.className = "project-card";
+    card.href = project.url || "#";
+    card.target = "_blank";
+    card.rel = "noopener";
+    card.setAttribute("aria-label", project.title + " link");
+
+    var title = document.createElement("div");
+    title.className = "project-card__title";
+    title.textContent = project.title;
+
+    var summary = document.createElement("div");
+    summary.className = "project-card__summary";
+    summary.textContent = project.summary;
+
+    var tags = document.createElement("div");
+    tags.className = "project-card__tags";
+
+    (project.tags || []).forEach(function (tag) {
+      var tagEl = document.createElement("span");
+      tagEl.className = "project-tag";
+      tagEl.textContent = tag;
+      tags.appendChild(tagEl);
+    });
+
+    card.appendChild(title);
+    card.appendChild(summary);
+    card.appendChild(tags);
+    fragment.appendChild(card);
+  });
+
+  container.appendChild(fragment);
+})();
+</script>
