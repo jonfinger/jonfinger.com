@@ -1,0 +1,12 @@
+---
+title: "Blog"
+page-layout: full
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  fields: [image, title, date, description]
+  categories: false
+---
+
+Short, practical notes on building Python systems, data products, and ML tooling.

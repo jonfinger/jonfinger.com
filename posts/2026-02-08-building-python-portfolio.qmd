@@ -1,0 +1,19 @@
+---
+title: "Building a Python-First Portfolio"
+date: 2026-02-08
+description: "What I want this site to communicate and how I think about real-world delivery."
+---
+
+## What matters in a portfolio
+
+I want a portfolio that reads like production work, not a collection of demos. That means:
+
+- Clear problem statements
+- Real constraints (data quality, deployment, observability)
+- Systems that can be maintained by someone else
+
+## The bar I care about
+
+I optimize for reliability and clarity. If a project has an API, it should be testable, documented, and observable. If it is a pipeline, it should be containerized and repeatable. If it is a model, it should explain its inputs and outputs clearly.
+
+This site is meant to make those priorities obvious at a glance.
