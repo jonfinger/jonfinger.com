@@ -3,6 +3,7 @@ project:
   output-dir: docs
   render:
     - index.qmd
+    - about.qmd
 
 website:
   title: "Jon Finger"
@@ -10,6 +11,8 @@ website:
     left:
       - text: Home
         href: index.qmd
+      - text: About
+        href: about.qmd
 
 format:
   html:
