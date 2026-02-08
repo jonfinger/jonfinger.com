@@ -1,0 +1,14 @@
+---
+title: "Jon Finger"
+page-layout: full
+---
+
+# Python-first portfolio
+
+I build data products and ML systems that ship. This site is being rebuilt around Python, data science, and production-grade delivery.
+
+## What you'll find here
+
+- Projects spanning FastAPI services, Dockerized pipelines, and applied ML
+- A short About page
+- A blog for technical notes and project write-ups

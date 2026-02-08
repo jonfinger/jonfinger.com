@@ -1,0 +1,17 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+
+website:
+  title: "Jon Finger"
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: false
