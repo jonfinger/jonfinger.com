@@ -12,6 +12,16 @@ _site
 .cursor/PR_URL
 .cursor/MR_URL
 
+# local planning / agent files (keep untracked)
+PLAN.MD
+PLANS.md
+PLANS_TEMPLATE.md
+AGENTS.MD
+.cursor/
+.cursorignore
+.github/pull_request_template.md
+scripts/task.sh
+
 # build/deps/caches (adjust to your stack)
 _site/
 .jekyll-cache/
