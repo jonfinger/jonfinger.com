@@ -140,6 +140,11 @@ code, pre {
   position: relative;
 }
 
+.listing-card {
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(107, 91, 149, 0.2);
+}
+
 .project-card::before,
 .listing-card::before {
   content: "";
@@ -190,6 +195,15 @@ code, pre {
   font-family: "IBM Plex Mono", monospace;
 }
 
+.listing-card .listing-image,
+.listing-card .listing-image img {
+  background: linear-gradient(180deg, rgba(21, 21, 34, 0.9), rgba(12, 12, 20, 0.9));
+  border-bottom: 1px dashed var(--line-soft);
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
 .listing-card .listing-title {
   font-weight: 700;
   text-transform: uppercase;
@@ -198,6 +212,28 @@ code, pre {
 
 .listing-card .listing-description {
   color: var(--ink-muted);
+}
+
+.listing-card .listing-body,
+.listing-card .listing-content {
+  padding: 1.2rem 1.4rem 1.4rem;
+}
+
+.listing-card .listing-title a {
+  color: var(--ink);
+  border-bottom: none;
+}
+
+.listing-card .listing-title a:hover {
+  color: var(--accent);
+}
+
+.listing-card .listing-date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .quarto-title-block .quarto-title-banner {
