@@ -1,0 +1,10 @@
+---
+description: Agent guidance and planning workflow
+alwaysApply: true
+---
+
+# Agent Guidance
+
+- Treat `AGENTS.MD` as the primary source of agentic guidance.
+- Always use `PLANS.md` to craft a plan for the current task before changes.
+- Keep plans concise and update them if the approach changes.
