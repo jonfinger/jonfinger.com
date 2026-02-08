@@ -1,12 +1,13 @@
 # jonfinger.com
 
-Personal portfolio and blog built with Quarto.
+A polished portfolio and blog, built with Quarto.
+Practical, sharp, and a little theatrical.
 
 ## Local development
 
 Prerequisites:
 - Quarto (https://quarto.org/docs/get-started/)
-- Python 3 (for the local static server)
+- Python 3 (for a simple static server)
 
 Build the site:
 - `quarto render`
@@ -21,6 +22,10 @@ Optional live preview:
 
 The site is designed for GitHub Pages. The Quarto build outputs to `docs/` (see `_quarto.yml`).
 
-To publish on GitHub Pages you can either:
-- Configure GitHub Pages to use the `docs/` folder on the default branch, or
-- Use a GitHub Actions workflow to build and deploy (recommended for automated builds).
+To publish on GitHub Pages:
+- Use the GitHub Actions workflow in `.github/workflows/quarto-pages.yml` (recommended), or
+- Configure GitHub Pages to serve the `docs/` folder on the default branch.
+
+## Tone
+
+Simple on the surface. A touch of gothic circus beneath the lights.
