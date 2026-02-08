@@ -20,7 +20,10 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   color: var(--ink);
-  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(196, 181, 253, 0.08), transparent 45%),
+    radial-gradient(circle at 80% 75%, rgba(107, 91, 149, 0.12), transparent 50%),
+    linear-gradient(180deg, #0a0a12 0%, #0b0b14 55%, #0f0f1a 100%);
   min-height: 100vh;
   position: relative;
 }
@@ -31,9 +34,22 @@ body::before {
   inset: 0;
   background-image:
     linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 56px 56px;
-  opacity: 0.6;
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    repeating-linear-gradient(135deg, rgba(107, 91, 149, 0.08) 0 2px, transparent 2px 16px);
+  background-size: 60px 60px, 60px 60px, 120px 120px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(248, 250, 252, 0.06), transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(107, 91, 149, 0.18), transparent 45%),
+    linear-gradient(180deg, rgba(15, 15, 24, 0.2), rgba(15, 15, 24, 0.65));
+  mix-blend-mode: screen;
   pointer-events: none;
 }
 
