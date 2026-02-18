@@ -1,18 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap");
 
 :root {
-  --bg-0: #090912;
-  --bg-1: #0e0e1a;
-  --bg-2: #151529;
-  --surface-0: rgba(21, 21, 41, 0.78);
-  --surface-1: rgba(28, 28, 52, 0.86);
-  --text-strong: #f5f3ff;
-  --text-muted: #b9b4d9;
-  --line-soft: rgba(166, 149, 255, 0.24);
-  --line-strong: rgba(166, 149, 255, 0.46);
-  --accent-primary: #a695ff;
-  --accent-secondary: #7dd8c7;
-  --accent-tertiary: #d48cff;
+  --bg-0: #07070d;
+  --bg-1: #0f1020;
+  --bg-2: #1a1b31;
+  --surface-0: rgba(24, 25, 45, 0.82);
+  --surface-1: rgba(31, 33, 58, 0.9);
+  --text-strong: #f5f6ff;
+  --text-muted: #b8bbcf;
+  --line-soft: rgba(168, 158, 230, 0.24);
+  --line-strong: rgba(168, 158, 230, 0.5);
+  --accent-primary: #a89ee6;
+  --accent-secondary: #c8c2ef;
   --dur-fast: 160ms;
   --dur-med: 320ms;
   --ease-main: cubic-bezier(0.22, 1, 0.36, 1);
@@ -31,10 +30,9 @@ body {
   font-family: "Space Grotesk", sans-serif;
   color: var(--text-strong);
   background:
-    radial-gradient(circle at 12% 18%, rgba(166, 149, 255, 0.24), transparent 44%),
-    radial-gradient(circle at 86% 74%, rgba(125, 216, 199, 0.15), transparent 48%),
-    radial-gradient(circle at 58% 30%, rgba(212, 140, 255, 0.12), transparent 42%),
-    linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 55%, var(--bg-2) 100%);
+    radial-gradient(circle at 12% 18%, rgba(168, 158, 230, 0.22), transparent 43%),
+    radial-gradient(circle at 84% 78%, rgba(200, 194, 239, 0.11), transparent 46%),
+    linear-gradient(180deg, var(--bg-0) 0%, var(--bg-1) 56%, var(--bg-2) 100%);
   min-height: 100vh;
   position: relative;
 }
@@ -47,23 +45,24 @@ body::after {
   pointer-events: none;
 }
 
-/* Subtle pathway lines inspired by biological signaling maps */
+/* Evolution-tree canopy and lineage branches */
 body::before {
   background-image:
-    linear-gradient(118deg, transparent 0 44%, rgba(166, 149, 255, 0.14) 45% 46%, transparent 47% 100%),
-    linear-gradient(39deg, transparent 0 30%, rgba(125, 216, 199, 0.09) 31% 32%, transparent 33% 100%),
-    linear-gradient(154deg, transparent 0 66%, rgba(212, 140, 255, 0.08) 67% 68%, transparent 69% 100%);
-  opacity: 0.85;
+    linear-gradient(124deg, transparent 0 44%, rgba(168, 158, 230, 0.2) 45% 46%, transparent 47% 100%),
+    linear-gradient(146deg, transparent 0 58%, rgba(200, 194, 239, 0.12) 59% 60%, transparent 61% 100%),
+    linear-gradient(58deg, transparent 0 24%, rgba(168, 158, 230, 0.12) 25% 26%, transparent 27% 100%),
+    linear-gradient(32deg, transparent 0 70%, rgba(168, 158, 230, 0.09) 71% 72%, transparent 73% 100%);
+  opacity: 0.9;
   mix-blend-mode: screen;
 }
 
-/* Faint particle field */
+/* Particle dust layer */
 body::after {
   background-image:
-    radial-gradient(circle, rgba(245, 243, 255, 0.09) 0.9px, transparent 1px),
-    radial-gradient(circle, rgba(166, 149, 255, 0.12) 1px, transparent 1.2px);
-  background-size: 46px 46px, 92px 92px;
-  background-position: 0 0, 18px 26px;
+    radial-gradient(circle, rgba(245, 246, 255, 0.1) 0.8px, transparent 1px),
+    radial-gradient(circle, rgba(168, 158, 230, 0.12) 1px, transparent 1.2px);
+  background-size: 52px 52px, 104px 104px;
+  background-position: 0 0, 22px 28px;
   opacity: 0.22;
 }
 
@@ -71,21 +70,21 @@ h1,
 h2,
 h3,
 h4 {
+  margin-top: 0;
   font-weight: 700;
   color: var(--text-strong);
-  margin-top: 0;
 }
 
 h1 {
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: clamp(2.1rem, 4vw, 3.15rem);
+  font-size: clamp(2.05rem, 4vw, 3.1rem);
 }
 
 h2,
 h3 {
   text-transform: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.015em;
 }
 
 a {
@@ -112,6 +111,11 @@ pre {
   font-family: "IBM Plex Mono", monospace;
 }
 
+p,
+li {
+  color: var(--text-muted);
+}
+
 .navbar {
   background: transparent;
   border-bottom: 1px solid var(--line-soft);
@@ -119,58 +123,73 @@ pre {
 }
 
 .navbar a {
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
   border-bottom: none;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  font-weight: 600;
 }
 
 .page-layout-full .content {
   max-width: 1040px;
-  background: linear-gradient(160deg, rgba(28, 28, 52, 0.9), rgba(21, 21, 41, 0.82));
+  position: relative;
+  background: linear-gradient(158deg, var(--surface-1), var(--surface-0));
   border: 1px solid var(--line-strong);
   border-radius: 16px;
-  padding: 2.4rem 2.8rem;
+  padding: 2.35rem 2.7rem;
   box-shadow:
-    0 22px 48px -30px rgba(8, 8, 20, 0.95),
-    inset 0 1px 0 rgba(245, 243, 255, 0.06);
-  position: relative;
+    0 24px 44px -30px rgba(7, 7, 13, 0.95),
+    inset 0 1px 0 rgba(245, 246, 255, 0.06);
   animation: content-enter var(--dur-med) var(--ease-main) both;
+}
+
+.page-layout-full .content::before {
+  content: "";
+  position: absolute;
+  inset: 0.78rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  pointer-events: none;
 }
 
 .page-layout-full .content::after {
   content: "";
   position: absolute;
-  inset: 0.8rem;
-  border: 1px solid var(--line-soft);
-  border-radius: 12px;
+  inset: 0;
+  border-radius: 16px;
+  background:
+    radial-gradient(140% 180% at 12% 8%, rgba(200, 194, 239, 0.06), transparent 55%),
+    radial-gradient(120% 170% at 90% 84%, rgba(168, 158, 230, 0.08), transparent 60%);
   pointer-events: none;
 }
 
 #project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.3rem;
-  margin-top: 1.7rem;
+  gap: 1.2rem;
+  margin-top: 1.65rem;
 }
 
 .project-card,
 #listing-listing .quarto-grid-item.card {
   display: block;
   position: relative;
-  padding: 1.4rem 1.5rem 1.45rem;
   border-radius: 12px;
   border: 1px solid var(--line-soft);
-  background: linear-gradient(155deg, rgba(31, 31, 59, 0.93), rgba(22, 22, 42, 0.95));
+  background: linear-gradient(160deg, rgba(36, 37, 66, 0.92), rgba(24, 25, 45, 0.94));
   color: var(--text-strong);
   box-shadow:
-    inset 0 0 0 1px rgba(166, 149, 255, 0.08),
-    0 14px 26px -20px rgba(7, 7, 20, 0.95);
+    inset 0 0 0 1px rgba(168, 158, 230, 0.09),
+    0 14px 24px -18px rgba(7, 7, 13, 0.95);
   transition:
     transform var(--dur-fast) var(--ease-main),
     border-color var(--dur-fast) var(--ease-main),
     box-shadow var(--dur-fast) var(--ease-main);
   animation: card-enter var(--dur-med) var(--ease-main) both;
+}
+
+.project-card {
+  padding: 1.35rem 1.5rem 1.45rem;
+  text-decoration: none;
 }
 
 .project-card::before,
@@ -183,7 +202,6 @@ pre {
   width: 4px;
   border-radius: 12px 0 0 12px;
   background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
-  opacity: 0.78;
   transition: width var(--dur-fast) var(--ease-main);
 }
 
@@ -193,7 +211,7 @@ pre {
   position: absolute;
   inset: 0.62rem;
   border-radius: 9px;
-  border: 1px solid rgba(166, 149, 255, 0.15);
+  border: 1px solid rgba(168, 158, 230, 0.15);
   pointer-events: none;
 }
 
@@ -202,8 +220,8 @@ pre {
   transform: translateY(-3px);
   border-color: var(--line-strong);
   box-shadow:
-    inset 0 0 0 1px rgba(166, 149, 255, 0.16),
-    0 22px 32px -20px rgba(125, 216, 199, 0.26);
+    inset 0 0 0 1px rgba(168, 158, 230, 0.18),
+    0 22px 30px -18px rgba(12, 12, 25, 0.95);
 }
 
 .project-card:hover::before,
@@ -220,8 +238,8 @@ pre {
 .project-card__title {
   margin-bottom: 0.55rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .project-card__summary {
@@ -233,7 +251,7 @@ pre {
 .project-card__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
+  gap: 0.42rem;
 }
 
 .project-tag {
@@ -242,22 +260,16 @@ pre {
   border-radius: 999px;
   border: 1px solid var(--line-strong);
   color: var(--accent-primary);
+  background: rgba(168, 158, 230, 0.09);
   padding: 0.24rem 0.62rem;
   font-size: 0.72rem;
   font-family: "IBM Plex Mono", monospace;
-  background: rgba(166, 149, 255, 0.08);
 }
 
 .project-tag:nth-child(2n) {
   color: var(--accent-secondary);
-  border-color: rgba(125, 216, 199, 0.45);
-  background: rgba(125, 216, 199, 0.1);
-}
-
-.project-tag:nth-child(3n) {
-  color: var(--accent-tertiary);
-  border-color: rgba(212, 140, 255, 0.45);
-  background: rgba(212, 140, 255, 0.1);
+  border-color: rgba(200, 194, 239, 0.45);
+  background: rgba(200, 194, 239, 0.1);
 }
 
 #listing-listing .quarto-grid-link {
@@ -267,7 +279,7 @@ pre {
 #listing-listing .list.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
-  gap: 1.2rem;
+  gap: 1.15rem;
   justify-content: start;
   align-items: stretch;
 }
@@ -282,23 +294,23 @@ pre {
   height: 100%;
   min-height: 305px;
   max-width: 420px;
-  padding: 0;
   overflow: hidden;
+  padding: 0;
 }
 
 #listing-listing .listing-item-img-placeholder.card-img-top {
   height: 132px !important;
-  background:
-    radial-gradient(circle at 32% 38%, rgba(166, 149, 255, 0.26), transparent 50%),
-    radial-gradient(circle at 72% 64%, rgba(125, 216, 199, 0.18), transparent 50%),
-    linear-gradient(180deg, rgba(24, 24, 47, 0.95), rgba(16, 16, 31, 0.95)) !important;
   border-bottom: 1px solid var(--line-soft);
+  background:
+    radial-gradient(circle at 26% 36%, rgba(200, 194, 239, 0.2), transparent 52%),
+    radial-gradient(circle at 72% 66%, rgba(168, 158, 230, 0.18), transparent 50%),
+    linear-gradient(180deg, rgba(33, 34, 59, 0.95), rgba(21, 22, 40, 0.95)) !important;
 }
 
 #listing-listing .card-body {
   background: transparent !important;
   color: var(--text-strong) !important;
-  padding: 1.15rem 1.25rem 1.2rem;
+  padding: 1.1rem 1.25rem 1.2rem;
 }
 
 #listing-listing .card-title,
@@ -320,11 +332,11 @@ pre {
 }
 
 #listing-listing .listing-date {
-  font-family: "IBM Plex Mono", monospace;
   color: var(--accent-primary) !important;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.74rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 0.74rem;
 }
 
 #listing-listing .listing-no-matching {
@@ -336,17 +348,11 @@ pre {
   border-bottom: 1px solid var(--line-soft);
 }
 
-p,
-li {
-  color: var(--text-muted);
-}
-
 footer {
   border-top: 1px solid var(--line-soft);
   margin-top: 2.2rem;
 }
 
-/* Staggered card entrance */
 #project-grid .project-card:nth-child(1),
 #listing-listing .list.grid > .g-col-1:nth-child(1) .quarto-grid-item.card {
   animation-delay: 40ms;
@@ -372,6 +378,7 @@ footer {
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -383,6 +390,7 @@ footer {
     opacity: 0;
     transform: translateY(10px) scale(0.995);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -406,16 +414,16 @@ footer {
   }
 
   h1 {
-    font-size: 1.9rem;
+    font-size: 1.85rem;
     letter-spacing: 0.08em;
   }
 
   .page-layout-full .content {
-    padding: 1.65rem 1.2rem;
+    padding: 1.6rem 1.18rem;
     border-radius: 12px;
   }
 
-  .page-layout-full .content::after {
+  .page-layout-full .content::before {
     inset: 0.56rem;
   }
 
@@ -425,14 +433,12 @@ footer {
     gap: 1rem;
   }
 
-  .project-card,
-  #listing-listing .quarto-grid-item.card {
+  .project-card {
     padding: 1.2rem;
   }
 
   #listing-listing .quarto-grid-item.card {
     max-width: none;
-    padding: 0;
   }
 }
 
