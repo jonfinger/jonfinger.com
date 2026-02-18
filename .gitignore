@@ -5,6 +5,7 @@
 _site
 docs
 .cursor
+AGENTS.md
 
 /.quarto/
 **/*.quarto_ipynb
