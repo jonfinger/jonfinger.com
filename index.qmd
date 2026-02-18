@@ -3,35 +3,23 @@ title: "Projects"
 page-layout: full
 ---
 
-A focused set of Python-forward projects. Each card links out to the live app or repo.
+A focused set of projects from jonfinger.com.
 
 <div id="project-grid" class="project-grid"></div>
 
 <script type="application/json" id="project-data">
 [
   {
-    "title": "FastAPI Model Serving",
-    "summary": "Production-ready API for NLP inference with monitoring hooks.",
-    "tags": ["FastAPI", "Docker", "NLP"],
+    "title": "Useless Tools",
+    "summary": "Coming soon.",
+    "tags": ["AI", "Python"],
     "url": "https://github.com/jae-finger"
   },
   {
-    "title": "Data Pipeline Orchestrator",
-    "summary": "Dockerized ETL pipeline with scheduling and data quality checks.",
-    "tags": ["Docker", "Python", "ETL"],
-    "url": "https://github.com/jae-finger"
-  },
-  {
-    "title": "MLOps Experiment Tracker",
-    "summary": "Lightweight tracking layer for experiments and model registry.",
-    "tags": ["MLops", "Python", "Tracking"],
-    "url": "https://github.com/jae-finger"
-  },
-  {
-    "title": "Vector Search Service",
-    "summary": "Fast semantic search with embeddings and API access.",
-    "tags": ["API", "Vector", "Search"],
-    "url": "https://github.com/jae-finger"
+    "title": "Biology Masters Thesis",
+    "summary": "Graduate thesis on modeling range expansion of an invasive species.",
+    "tags": ["Paper"],
+    "url": "https://www.dissertations.wsu.edu/Thesis/Spring2018/J_Finger_041718.pdf"
   }
 ]
 </script>
