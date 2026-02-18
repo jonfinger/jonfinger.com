@@ -9,4 +9,4 @@ listing:
   categories: false
 ---
 
-Short, practical notes on building Python systems, data products, and ML tooling.
+Technical field notes on adaptive systems, production data science, and model-driven engineering.

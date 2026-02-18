@@ -3,7 +3,7 @@ title: "Projects"
 page-layout: full
 ---
 
-A focused set of projects from jonfinger.com.
+A curated map of evolving systems, from applied AI prototypes to ecological modeling research.
 
 <div id="project-grid" class="project-grid"></div>
 
