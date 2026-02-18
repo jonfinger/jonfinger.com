@@ -236,6 +236,57 @@ code, pre {
   color: var(--accent);
 }
 
+/* Quarto blog listing cards use bootstrap .card classes */
+#listing-listing .quarto-grid-link {
+  border-bottom: none;
+}
+
+#listing-listing .quarto-grid-item.card {
+  background: var(--panel-2) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 10px !important;
+  color: var(--ink) !important;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(107, 91, 149, 0.2);
+}
+
+#listing-listing .listing-item-img-placeholder.card-img-top {
+  background: linear-gradient(180deg, rgba(21, 21, 34, 0.9), rgba(12, 12, 20, 0.9)) !important;
+  border-bottom: 1px dashed var(--line-soft);
+}
+
+#listing-listing .card-body {
+  background: transparent !important;
+  color: var(--ink) !important;
+}
+
+#listing-listing .card-title,
+#listing-listing .card-title a {
+  color: var(--ink) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: none;
+}
+
+#listing-listing .card-title a:hover {
+  color: var(--accent) !important;
+}
+
+#listing-listing .listing-description,
+#listing-listing .card-text {
+  color: var(--ink-muted) !important;
+}
+
+#listing-listing .listing-date {
+  color: var(--accent) !important;
+}
+
+#listing-listing .listing-description p::before,
+#listing-listing .card-text p::before {
+  content: "";
+  margin-right: 0;
+}
+
 .quarto-title-block .quarto-title-banner {
   background: transparent;
   border-bottom: 1px dashed var(--line-soft);
