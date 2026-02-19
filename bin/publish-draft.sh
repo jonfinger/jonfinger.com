@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [ $# -ne 1 ]; then
-  echo "Usage: bin/publish-draft.sh posts/drafts/YYYY-MM-DD-slug.qmd"
+  echo "Usage: bin/publish-draft.sh .drafts/YYYY-MM-DD-slug.qmd"
   exit 1
 fi
 
@@ -14,9 +14,9 @@ if [ ! -f "$src" ]; then
 fi
 
 case "$src" in
-  posts/drafts/*.qmd) ;;
+  .drafts/*.qmd) ;;
   *)
-    echo "Draft must be inside posts/drafts/"
+    echo "Draft must be inside .drafts/"
     exit 1
     ;;
 esac

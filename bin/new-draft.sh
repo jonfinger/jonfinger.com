@@ -14,8 +14,8 @@ if [ -z "$slug" ]; then
   slug="draft-post"
 fi
 
-mkdir -p posts/drafts
-path="posts/drafts/${date_str}-${slug}.qmd"
+mkdir -p .drafts
+path=".drafts/${date_str}-${slug}.qmd"
 
 if [ -e "$path" ]; then
   echo "Draft already exists: $path"
