@@ -18,6 +18,21 @@ Serve locally:
 Optional live preview:
 - `quarto preview`
 
+## Draft post workflow
+
+Create a draft:
+- `bin/new-draft.sh "Your post title"`
+
+Drafts are saved in `posts/drafts/` and are not listed on the public blog.
+
+Preview a draft locally:
+- `quarto preview posts/drafts/YYYY-MM-DD-your-post-title.qmd`
+
+Publish a draft:
+- `bin/publish-draft.sh posts/drafts/YYYY-MM-DD-your-post-title.qmd`
+
+The publish script moves the file into `posts/` and removes `draft: true`.
+
 ## Deployment
 
 The site is designed for GitHub Pages. The Quarto build outputs to `docs/` (see `_quarto.yml`).

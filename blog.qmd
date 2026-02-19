@@ -1,12 +1,21 @@
 ---
 title: "Blog"
 page-layout: full
+body-classes: page-blog
 listing:
-  contents: posts
+  contents: posts/*.qmd
   sort: "date desc"
   type: grid
   fields: [image, title, date, description]
   categories: false
 ---
 
-Technical field notes on adaptive systems, production data science, and model-driven engineering.
+::: {.hero-block}
+::: {.hero-kicker}
+Biology x AI x Education
+:::
+
+::: {.hero-lead}
+Notes on how biology, AI, and education shape my work, and how past experiences become the foundation of current skills, judgment, and identity.
+:::
+:::
