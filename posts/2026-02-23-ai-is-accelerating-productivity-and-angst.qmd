@@ -1,0 +1,54 @@
+---
+title: "AI Is Accelerating Productivity & Angst"
+date: 2026-02-23
+description: "AI is reshaping software work, not erasing it: the craft stays alive by adapting methods while protecting standards."
+body-classes: page-post
+---
+
+> "When alive, the body is soft and pliant; when dead, it is hard and stiff. All living things are soft and supple; the dead are brittle and dry."
+> -- Laozi, Tao Te Ching
+
+I'm a data scientist who happens to write a lot of code; I'm not an engineer who specializes in building things via code. In my world, we're usually tasked with delivering an outcome or insight by almost any responsible means necessary. Your advantage isn't a single tool. It's your ability to use the right tool at the right time for the right reason. There's no free lunch in data science.
+
+That's probably why watching software engineers wrestle with AI feels surprising from the outside. What should be a logical response to AI (engineers using advancing science and technology tools) is often an emotional one (engineers worrying about being replaced by a robot).
+
+An existential crisis isn't just panic. It's a moment where you question identity, purpose, and what you actually love about what you do.
+
+When AI starts writing faster than you, designing systems at someone else's prompt, and reviewing code automatically, it can put that identity in jeopardy.
+
+But a lesson from science is that tool evolution doesn't erase you. It changes how you operate. We teach young scientists that tools will change, from Newton to Einstein to Hawking to today. Adaptability is integral to advancement.
+
+---
+
+Maybe I'm biased. My generation of scientists brought in bioinformatics at a click, entire scientific libraries on a thumb drive, and the onset of machine learning. Progress is not only inevitable in science; it's celebrated.
+
+But we also teach the dangers and responsibilities of those shepherding in the new. You only need to look at Oppenheimer to see the blurry line between humanity's newest technology and humanity's last technology.
+
+In my 10 years in science and education, this kind of disruption happened almost yearly:
+
+- New hardware or software appears (large-scale genome and cloud data, AI-assisted learning)
+- Manual steps get automated (citation managers, digital sequencing, individual tablets and learning tools)
+- Efficiency increases (faster DNA workflows, Zoom conferencing instead of long email chains, remote learning)
+- Outcomes improve (better cancer detection, advanced satellite data, translation access for teachers)
+
+The scientist doesn't disappear when the microscope improves. They adjust their stack. They ask better questions and gain better control of output. They test whether old dogmas should be re-examined with new tools.
+
+So maybe what's happening in software isn't extinction. Maybe it's attachment being exposed. What do we actually love about the craft? Was it the literal act of typing keys on a keyboard?
+
+Don't be naive. But don't forget that history often glosses over the manual effort behind legendary feats. Individual work becomes more chaotic over time, as physics would predict. Industries evolve under pressure, like biological species. Adaptability is key to surviving the grinding wheel of time.
+
+---
+
+I started with a line from the Tao Te Ching:
+
+> "When alive, the body is soft and pliant; when dead, it is hard and stiff. All living things are soft and supple; the dead are brittle and dry."
+
+If you want your career or your field to stay alive, it has to behave like something alive. It has to bend.
+
+That doesn't mean lowering standards. It doesn't mean surrendering judgment to a model. It doesn't mean being replaced by a robot.
+
+It means adapting the method while protecting the mission.
+
+AI replacing us entirely is one extreme. Rejecting AI entirely is another. The more realistic path is compromise: be a pioneer. Stand on the shoulders of giants to reach new heights without sacrificing standards.
+
+Don't break under the pressure of introspection. Years of learning, experience, and wisdom don't vanish overnight. Transitioning may cost energy, but you can still leave your stamp and standards on what you build, with AI or without it.
