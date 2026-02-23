@@ -13,17 +13,12 @@ _site
 .env
 .env.*
 
-# cursor ephemeral
-.cursor/PR_URL
-.cursor/MR_URL
-
 # local planning / agent files (keep untracked)
 AGENTS.md
 AGENTS.MD
 PLAN.MD
 PLANS.md
 PLANS_TEMPLATE.md
-.cursorignore
 .github/pull_request_template.md
 scripts/task.sh
 
@@ -40,6 +35,3 @@ coverage/
 .venv/
 __pycache__/
 .DS_Store
-
-# local editor workspace
-.cursor/
