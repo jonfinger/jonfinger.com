@@ -5,6 +5,13 @@ description: "AI is reshaping software work, not erasing it: the craft stays ali
 body-classes: page-post
 ---
 
+```text
++----------------------------------------------------+
+| BROADCAST LOG :: AI PRODUCTIVITY / EXISTENTIALITY |
+| NODE: JONFINGER.COM :: ENTRY DATE 2026-02-23      |
++----------------------------------------------------+
+```
+
 > "When alive, the body is soft and pliant; when dead, it is hard and stiff. All living things are soft and supple; the dead are brittle and dry."
 > -- Laozi, Tao Te Ching
 

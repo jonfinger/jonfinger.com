@@ -10,12 +10,16 @@ listing:
   categories: false
 ---
 
-::: {.hero-block}
-::: {.hero-kicker}
-Biology x AI x Education
+::: {.blog-header}
+::: {.blog-header__kicker}
+Archive // Signal Feed
 :::
 
-::: {.hero-lead}
-Notes on how biology, AI, and education shape my work, and how past experiences become the foundation of current skills, judgment, and identity.
+::: {.blog-header__title}
+Notes on biology, AI, and education in practice
+:::
+
+::: {.blog-header__lead}
+Field notes on how past training and current AI workflows shape execution quality, judgment, and technical identity.
 :::
 :::

@@ -5,10 +5,6 @@ body-classes: page-projects
 ---
 
 ::: {.hero-block}
-::: {.hero-kicker}
-Climate x Biology x AI
-:::
-
 ::: {.hero-lead}
 A portfolio of climate-linked AI systems, geospatial workflows, and species movement prediction research grounded in remote sensing and production delivery.
 :::
@@ -34,10 +30,22 @@ A portfolio of climate-linked AI systems, geospatial workflows, and species move
 ]
 </script>
 
-::: {.latest-notes}
-::: {.latest-notes__label}
-Latest Notes
+::: {.dispatch-panel}
+::: {.dispatch-panel__label}
+Latest Dispatch
 :::
 
-- [Building a Python-First Portfolio](posts/2026-02-08-building-python-portfolio.qmd)
+::: {.dispatch-grid}
+::: {.dispatch-item}
+[Open Full Blog](blog.qmd)
+:::
+
+::: {.dispatch-item}
+[Read AI Productivity & Angst](posts/2026-02-23-ai-is-accelerating-productivity-and-angst.qmd)
+:::
+
+::: {.dispatch-item}
+[Read Python-First Portfolio](posts/2026-02-08-building-python-portfolio.qmd)
+:::
+:::
 :::
