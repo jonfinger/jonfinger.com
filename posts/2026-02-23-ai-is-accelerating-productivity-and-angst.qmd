@@ -7,7 +7,7 @@ body-classes: page-post
 
 ```text
 +----------------------------------------------------+
-| BROADCAST LOG :: AI PRODUCTIVITY / EXISTENTIALITY |
+| BROADCAST LOG :: AI / EXISTENTIALISM              |
 | NODE: JONFINGER.COM :: ENTRY DATE 2026-02-23      |
 +----------------------------------------------------+
 ```

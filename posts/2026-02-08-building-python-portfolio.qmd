@@ -7,6 +7,8 @@ body-classes: page-post
 
 ## Biology, AI, and education in one lens
 
+*Note 02.23.2026: This was an experiment in AI writing. I beg the reader forgive me this silly and lazy experiment.*
+
 I do not separate my background into isolated chapters. Biology trained me to think in systems and uncertainty. Education trained me to communicate clearly and design for understanding. AI gave me modern tools to turn complex signals into usable decisions.
 
 Together, they define how I work: observe carefully, model rigorously, explain simply, and ship responsibly.

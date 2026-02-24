@@ -20,9 +20,10 @@ website:
       - text: Blog
         href: blog.qmd
     right:
-      - text: LinkedIn
+      - icon: linkedin
         href: https://www.linkedin.com/in/jae-finger/
         target: _blank
+        aria-label: LinkedIn
 
 format:
   html:
