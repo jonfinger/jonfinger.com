@@ -6,7 +6,7 @@ body-classes: page-projects
 
 ::: {.hero-block}
 ::: {.hero-lead}
-A portfolio of climate-linked AI systems, geospatial workflows, and species movement prediction research grounded in remote sensing and production delivery.
+A collection of nonsense and spaghetti from a regular human data scientist. Buyer beware.
 :::
 :::
 

@@ -6,8 +6,4 @@ body-classes: page-about
 
 ## Jon Finger
 
-I am a Python data scientist with a biology foundation, focused on climate and satellite-informed modeling for species movement and ecological risk.
-
-My work spans applied machine learning, remote-sensing feature engineering, and MLOps. I build pipelines, APIs, and model workflows that are measurable, testable, and maintainable in production.
-
-If you want to see execution quality, start with the Projects page for shipped systems and reproducible research artifacts.
+Your typical coder focused things far larger than himself. Recovering academic.

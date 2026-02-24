@@ -549,18 +549,6 @@ main.content > * {
   text-decoration: none;
 }
 
-.project-card::before {
-  counter-increment: project-id;
-  content: "P-0" counter(project-id) " //";
-  position: absolute;
-  left: 0.65rem;
-  top: 0.55rem;
-  font-family: "Space Mono", monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  color: rgba(237, 231, 255, 0.72);
-}
-
 #listing-listing .quarto-grid-item.card::before {
   content: ">>";
   position: absolute;
