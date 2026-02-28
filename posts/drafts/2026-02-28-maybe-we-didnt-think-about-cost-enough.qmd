@@ -1,0 +1,82 @@
+---
+title: "Maybe We Didn't Think About Cost Enough"
+date: 2026-02-28
+description: "AI labor may not become universally cheap. As demand and reliability expectations rise, high-quality AI work could become premium and rationed."
+body-classes: page-post
+---
+
+```text
++----------------------------------------------------+
+| BROADCAST LOG :: AI / COST CURVES                 |
+| NODE: JONFINGER.COM :: ENTRY DATE 2026-02-28      |
++----------------------------------------------------+
+```
+
+> "It also takes a lot of energy to train a human."
+> -- Sam Altman
+
+Maybe we did not think about cost enough.
+
+For a while, the dominant story was simple: AI would get better, faster, and cheaper until it replaced most of the messy human labor we have now. Clean machine labor in, expensive human labor out.
+
+I believed part of that story too.
+
+But now I think we may be walking into a different reality. Not a world where AI is free and everywhere. A world where high-performance AI is expensive, constrained, and rationed like any other premium resource.
+
+---
+
+Everyone talks about AI energy cost now. Fair. But we usually compare it to a cartoon version of human labor, like humans are somehow energy-free.
+
+They are not.
+
+Humans require years of training, schooling, mentorship, infrastructure, health systems, buildings, transport, and every daily maintenance system that keeps society running. The point is not "humans are bad." The point is that both systems have hidden cost structures, and both are real.
+
+Then layer in monetary cost.
+
+As context windows grow, reliability requirements increase, and higher-end reasoning models become the default expectation, the unit economics change. The model that can draft a rough answer cheaply is not the same model you trust for production decisions, regulated workflows, or safety-critical output.
+
+The cleaner the output we demand, the more expensive the stack tends to get.
+
+---
+
+I feel this directly in my own role.
+
+Part of my work is helping non-technical people use AI effectively. If I do that well, usage goes up. As usage goes up, demand rises. As demand rises, providers have pricing power. At the same time, our own appetite rises for better models, bigger contexts, lower hallucination rates, and stronger guardrails.
+
+So the pressure is multiplicative:
+
+- More users
+- More usage per user
+- More expensive model tiers
+- More governance overhead
+
+That is not a flat cost curve. That is a bottleneck forming.
+
+---
+
+And if we are serious about "AI replacing human labor" in any meaningful way, we cannot ignore governance cost.
+
+Production AI needs compliance controls, auditability, policy enforcement, data boundaries, legal review, incident response, and retraining loops. Those are not optional if outcomes matter. They are the equivalent of professional standards in human systems: training, licensing, supervision, accountability.
+
+None of this is free.
+
+Which raises an uncomfortable possibility: we may not end up with universal low-cost AI labor. We may end up with a split system.
+
+- Cheap, flexible human labor where risk tolerance is high
+- Premium, cleaner AI labor where reliability and compliance are non-negotiable
+
+If that sounds familiar, it should. Society often knows which option is cleaner and still optimizes for convenience and short-term cost.
+
+---
+
+This is not an argument against AI.
+
+It is an argument against lazy assumptions.
+
+AI is a real force multiplier. It can raise the ceiling for individuals and teams. But force multipliers also amplify constraints. If you scale adoption faster than you scale cost discipline and governance, you do not get liberation. You get a budget fire and a trust problem.
+
+The practical path is neither hype nor rejection.
+
+Use cheap models when cheap is enough. Reserve premium models for high-impact decisions. Treat governance as part of product cost, not an afterthought. And stop pretending either humans or AI are "free."
+
+If we want AI to be durable infrastructure instead of a short-lived productivity sugar high, we need to think about cost with the same seriousness we bring to performance.

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Useless Tools</title>
+    <meta name="description" content="A retro collection of intentionally impractical tools.">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="app-header">
+        <p class="kicker">Jon Finger Labs</p>
+        <h1>Useless Tools</h1>
+        <p class="subtitle">A polished collection of magnificent wastes of time.</p>
+      </header>
+
+      <section class="app-layout" aria-label="Useless Tools application">
+        <aside class="wheel-column" aria-label="Tool selector">
+          <div class="wheel-frame">
+            <div id="tool-wheel" class="tool-wheel" role="group" aria-label="Spinning tool wheel">
+              <button class="wheel-slice is-selected" data-tool="url-lengthener" type="button" style="--slice-angle: 0deg;">
+                <span>URL Lengthener</span>
+              </button>
+              <button class="wheel-slice" data-tool="useless-facts" type="button" style="--slice-angle: 120deg;">
+                <span>Useless Facts</span>
+              </button>
+              <button class="wheel-slice" data-tool="obtuse-helper" type="button" style="--slice-angle: 240deg;">
+                <span>Obtuse Helper</span>
+              </button>
+              <div class="wheel-core" aria-hidden="true">Drag</div>
+            </div>
+            <div class="wheel-pointer" aria-hidden="true"></div>
+          </div>
+
+          <div class="tool-list-shell" aria-label="Keyboard tool list">
+            <p class="tool-list-label">Tool list (keyboard fallback)</p>
+            <div class="tool-list" role="list">
+              <button class="tool-list-item is-selected" type="button" data-tool-list="url-lengthener">URL Lengthener</button>
+              <button class="tool-list-item" type="button" data-tool-list="useless-facts">Useless Facts</button>
+              <button class="tool-list-item" type="button" data-tool-list="obtuse-helper">Obtuse Helper</button>
+            </div>
+          </div>
+        </aside>
+
+        <section class="panel-column" aria-live="polite">
+          <article class="tool-panel is-active" data-panel="url-lengthener">
+            <h2>URL Lengthener</h2>
+            <p>
+              Turn short links into absurd links. This tool wraps a target URL in a long
+              redirect URL under <code>jonfinger.com/useless-tools/</code>.
+            </p>
+
+            <form id="url-form" class="url-form" novalidate>
+              <label for="target-url">Target URL</label>
+              <input id="target-url" name="target-url" type="url" required placeholder="https://example.com">
+
+              <fieldset class="length-fieldset">
+                <legend>Target length</legend>
+                <div class="preset-row" role="group" aria-label="Length presets">
+                  <button class="preset-button" type="button" data-length="512">512</button>
+                  <button class="preset-button is-selected" type="button" data-length="1024">1024</button>
+                  <button class="preset-button" type="button" data-length="2048">2048</button>
+                </div>
+              </fieldset>
+
+              <div class="seed-row">
+                <label for="seed-input">Seed</label>
+                <div class="seed-controls">
+                  <input id="seed-input" type="text" readonly>
+                  <button id="new-seed" type="button">New seed</button>
+                </div>
+                <label class="checkbox-inline" for="randomize-seed">
+                  <input id="randomize-seed" type="checkbox">
+                  Randomize seed on generate
+                </label>
+              </div>
+
+              <button class="generate-button" type="submit">Generate long URL</button>
+            </form>
+
+            <p id="form-error" class="form-error" role="alert"></p>
+            <p id="form-status" class="form-status" role="status"></p>
+
+            <label for="long-url-output">Generated URL</label>
+            <textarea id="long-url-output" rows="4" readonly placeholder="Generated URL appears here"></textarea>
+
+            <div class="output-actions">
+              <button id="copy-url" type="button">Copy URL</button>
+              <a id="open-url" class="open-link is-disabled" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true">Open URL</a>
+            </div>
+          </article>
+
+          <article class="tool-panel" data-panel="useless-facts">
+            <h2>Useless Facts</h2>
+            <p>Coming soon. This slot will surface weirdly specific facts no one requested.</p>
+          </article>
+
+          <article class="tool-panel" data-panel="obtuse-helper">
+            <h2>Obtuse Helper</h2>
+            <p>Coming soon. This slot will provide answers that are technically helpful and practically confusing.</p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

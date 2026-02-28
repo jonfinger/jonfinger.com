@@ -17,9 +17,9 @@ A collection of nonsense and spaghetti from a regular human data scientist. Buye
 [
   {
     "title": "Useless Tools",
-    "summary": "Coming soon.",
-    "tags": ["AI", "Python"],
-    "url": "https://github.com/jae-finger"
+    "summary": "Retro web toys, starting with a URL Lengthener that makes normal links absurdly long.",
+    "tags": ["JavaScript", "Web"],
+    "url": "/useless-tools/"
   },
   {
     "title": "Biology Masters Thesis",
