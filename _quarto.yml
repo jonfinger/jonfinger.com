@@ -4,6 +4,7 @@ project:
   resources:
     - CNAME
     - assets/**
+    - useless-tools/**
   render:
     - index.qmd
     - about.qmd
@@ -24,6 +25,10 @@ website:
         href: https://www.linkedin.com/in/jae-finger/
         target: _blank
         aria-label: LinkedIn
+      - icon: bluesky
+        href: https://bsky.app/profile/jonfinger.com
+        target: _blank
+        aria-label: Bluesky
 
 format:
   html:
