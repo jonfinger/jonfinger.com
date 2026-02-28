@@ -10,6 +10,7 @@ listing:
   categories: false
 ---
 
+::: {.hud-grid}
 ::: {.blog-header}
 ::: {.blog-header__kicker}
 Archive // Broadcast Log
@@ -22,4 +23,37 @@ Notes on science, AI, and execution under pressure
 ::: {.blog-header__lead}
 Field reports on cost, quality, and technical judgment in the AI era.
 :::
+:::
+
+::: {.status-panel}
+::: {.status-panel__title}
+Feed Status
+:::
+
+- Signal Type: Long-form notes
+- Sort: Newest first
+- Filter: No fluff, practical insights
+- Queue: Active
+:::
+
+::: {.dispatch-panel}
+::: {.dispatch-panel__label}
+Quick Commands
+:::
+
+::: {.dispatch-grid}
+::: {.dispatch-item}
+[Read Latest Published](posts/2026-02-23-ai-is-accelerating-productivity-and-angst.qmd)
+:::
+
+::: {.dispatch-item}
+[Open Draft Folder](posts/drafts/)
+:::
+
+::: {.dispatch-item}
+[Back To Projects](index.qmd)
+:::
+:::
+:::
+
 :::

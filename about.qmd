@@ -6,10 +6,37 @@ body-classes: page-about
 
 ## Jon Finger
 
+::: {.hud-grid}
 ::: {.hero-block}
+::: {.hero-label}
+Trainer Profile
+:::
+
 ::: {.hero-lead}
 Data scientist. Builder. Recovering academic. I work at the edge where messy real-world constraints meet practical AI execution.
 :::
+:::
+
+::: {.status-panel}
+::: {.status-panel__title}
+Build Stats
+:::
+
+- Main Skill: Applied Data Science
+- Secondary Skill: Production AI Workflows
+- Bias: Practical over performative
+- Weakness: Unclear goals and vague metrics
+:::
+
+::: {.dispatch-panel}
+::: {.dispatch-panel__label}
+Operating Rules
+:::
+
+1. Solve for outcomes, not status.
+2. Keep tradeoffs visible.
+3. Protect quality while moving quickly.
+4. Treat AI as a tool, not a belief system.
 :::
 
 I care about outcomes, not theater.
@@ -17,3 +44,5 @@ I care about outcomes, not theater.
 Most of my work sits at the intersection of science, education, and production AI workflows. I like systems that are honest about tradeoffs: speed versus rigor, scale versus trust, novelty versus reliability.
 
 This site is where I share field notes from that work.
+
+:::

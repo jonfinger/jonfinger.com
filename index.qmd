@@ -4,10 +4,30 @@ page-layout: full
 body-classes: page-projects
 ---
 
+::: {.hud-grid}
 ::: {.hero-block}
-::: {.hero-lead}
-A workshop notebook from a data scientist shipping real things in public: rough edges included by design.
+::: {.hero-label}
+Trainer Notes
 :::
+
+::: {.hero-lead}
+A workshop notebook from a data scientist shipping real things in public. Practical experiments, strange tools, and working prototypes.
+:::
+:::
+
+::: {.status-panel}
+::: {.status-panel__title}
+Field Status
+:::
+
+- Role: Data Scientist
+- Mode: Build + Test + Ship
+- Region: Biology, AI, Education
+- Current Build: Useless Tools
+:::
+
+::: {.section-label}
+Active Party
 :::
 
 ::: {#project-grid .project-grid}
@@ -32,20 +52,22 @@ A workshop notebook from a data scientist shipping real things in public: rough 
 
 ::: {.dispatch-panel}
 ::: {.dispatch-panel__label}
-Latest Dispatch
+Command Menu
 :::
 
 ::: {.dispatch-grid}
 ::: {.dispatch-item}
-[Open Full Blog](blog.qmd)
+[Open Blog Archive](blog.qmd)
 :::
 
 ::: {.dispatch-item}
-[Read: Maybe We Didn't Think About Cost Enough](posts/drafts/2026-02-28-maybe-we-didnt-think-about-cost-enough.qmd)
+[Read Draft: Cost Enough](posts/drafts/2026-02-28-maybe-we-didnt-think-about-cost-enough.qmd)
 :::
 
 ::: {.dispatch-item}
-[Read AI Productivity & Angst](posts/2026-02-23-ai-is-accelerating-productivity-and-angst.qmd)
+[Read: Productivity & Angst](posts/2026-02-23-ai-is-accelerating-productivity-and-angst.qmd)
 :::
 :::
+:::
+
 :::

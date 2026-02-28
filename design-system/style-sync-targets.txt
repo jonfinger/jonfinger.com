@@ -1,0 +1,6 @@
+# One target path per line.
+# Relative paths resolve from the jonfinger.com repository root.
+# Add future app token targets here to include them in chain sync.
+
+useless-tools/theme-tokens.css
+/Users/jaef/things/useless-tools/web/theme-tokens.css

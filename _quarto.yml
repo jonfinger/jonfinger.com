@@ -4,6 +4,7 @@ project:
   resources:
     - CNAME
     - assets/**
+    - design-system/**
     - useless-tools/**
   render:
     - index.qmd
