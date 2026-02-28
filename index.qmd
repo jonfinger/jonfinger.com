@@ -6,7 +6,7 @@ body-classes: page-projects
 
 ::: {.hero-block}
 ::: {.hero-lead}
-A collection of nonsense and spaghetti from a regular human data scientist. Buyer beware.
+A workshop notebook from a data scientist shipping real things in public: rough edges included by design.
 :::
 :::
 
@@ -41,11 +41,11 @@ Latest Dispatch
 :::
 
 ::: {.dispatch-item}
-[Read AI Productivity & Angst](posts/2026-02-23-ai-is-accelerating-productivity-and-angst.qmd)
+[Read: Maybe We Didn't Think About Cost Enough](posts/drafts/2026-02-28-maybe-we-didnt-think-about-cost-enough.qmd)
 :::
 
 ::: {.dispatch-item}
-[Read Python-First Portfolio](posts/2026-02-08-building-python-portfolio.qmd)
+[Read AI Productivity & Angst](posts/2026-02-23-ai-is-accelerating-productivity-and-angst.qmd)
 :::
 :::
 :::

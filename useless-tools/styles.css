@@ -74,7 +74,7 @@ h1,
 h2,
 h3,
 legend,
-.kicker {
+.crumbs {
   font-family: "Space Mono", "SFMono-Regular", monospace;
 }
 
@@ -88,12 +88,34 @@ legend,
   margin-bottom: 1.4rem;
 }
 
-.kicker {
-  margin: 0 0 0.55rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent-2);
-  font-size: 0.8rem;
+.crumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  margin-bottom: 0.58rem;
+  padding: 0.32rem 0.58rem;
+  border: 1px solid rgba(237, 231, 255, 0.32);
+  border-radius: 8px;
+  font-family: "Space Mono", "SFMono-Regular", monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  background: rgba(18, 15, 36, 0.78);
+}
+
+.crumbs a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(237, 231, 255, 0.4);
+}
+
+.crumbs a:hover {
+  color: #ffffff;
+  border-bottom-color: rgba(255, 255, 255, 0.8);
+}
+
+.crumb-sep {
+  color: rgba(237, 231, 255, 0.72);
 }
 
 h1 {

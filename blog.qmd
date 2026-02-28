@@ -12,14 +12,14 @@ listing:
 
 ::: {.blog-header}
 ::: {.blog-header__kicker}
-Archive // Signal Feed
+Archive // Broadcast Log
 :::
 
 ::: {.blog-header__title}
-Notes on biology, AI, and education in practice
+Notes on science, AI, and execution under pressure
 :::
 
 ::: {.blog-header__lead}
-Field notes on how past training and current AI workflows shape execution quality, judgment, and technical identity.
+Field reports on cost, quality, and technical judgment in the AI era.
 :::
 :::

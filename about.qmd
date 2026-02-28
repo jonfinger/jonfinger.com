@@ -6,4 +6,14 @@ body-classes: page-about
 
 ## Jon Finger
 
-Your typical coder focused things far larger than himself. Recovering academic.
+::: {.hero-block}
+::: {.hero-lead}
+Data scientist. Builder. Recovering academic. I work at the edge where messy real-world constraints meet practical AI execution.
+:::
+:::
+
+I care about outcomes, not theater.
+
+Most of my work sits at the intersection of science, education, and production AI workflows. I like systems that are honest about tradeoffs: speed versus rigor, scale versus trust, novelty versus reliability.
+
+This site is where I share field notes from that work.

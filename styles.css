@@ -1,27 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap");
 
 :root {
   --bg-0: #080710;
   --bg-1: #120f23;
   --bg-2: #1d1934;
-  --panel-bg: rgba(15, 13, 31, 0.82);
-  --panel-bg-strong: rgba(11, 10, 24, 0.92);
-  --card-bg: rgba(17, 15, 34, 0.84);
-  --card-bg-strong: rgba(14, 12, 28, 0.92);
-  --line-soft: rgba(223, 216, 247, 0.2);
-  --line-strong: rgba(238, 233, 255, 0.48);
+  --panel-bg: rgba(15, 13, 31, 0.86);
+  --panel-bg-strong: rgba(11, 10, 24, 0.94);
+  --card-bg: rgba(17, 15, 34, 0.88);
+  --card-bg-strong: rgba(14, 12, 28, 0.95);
+  --line-soft: rgba(223, 216, 247, 0.24);
+  --line-strong: rgba(238, 233, 255, 0.56);
   --text-strong: #fbfaff;
   --text-muted: #d7d1ea;
   --text-dim: #b0a8c9;
   --accent: #ede7ff;
   --accent-2: #d5d8e2;
-  --accent-muted: rgba(237, 231, 255, 0.72);
-  --shadow-lg: 0 32px 50px -28px rgba(0, 0, 0, 0.92);
-  --shadow-md: 0 22px 34px -24px rgba(0, 0, 0, 0.88);
+  --accent-muted: rgba(237, 231, 255, 0.74);
+  --pixel-border: #f1ecff;
+  --pixel-shadow: #0f0c1f;
+  --shadow-lg: 0 34px 56px -32px rgba(0, 0, 0, 0.94);
+  --shadow-md: 0 24px 40px -26px rgba(0, 0, 0, 0.9);
   --dur-fast: 140ms;
   --dur-med: 280ms;
   --ease-main: cubic-bezier(0.22, 1, 0.36, 1);
-  --scanline-strength: 0.085;
+  --scanline-strength: 0.082;
   --scroll-progress: 0;
   --wallpaper-desktop: url("assets/img/wallpaper-biotech-atlas-desktop.jpg");
   --wallpaper-tablet: url("assets/img/wallpaper-biotech-atlas-tablet.jpg");
@@ -47,9 +49,9 @@ body {
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   line-height: 1.62;
   background:
-    radial-gradient(circle at 22% 18%, rgba(237, 231, 255, 0.08), transparent 38%),
-    radial-gradient(circle at 78% 84%, rgba(213, 216, 226, 0.08), transparent 42%),
-    linear-gradient(175deg, var(--bg-0) 0%, var(--bg-1) 56%, var(--bg-2) 100%);
+    radial-gradient(circle at 20% 16%, rgba(237, 231, 255, 0.08), transparent 38%),
+    radial-gradient(circle at 76% 84%, rgba(213, 216, 226, 0.08), transparent 40%),
+    linear-gradient(176deg, var(--bg-0) 0%, var(--bg-1) 54%, var(--bg-2) 100%);
   isolation: isolate;
 }
 
@@ -88,12 +90,12 @@ body::before {
   background-size: cover, cover;
   background-position: center center, var(--bg-position-desktop);
   background-repeat: no-repeat;
-  filter: saturate(0.45) contrast(1.08) brightness(0.76);
+  filter: saturate(0.42) contrast(1.06) brightness(0.74);
 }
 
 body::after {
   z-index: -2;
-  opacity: 0.88;
+  opacity: 0.9;
   background-image:
     repeating-linear-gradient(
       180deg,
@@ -102,16 +104,16 @@ body::after {
       transparent 1px,
       transparent 3px
     ),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.38)),
-    radial-gradient(circle at 50% -8%, rgba(237, 231, 255, 0.14), transparent 44%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.4)),
+    radial-gradient(circle at 50% -8%, rgba(237, 231, 255, 0.14), transparent 42%),
     radial-gradient(circle at 50% 110%, rgba(213, 216, 226, 0.1), transparent 40%);
-  animation: crtPulse 5.4s steps(2, end) infinite;
+  animation: crtPulse 5.2s steps(2, end) infinite;
 }
 
 a {
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px dashed rgba(237, 231, 255, 0.46);
+  border-bottom: 1px dashed rgba(237, 231, 255, 0.44);
   transition: color var(--dur-fast) var(--ease-main), border-color var(--dur-fast) var(--ease-main);
 }
 
@@ -121,7 +123,7 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 2px solid rgba(237, 231, 255, 0.84);
+  outline: 2px solid rgba(237, 231, 255, 0.86);
   outline-offset: 3px;
   border-bottom-color: transparent;
 }
@@ -144,8 +146,8 @@ h4 {
 
 h1 {
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: clamp(1.9rem, 4vw, 3rem);
+  letter-spacing: 0.12em;
+  font-size: clamp(1.8rem, 4vw, 2.9rem);
   margin-bottom: 1rem;
   text-shadow: 0 0 18px rgba(237, 231, 255, 0.2);
 }
@@ -176,7 +178,7 @@ pre {
 hr {
   border: 0;
   border-top: 1px dashed rgba(237, 231, 255, 0.44);
-  margin: 1.4rem 0;
+  margin: 1.5rem 0;
 }
 
 blockquote {
@@ -194,7 +196,7 @@ blockquote {
 
 #quarto-header .navbar {
   position: relative;
-  background: rgba(10, 9, 19, 0.8);
+  background: rgba(10, 9, 19, 0.82);
   border-bottom: 1px solid rgba(237, 231, 255, 0.28);
   backdrop-filter: blur(10px) saturate(1.1);
   transition: background var(--dur-fast) var(--ease-main), border-color var(--dur-fast) var(--ease-main), padding var(--dur-fast) var(--ease-main);
@@ -213,6 +215,18 @@ blockquote {
   transform-origin: left center;
   transform: scaleX(var(--scroll-progress));
   background: linear-gradient(90deg, rgba(237, 231, 255, 0.95), rgba(213, 216, 226, 0.9));
+}
+
+#quarto-header .navbar::after {
+  content: "+----------------------------------------------+";
+  position: absolute;
+  left: 1rem;
+  top: -0.62rem;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.45rem;
+  letter-spacing: 0.02em;
+  color: rgba(237, 231, 255, 0.5);
+  pointer-events: none;
 }
 
 #quarto-header .quarto-search-button,
@@ -235,20 +249,23 @@ blockquote {
 }
 
 #quarto-header .navbar-brand {
-  font-family: "Space Mono", monospace;
-  letter-spacing: 0.14em;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
+  text-shadow: 0 0 10px rgba(237, 231, 255, 0.24);
 }
 
 #quarto-header .navbar .nav-link {
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 600;
-  font-size: 0.78rem;
-  padding: 0.2rem 0;
-  margin-right: 1.3rem;
+  letter-spacing: 0.08em;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.54rem;
+  line-height: 1.5;
+  padding: 0.22rem 0;
+  margin-right: 1.1rem;
 }
 
 #quarto-header .navbar .nav-link::before {
@@ -273,6 +290,7 @@ blockquote {
 #quarto-header .navbar .nav-link:hover,
 #quarto-header .navbar .nav-link.is-active {
   color: var(--text-strong);
+  text-shadow: 0 0 8px rgba(237, 231, 255, 0.3);
 }
 
 #quarto-header .navbar .nav-link:hover::after,
@@ -283,18 +301,16 @@ blockquote {
 #quarto-header .navbar-collapse > .navbar-nav:last-of-type .nav-link {
   margin-right: 0;
   border: 1px solid rgba(238, 233, 255, 0.56);
-  border-radius: 999px;
-  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  padding: 0.4rem 0.72rem;
   color: #ffffff;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.08em;
   background:
     linear-gradient(150deg, rgba(245, 240, 255, 0.32), rgba(214, 221, 240, 0.26)),
-    linear-gradient(145deg, rgba(72, 58, 124, 0.36), rgba(33, 26, 63, 0.5));
+    linear-gradient(145deg, rgba(72, 58, 124, 0.38), rgba(33, 26, 63, 0.52));
   box-shadow:
     inset 0 0 0 1px rgba(255, 255, 255, 0.22),
-    0 8px 18px -14px rgba(161, 139, 236, 0.92);
-  text-shadow: 0 0 10px rgba(246, 241, 255, 0.44);
-  transition: transform var(--dur-fast) var(--ease-main), box-shadow var(--dur-fast) var(--ease-main), border-color var(--dur-fast) var(--ease-main), color var(--dur-fast) var(--ease-main);
+    3px 3px 0 0 rgba(11, 10, 24, 0.9);
 }
 
 #quarto-header .navbar-collapse > .navbar-nav:last-of-type .nav-link::before {
@@ -307,18 +323,12 @@ blockquote {
 }
 
 #quarto-header .navbar-collapse > .navbar-nav:last-of-type .nav-link:hover {
-  transform: translateY(-1px);
-  color: #ffffff;
+  transform: translate(-1px, -1px);
   border-color: rgba(250, 247, 255, 0.86);
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.28),
-    0 16px 30px -20px rgba(167, 143, 244, 1),
-    0 0 26px -18px rgba(214, 201, 255, 0.9);
-}
-
-#quarto-header .navbar-collapse > .navbar-nav:last-of-type .nav-link:focus-visible {
-  outline: 2px solid rgba(248, 244, 255, 0.95);
-  outline-offset: 3px;
+    inset 0 0 0 1px rgba(255, 255, 255, 0.24),
+    4px 4px 0 0 rgba(11, 10, 24, 0.94),
+    0 0 24px -14px rgba(214, 201, 255, 0.9);
 }
 
 #quarto-header .navbar-toggler {
@@ -335,11 +345,11 @@ main.content {
   overflow: hidden;
   margin-top: 1rem;
   max-width: 1100px;
-  border: 1px solid var(--line-strong);
-  border-radius: 14px;
-  padding: 2.4rem 2.5rem;
+  border: 2px solid var(--pixel-border);
+  border-radius: 12px;
+  padding: 2.35rem 2.4rem;
   background:
-    linear-gradient(155deg, rgba(12, 10, 26, 0.92), rgba(13, 11, 28, 0.86)),
+    linear-gradient(155deg, rgba(12, 10, 26, 0.92), rgba(13, 11, 28, 0.88)),
     radial-gradient(circle at 85% 10%, rgba(237, 231, 255, 0.08), transparent 38%),
     repeating-linear-gradient(
       90deg,
@@ -350,37 +360,38 @@ main.content {
     ),
     repeating-linear-gradient(
       180deg,
-      rgba(237, 231, 255, 0.035) 0,
-      rgba(237, 231, 255, 0.035) 1px,
+      rgba(237, 231, 255, 0.03) 0,
+      rgba(237, 231, 255, 0.03) 1px,
       transparent 1px,
       transparent 34px
     );
   box-shadow:
     var(--shadow-lg),
-    0 0 68px -22px rgba(173, 151, 242, 0.74),
-    inset 0 0 0 1px rgba(237, 231, 255, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    5px 5px 0 0 var(--pixel-shadow),
+    0 0 64px -24px rgba(173, 151, 242, 0.72),
+    inset 0 0 0 1px rgba(237, 231, 255, 0.08);
+}
+
+main.content::before,
+main.content::after {
+  position: absolute;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.04em;
+  color: rgba(231, 224, 251, 0.64);
+  pointer-events: none;
 }
 
 main.content::before {
-  content: "";
-  position: absolute;
-  inset: 0.68rem;
-  border-radius: 10px;
-  border: 1px solid var(--line-soft);
-  pointer-events: none;
+  content: "+--------------------------------+";
+  left: 0.84rem;
+  top: 0.55rem;
 }
 
 main.content::after {
-  content: "SYSTEM FEED // 2026";
-  position: absolute;
-  right: 1rem;
-  top: 0.5rem;
-  font-family: "Space Mono", monospace;
-  font-size: 0.64rem;
-  letter-spacing: 0.08em;
-  color: rgba(231, 224, 251, 0.58);
-  pointer-events: none;
+  content: "+--------------------------------+";
+  right: 0.84rem;
+  bottom: 0.52rem;
 }
 
 main.content > * {
@@ -404,29 +415,42 @@ main.content > * {
   font-size: 0.74rem;
 }
 
-.hero-block {
+.hero-block,
+.blog-header,
+.project-card,
+#listing-listing .quarto-grid-item.card,
+.dispatch-panel {
   position: relative;
   overflow: hidden;
-  margin-bottom: 1.5rem;
-  padding: 1rem 1.1rem;
-  border: 1px solid rgba(237, 231, 255, 0.24);
+  border: 2px solid rgba(237, 231, 255, 0.42);
   border-radius: 10px;
-  background:
-    linear-gradient(145deg, rgba(32, 25, 58, 0.74), rgba(15, 13, 31, 0.8)),
-    radial-gradient(circle at 82% 18%, rgba(237, 231, 255, 0.16), transparent 44%);
   box-shadow:
-    inset 0 0 0 1px rgba(237, 231, 255, 0.08),
-    0 0 30px -22px rgba(184, 166, 246, 0.72);
+    var(--shadow-md),
+    4px 4px 0 0 rgba(12, 10, 23, 0.92),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-.hero-block::before {
-  content: "";
+.hero-block::before,
+.blog-header::before,
+.project-card::before,
+#listing-listing .quarto-grid-item.card::before,
+.dispatch-panel::before {
+  content: "+ + + +";
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
+  top: 0.36rem;
+  right: 0.52rem;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.42rem;
+  color: rgba(237, 231, 255, 0.62);
+  letter-spacing: 0.1em;
+}
+
+.hero-block {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.1rem;
   background:
-    linear-gradient(90deg, transparent, rgba(237, 231, 255, 0.22), transparent) top / 100% 1px no-repeat;
-  pointer-events: none;
+    linear-gradient(145deg, rgba(31, 24, 57, 0.76), rgba(14, 12, 30, 0.82)),
+    radial-gradient(circle at 82% 18%, rgba(237, 231, 255, 0.16), transparent 44%);
 }
 
 .hero-lead {
@@ -438,48 +462,17 @@ main.content > * {
 }
 
 .blog-header {
-  position: relative;
-  overflow: hidden;
   margin-bottom: 1.35rem;
-  border: 1px solid rgba(237, 231, 255, 0.3);
-  border-radius: 12px;
   padding: 1.14rem 1.2rem 1.22rem;
   min-height: 230px;
   display: grid;
   align-content: end;
   background-image:
-    linear-gradient(160deg, rgba(9, 8, 18, 0.24), rgba(9, 8, 18, 0.9)),
+    linear-gradient(160deg, rgba(9, 8, 18, 0.26), rgba(9, 8, 18, 0.9)),
     radial-gradient(circle at 72% 18%, rgba(245, 240, 255, 0.28), transparent 46%),
     var(--wallpaper-desktop);
   background-size: auto, auto, cover;
   background-position: center center, center center, 56% 38%;
-  box-shadow:
-    inset 0 0 0 1px rgba(237, 231, 255, 0.1),
-    0 0 44px -24px rgba(183, 165, 249, 0.8);
-}
-
-.blog-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      180deg,
-      rgba(237, 231, 255, 0.08) 0,
-      rgba(237, 231, 255, 0.08) 1px,
-      transparent 1px,
-      transparent 4px
-    );
-  pointer-events: none;
-}
-
-.blog-header::after {
-  content: "";
-  position: absolute;
-  inset: 0.6rem;
-  border: 1px solid rgba(237, 231, 255, 0.26);
-  border-radius: 8px;
-  pointer-events: none;
 }
 
 .blog-header__kicker,
@@ -491,18 +484,18 @@ main.content > * {
 
 .blog-header__kicker {
   margin-bottom: 0.38rem;
-  font-family: "Space Mono", monospace;
+  font-family: "Press Start 2P", "Space Mono", monospace;
   text-transform: uppercase;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  color: rgba(236, 232, 250, 0.88);
+  font-size: 0.46rem;
+  letter-spacing: 0.08em;
+  color: rgba(236, 232, 250, 0.9);
 }
 
 .blog-header__title {
   margin: 0 0 0.56rem;
   max-width: 28ch;
   font-family: "Space Mono", monospace;
-  font-size: clamp(1.28rem, 2.2vw, 1.72rem);
+  font-size: clamp(1.2rem, 2.1vw, 1.62rem);
   letter-spacing: 0.04em;
   color: #ffffff;
   text-shadow: 0 0 18px rgba(237, 231, 255, 0.32);
@@ -512,7 +505,7 @@ main.content > * {
 .blog-header__lead {
   margin: 0;
   max-width: 64ch;
-  font-size: 0.97rem;
+  font-size: 0.96rem;
   color: #e6e0f9;
   text-shadow: 0 0 14px rgba(237, 231, 255, 0.2);
 }
@@ -528,19 +521,11 @@ main.content > * {
 .project-card,
 #listing-listing .quarto-grid-item.card {
   display: block;
-  position: relative;
-  overflow: hidden;
   height: 100%;
-  border: 1px solid var(--line-soft);
-  border-radius: 12px;
   background:
     linear-gradient(160deg, var(--card-bg), var(--card-bg-strong)),
     radial-gradient(circle at 78% 18%, rgba(237, 231, 255, 0.14), transparent 46%);
   color: var(--text-strong);
-  box-shadow:
-    var(--shadow-md),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    inset 0 0 0 1px rgba(237, 231, 255, 0.04);
   transition: transform var(--dur-fast) var(--ease-main), border-color var(--dur-fast) var(--ease-main), box-shadow var(--dur-fast) var(--ease-main);
 }
 
@@ -549,40 +534,25 @@ main.content > * {
   text-decoration: none;
 }
 
-#listing-listing .quarto-grid-item.card::before {
-  content: ">>";
-  position: absolute;
-  left: 0.65rem;
-  top: 0.55rem;
-  font-family: "Space Mono", monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  color: rgba(237, 231, 255, 0.72);
-}
-
 .project-card::after,
 #listing-listing .quarto-grid-item.card::after {
-  content: "";
+  content: "[]";
   position: absolute;
-  inset: 0.6rem;
-  border-radius: 9px;
-  border: 1px solid rgba(237, 231, 255, 0.12);
-  pointer-events: none;
+  left: 0.64rem;
+  bottom: 0.48rem;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.46rem;
+  color: rgba(237, 231, 255, 0.6);
 }
 
 .project-card:hover,
 #listing-listing .quarto-grid-item.card:hover {
-  transform: translateY(-3px);
+  transform: translate(-2px, -2px);
   border-color: var(--line-strong);
   box-shadow:
-    0 28px 42px -24px rgba(0, 0, 0, 0.94),
-    0 0 44px -14px rgba(188, 170, 245, 0.86),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-.project-card:hover::after,
-#listing-listing .quarto-grid-item.card:hover::after {
-  border-color: rgba(237, 231, 255, 0.32);
+    0 26px 40px -24px rgba(0, 0, 0, 0.94),
+    6px 6px 0 0 rgba(11, 10, 24, 0.96),
+    0 0 40px -16px rgba(188, 170, 245, 0.84);
 }
 
 .project-card:hover .project-card__title {
@@ -592,7 +562,7 @@ main.content > * {
 
 .project-card:focus-visible,
 #listing-listing .quarto-grid-link:focus-visible .quarto-grid-item.card {
-  outline: 2px solid rgba(237, 231, 255, 0.86);
+  outline: 2px solid rgba(237, 231, 255, 0.88);
   outline-offset: 3px;
 }
 
@@ -619,11 +589,12 @@ main.content > * {
   display: inline-flex;
   align-items: center;
   border: 1px solid var(--line-soft);
-  border-radius: 999px;
+  border-radius: 4px;
   padding: 0.2rem 0.56rem;
-  font-family: "Space Mono", monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.42rem;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
   color: var(--accent-muted);
   background: rgba(237, 231, 255, 0.06);
 }
@@ -631,22 +602,17 @@ main.content > * {
 .dispatch-panel {
   margin-top: 1rem;
   padding: 0.92rem 1rem;
-  border: 1px solid var(--line-soft);
-  border-radius: 10px;
   background:
-    linear-gradient(145deg, rgba(24, 20, 44, 0.66), rgba(15, 13, 29, 0.76)),
+    linear-gradient(145deg, rgba(24, 20, 44, 0.68), rgba(15, 13, 29, 0.78)),
     radial-gradient(circle at 12% 10%, rgba(237, 231, 255, 0.12), transparent 32%);
-  box-shadow:
-    inset 0 0 0 1px rgba(237, 231, 255, 0.07),
-    0 0 32px -24px rgba(182, 166, 244, 0.82);
 }
 
 .dispatch-panel__label {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  font-family: "Space Mono", monospace;
+  font-size: 0.48rem;
+  letter-spacing: 0.1em;
+  font-family: "Press Start 2P", "Space Mono", monospace;
   color: var(--text-dim);
 }
 
@@ -658,16 +624,18 @@ main.content > * {
 
 .dispatch-item a {
   display: block;
-  border: 1px solid rgba(237, 231, 255, 0.2);
-  border-radius: 8px;
+  border: 2px solid rgba(237, 231, 255, 0.36);
+  border-radius: 6px;
   padding: 0.62rem 0.68rem;
-  font-family: "Space Mono", monospace;
-  font-size: 0.72rem;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.46rem;
+  line-height: 1.5;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--accent);
-  background: linear-gradient(145deg, rgba(24, 20, 42, 0.7), rgba(14, 12, 28, 0.75));
+  background: linear-gradient(145deg, rgba(24, 20, 42, 0.72), rgba(14, 12, 28, 0.8));
   border-bottom-style: solid;
+  box-shadow: 2px 2px 0 0 rgba(11, 10, 24, 0.9);
   transition: transform var(--dur-fast) var(--ease-main), border-color var(--dur-fast) var(--ease-main), box-shadow var(--dur-fast) var(--ease-main), color var(--dur-fast) var(--ease-main);
 }
 
@@ -676,13 +644,12 @@ main.content > * {
 }
 
 .dispatch-item a:hover {
-  transform: translateY(-2px);
+  transform: translate(-1px, -1px);
   color: #ffffff;
   border-color: var(--line-strong);
   box-shadow:
-    0 18px 28px -18px rgba(0, 0, 0, 0.92),
-    0 0 32px -20px rgba(187, 168, 250, 0.9),
-    inset 0 0 0 1px rgba(237, 231, 255, 0.18);
+    3px 3px 0 0 rgba(11, 10, 24, 0.94),
+    0 0 28px -18px rgba(187, 168, 250, 0.9);
 }
 
 #listing-listing .quarto-grid-link {
@@ -748,9 +715,10 @@ main.content > * {
 
 #listing-listing .listing-date {
   color: var(--accent-2) !important;
-  font-family: "Space Mono", monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.44rem;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -781,9 +749,11 @@ footer {
   0% {
     opacity: 0.96;
   }
+
   50% {
     opacity: 0.93;
   }
+
   100% {
     opacity: 0.95;
   }
@@ -793,6 +763,7 @@ footer {
   0% {
     text-shadow: 0 0 6px rgba(237, 231, 255, 0.2);
   }
+
   100% {
     text-shadow: 0 0 20px rgba(237, 231, 255, 0.34);
   }
@@ -845,10 +816,15 @@ footer {
     padding-bottom: 0.35rem;
   }
 
+  #quarto-header .navbar::after {
+    display: none;
+  }
+
   #quarto-header .navbar .nav-link {
     margin-right: 0;
     margin-bottom: 0.4rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.06em;
+    font-size: 0.5rem;
   }
 
   #quarto-header .navbar-collapse > .navbar-nav:last-of-type .nav-link {
@@ -856,8 +832,8 @@ footer {
   }
 
   h1 {
-    font-size: 1.7rem;
-    letter-spacing: 0.1em;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
   }
 
   h2 {
@@ -867,17 +843,12 @@ footer {
   main.content {
     margin-top: 0.82rem;
     padding: 1.45rem 1.02rem;
-    border-radius: 12px;
+    border-radius: 10px;
   }
 
-  main.content::before {
-    inset: 0.52rem;
-  }
-
+  main.content::before,
   main.content::after {
-    right: 0.64rem;
-    top: 0.42rem;
-    font-size: 0.56rem;
+    font-size: 0.42rem;
   }
 
   .hero-lead {
@@ -905,12 +876,11 @@ footer {
   }
 
   .blog-header__title {
-    font-size: 1.2rem;
-    letter-spacing: 0.05em;
+    font-size: 1.14rem;
   }
 
   .blog-header__lead {
-    font-size: 0.92rem;
+    font-size: 0.9rem;
   }
 
   .project-card {
