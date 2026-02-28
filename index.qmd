@@ -27,7 +27,7 @@ Field Status
 :::
 
 ::: {.section-label}
-Active Party
+Featured Projects
 :::
 
 ::: {#project-grid .project-grid}
@@ -61,7 +61,7 @@ Command Menu
 :::
 
 ::: {.dispatch-item}
-[Read Draft: Cost Enough](posts/drafts/2026-02-28-maybe-we-didnt-think-about-cost-enough.qmd)
+[Read: Python Portfolio](posts/2026-02-08-building-python-portfolio.qmd)
 :::
 
 ::: {.dispatch-item}
