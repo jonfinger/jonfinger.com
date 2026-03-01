@@ -35,3 +35,7 @@ coverage/
 .venv/
 __pycache__/
 .DS_Store
+
+# local PR artifacts
+pr-image/
+pr-images/
