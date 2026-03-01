@@ -77,16 +77,9 @@
     projects.forEach(function (project) {
       var card = document.createElement("a");
       var url = project.url || "#";
-      var external = /^https?:\/\//i.test(url);
-
       card.className = "project-card";
       card.href = url;
       card.setAttribute("aria-label", (project.title || "Project") + " link");
-
-      if (external) {
-        card.target = "_blank";
-        card.rel = "noopener";
-      }
 
       var title = document.createElement("h3");
       title.className = "project-card__title";
