@@ -4,10 +4,11 @@
   var CANONICAL_ORIGIN = "https://jonfinger.com";
   var TOOL_IDS = ["url-lengthener", "useless-facts", "obtuse-helper"];
 
-  var wheel = document.getElementById("tool-wheel");
-  var wheelSlices = Array.prototype.slice.call(document.querySelectorAll(".wheel-slice"));
-  var listButtons = Array.prototype.slice.call(document.querySelectorAll("[data-tool-list]"));
+  var songRows = Array.prototype.slice.call(document.querySelectorAll("[data-tool-select]"));
   var panels = Array.prototype.slice.call(document.querySelectorAll(".tool-panel"));
+
+  var toolCounter = document.getElementById("tool-counter");
+  var activeToolReadout = document.getElementById("active-tool-readout");
 
   var urlForm = document.getElementById("url-form");
   var targetUrlInput = document.getElementById("target-url");
@@ -23,15 +24,7 @@
 
   var state = {
     selectedTool: "url-lengthener",
-    selectedLength: 1024,
-    rotation: 0,
-    isDragging: false,
-    pointerId: null,
-    previousAngle: 0,
-    velocity: 0,
-    inertiaFrame: null,
-    justDragged: false,
-    dragDistance: 0
+    selectedLength: 1024
   };
 
   function randomSeed() {
@@ -50,77 +43,68 @@
     seedInput.value = value || randomSeed();
   }
 
-  function normalizeAngleDelta(delta) {
-    var next = delta;
-    while (next > 180) {
-      next -= 360;
-    }
-    while (next < -180) {
-      next += 360;
-    }
-    return next;
+  function selectedIndexOf(toolId) {
+    return TOOL_IDS.indexOf(toolId);
   }
 
-  function getPointerAngle(event) {
-    var rect = wheel.getBoundingClientRect();
-    var centerX = rect.left + rect.width / 2;
-    var centerY = rect.top + rect.height / 2;
-    var dx = event.clientX - centerX;
-    var dy = event.clientY - centerY;
-    return Math.atan2(dy, dx) * (180 / Math.PI);
-  }
+  function setActiveReadout(toolId) {
+    var selected = null;
+    var i;
 
-  function applyRotation() {
-    wheel.style.transform = "rotate(" + state.rotation.toFixed(2) + "deg)";
-  }
-
-  function stopInertia() {
-    if (state.inertiaFrame) {
-      window.cancelAnimationFrame(state.inertiaFrame);
-      state.inertiaFrame = null;
-    }
-  }
-
-  function startInertia() {
-    stopInertia();
-
-    function step() {
-      state.rotation += state.velocity;
-      state.velocity *= 0.94;
-      applyRotation();
-
-      if (Math.abs(state.velocity) < 0.06) {
-        state.velocity = 0;
-        state.inertiaFrame = null;
-        return;
+    for (i = 0; i < songRows.length; i += 1) {
+      if (songRows[i].getAttribute("data-tool-select") === toolId) {
+        selected = songRows[i];
+        break;
       }
-
-      state.inertiaFrame = window.requestAnimationFrame(step);
     }
 
-    if (Math.abs(state.velocity) >= 0.06) {
-      state.inertiaFrame = window.requestAnimationFrame(step);
+    if (!selected) {
+      return;
     }
+
+    var titleEl = selected.querySelector(".song-row__title");
+    if (!titleEl) {
+      return;
+    }
+
+    activeToolReadout.textContent = "Now selecting: " + titleEl.textContent;
   }
 
-  function setSelectedTool(toolId) {
+  function setCounter(toolId) {
+    var index = selectedIndexOf(toolId);
+    if (index < 0) {
+      toolCounter.textContent = "-- / --";
+      return;
+    }
+
+    var humanIndex = String(index + 1).padStart(2, "0");
+    var total = String(TOOL_IDS.length).padStart(2, "0");
+    toolCounter.textContent = humanIndex + " / " + total;
+  }
+
+  function setSelectedTool(toolId, options) {
     if (TOOL_IDS.indexOf(toolId) === -1) {
       return;
     }
 
     state.selectedTool = toolId;
 
-    wheelSlices.forEach(function (slice) {
-      slice.classList.toggle("is-selected", slice.getAttribute("data-tool") === toolId);
-    });
+    songRows.forEach(function (row) {
+      var isActive = row.getAttribute("data-tool-select") === toolId;
+      row.classList.toggle("is-selected", isActive);
+      row.setAttribute("aria-selected", isActive ? "true" : "false");
 
-    listButtons.forEach(function (button) {
-      button.classList.toggle("is-selected", button.getAttribute("data-tool-list") === toolId);
+      if (options && options.focus && isActive) {
+        row.focus();
+      }
     });
 
     panels.forEach(function (panel) {
       panel.classList.toggle("is-active", panel.getAttribute("data-panel") === toolId);
     });
+
+    setCounter(toolId);
+    setActiveReadout(toolId);
   }
 
   function showError(message) {
@@ -266,84 +250,58 @@
     }
   }
 
-  function onWheelPointerDown(event) {
-    if (event.button !== 0 && event.pointerType !== "touch") {
-      return;
+  function isTypingFocus() {
+    var active = document.activeElement;
+    if (!active) {
+      return false;
     }
 
-    state.isDragging = true;
-    state.pointerId = event.pointerId;
-    state.previousAngle = getPointerAngle(event);
-    state.velocity = 0;
-    state.dragDistance = 0;
-    state.justDragged = false;
-    wheel.classList.add("is-dragging");
-    stopInertia();
-
-    if (wheel.setPointerCapture) {
-      wheel.setPointerCapture(event.pointerId);
-    }
+    var tag = active.tagName;
+    return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
   }
 
-  function onWheelPointerMove(event) {
-    if (!state.isDragging || state.pointerId !== event.pointerId) {
-      return;
+  function moveSelection(delta) {
+    var current = selectedIndexOf(state.selectedTool);
+    if (current < 0) {
+      current = 0;
     }
 
-    var nextAngle = getPointerAngle(event);
-    var delta = normalizeAngleDelta(nextAngle - state.previousAngle);
-
-    state.rotation += delta;
-    state.previousAngle = nextAngle;
-    state.velocity = delta;
-    state.dragDistance += Math.abs(delta);
-
-    if (state.dragDistance > 3) {
-      state.justDragged = true;
-    }
-
-    applyRotation();
+    var next = (current + delta + TOOL_IDS.length) % TOOL_IDS.length;
+    setSelectedTool(TOOL_IDS[next], { focus: true });
   }
 
-  function onWheelPointerUp(event) {
-    if (!state.isDragging || state.pointerId !== event.pointerId) {
-      return;
-    }
+  function initializeSelector() {
+    songRows.forEach(function (row) {
+      row.addEventListener("click", function () {
+        setSelectedTool(row.getAttribute("data-tool-select"));
+      });
+    });
 
-    state.isDragging = false;
-    state.pointerId = null;
-    wheel.classList.remove("is-dragging");
-    startInertia();
-
-    if (wheel.releasePointerCapture) {
-      try {
-        wheel.releasePointerCapture(event.pointerId);
-      } catch (_error) {
-        // Ignore invalid pointer release race.
+    document.addEventListener("keydown", function (event) {
+      if (isTypingFocus()) {
+        return;
       }
-    }
 
-    window.setTimeout(function () {
-      state.justDragged = false;
-    }, 30);
-  }
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        moveSelection(1);
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        moveSelection(-1);
+      }
+    });
 
-  function initializeWheelSelection() {
-    wheelSlices.forEach(function (slice) {
-      slice.addEventListener("click", function () {
-        if (state.justDragged) {
-          return;
+    var selector = document.querySelector(".song-list");
+    if (selector) {
+      selector.addEventListener("wheel", function (event) {
+        event.preventDefault();
+        if (event.deltaY > 0) {
+          moveSelection(1);
+        } else if (event.deltaY < 0) {
+          moveSelection(-1);
         }
-
-        setSelectedTool(slice.getAttribute("data-tool"));
-      });
-    });
-
-    listButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        setSelectedTool(button.getAttribute("data-tool-list"));
-      });
-    });
+      }, { passive: false });
+    }
   }
 
   function initializeLengthener() {
@@ -385,13 +343,7 @@
     copyButton.addEventListener("click", copyGeneratedUrl);
   }
 
-  wheel.addEventListener("pointerdown", onWheelPointerDown);
-  wheel.addEventListener("pointermove", onWheelPointerMove);
-  wheel.addEventListener("pointerup", onWheelPointerUp);
-  wheel.addEventListener("pointercancel", onWheelPointerUp);
-
-  initializeWheelSelection();
+  initializeSelector();
   initializeLengthener();
   setSelectedTool(state.selectedTool);
-  applyRotation();
 })();

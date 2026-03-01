@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  --bg-0: #060510;
+  --bg-1: #120f24;
+  --bg-2: #1f1a38;
+  --panel-bg: rgba(15, 13, 31, 0.9);
+  --panel-bg-strong: rgba(11, 10, 24, 0.96);
+  --card-bg: rgba(18, 16, 35, 0.92);
+  --card-bg-strong: rgba(13, 12, 27, 0.96);
+  --line-soft: rgba(224, 218, 246, 0.25);
+  --line-strong: rgba(240, 236, 255, 0.62);
+  --text-strong: #f6f3ff;
+  --text-muted: #d8d2ea;
+  --text-dim: #afa6c8;
+  --accent: #f0ebff;
+  --accent-2: #d6daea;
+  --accent-muted: rgba(240, 235, 255, 0.74);
+  --accent-hot: #f4ff95;
+  --danger: #ff9c9c;
+  --ok: #beffcf;
+  --pixel-border: #ece6ff;
+  --pixel-shadow: #0d0b19;
+  --shadow-lg: 0 34px 56px -32px rgba(0, 0, 0, 0.92);
+  --shadow-md: 0 24px 40px -26px rgba(0, 0, 0, 0.88);
+  --dur-fast: 140ms;
+  --dur-med: 280ms;
+  --ease-main: cubic-bezier(0.22, 1, 0.36, 1);
+  --scanline-strength: 0.075;
+  --scroll-progress: 0;
+}

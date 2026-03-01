@@ -15,41 +15,52 @@
           <span class="crumb-sep">/</span>
           <span aria-current="page">useless-tools</span>
         </nav>
+
+        <div class="title-strip" aria-hidden="true">
+          <span class="title-strip__label">SELECT TOOL</span>
+          <span class="title-strip__hint">choose one // run on right panel</span>
+        </div>
+
         <h1>Useless Tools</h1>
-        <p class="subtitle">A polished collection of magnificent wastes of time.</p>
+        <p class="subtitle">DDR-style selector on the left. Active tool console on the right.</p>
       </header>
 
-      <section class="app-layout" aria-label="Useless Tools application">
-        <aside class="wheel-column" aria-label="Tool selector">
-          <div class="wheel-frame">
-            <div id="tool-wheel" class="tool-wheel" role="group" aria-label="Spinning tool wheel">
-              <button class="wheel-slice is-selected" data-tool="url-lengthener" type="button" style="--slice-angle: 0deg;">
-                <span>URL Lengthener</span>
-              </button>
-              <button class="wheel-slice" data-tool="useless-facts" type="button" style="--slice-angle: 120deg;">
-                <span>Useless Facts</span>
-              </button>
-              <button class="wheel-slice" data-tool="obtuse-helper" type="button" style="--slice-angle: 240deg;">
-                <span>Obtuse Helper</span>
-              </button>
-              <div class="wheel-core" aria-hidden="true">Drag</div>
+      <section class="ddr-layout" aria-label="Useless Tools application">
+        <aside class="selector-column" aria-label="Tool selector">
+          <div class="selector-shell">
+            <div class="selector-shell__header">
+              <span>Tool Roster</span>
+              <span class="selector-shell__counter" id="tool-counter">01 / 03</span>
             </div>
-            <div class="wheel-pointer" aria-hidden="true"></div>
-          </div>
 
-          <div class="tool-list-shell" aria-label="Keyboard tool list">
-            <p class="tool-list-label">Tool list (keyboard fallback)</p>
-            <div class="tool-list" role="list">
-              <button class="tool-list-item is-selected" type="button" data-tool-list="url-lengthener">URL Lengthener</button>
-              <button class="tool-list-item" type="button" data-tool-list="useless-facts">Useless Facts</button>
-              <button class="tool-list-item" type="button" data-tool-list="obtuse-helper">Obtuse Helper</button>
+            <div class="song-list" role="listbox" aria-label="Tool list">
+              <button class="song-row is-selected" type="button" role="option" aria-selected="true" data-tool-select="url-lengthener">
+                <span class="song-row__title">URL Lengthener</span>
+                <span class="song-row__meta">Route Utility // 125 BPM</span>
+              </button>
+              <button class="song-row" type="button" role="option" aria-selected="false" data-tool-select="useless-facts">
+                <span class="song-row__title">Useless Facts</span>
+                <span class="song-row__meta">Info Noise // 140 BPM</span>
+              </button>
+              <button class="song-row" type="button" role="option" aria-selected="false" data-tool-select="obtuse-helper">
+                <span class="song-row__title">Obtuse Helper</span>
+                <span class="song-row__meta">Confusion Engine // 150 BPM</span>
+              </button>
+            </div>
+
+            <div class="selector-shell__footer">
+              <p id="active-tool-readout" class="active-readout">Now selecting: URL Lengthener</p>
+              <p class="control-readout">Controls: click, arrow keys, mouse wheel</p>
             </div>
           </div>
         </aside>
 
         <section class="panel-column" aria-live="polite">
           <article class="tool-panel is-active" data-panel="url-lengthener">
-            <h2>URL Lengthener</h2>
+            <div class="tool-panel__header">
+              <span class="tool-panel__status">ACTIVE TOOL</span>
+              <h2>URL Lengthener</h2>
+            </div>
             <p>
               Turn short links into absurd links. This tool wraps a target URL in a long
               redirect URL under <code>jonfinger.com/useless-tools/</code>.
@@ -60,7 +71,7 @@
               <input id="target-url" name="target-url" type="url" required placeholder="https://example.com">
 
               <fieldset class="length-fieldset">
-                <legend>Target length</legend>
+                <legend>Target Length</legend>
                 <div class="preset-row" role="group" aria-label="Length presets">
                   <button class="preset-button" type="button" data-length="512">512</button>
                   <button class="preset-button is-selected" type="button" data-length="1024">1024</button>
@@ -95,14 +106,20 @@
             </div>
           </article>
 
-          <article class="tool-panel" data-panel="useless-facts">
-            <h2>Useless Facts</h2>
-            <p>Coming soon. This slot will surface weirdly specific facts no one requested.</p>
+          <article class="tool-panel tool-panel--coming" data-panel="useless-facts">
+            <div class="tool-panel__header">
+              <span class="tool-panel__status">COMING SOON</span>
+              <h2>Useless Facts</h2>
+            </div>
+            <p>This lane will dump perfectly true facts with zero practical value.</p>
           </article>
 
-          <article class="tool-panel" data-panel="obtuse-helper">
-            <h2>Obtuse Helper</h2>
-            <p>Coming soon. This slot will provide answers that are technically helpful and practically confusing.</p>
+          <article class="tool-panel tool-panel--coming" data-panel="obtuse-helper">
+            <div class="tool-panel__header">
+              <span class="tool-panel__status">COMING SOON</span>
+              <h2>Obtuse Helper</h2>
+            </div>
+            <p>This lane will answer simple questions in increasingly indirect ways.</p>
           </article>
         </section>
       </section>
