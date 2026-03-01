@@ -16,14 +16,7 @@ This workflow keeps the main site and app surfaces visually aligned.
 ## Standard Update Flow
 
 1. Edit shared tokens in `design-system/pixel-theme-tokens.css`.
-2. Run the full test chain:
-
-```bash
-cd /Users/jaef/things/jonfinger.com
-make style-chain-test
-```
-
-Equivalent manual sequence:
+2. Sync shared style tokens:
 
 ```bash
 cd /Users/jaef/things/jonfinger.com
@@ -56,10 +49,3 @@ quarto render
 ```
 
 3. Keep project-specific layout/component rules in the project stylesheet; keep palette/typography tokens in the shared token file.
-
-## Desktop Shortcut
-
-A launcher was added at:
-- `/Users/jaef/Desktop/Test-Style-Chain.command`
-
-Double-click it to run `make style-chain-test` in a terminal window.
