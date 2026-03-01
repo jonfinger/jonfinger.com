@@ -43,7 +43,7 @@ Featured Projects
   },
   {
     "title": "Stackscenes",
-    "summary": "In development: scene-based stories exploring data, code, and scientific ideas.",
+    "summary": "In development: an attempt at creating a cinematic experience from human-created TCG stories.",
     "tags": ["In Development", "Data Science", "Python"],
     "url": "https://github.com/jonfinger/stackscenes/blob/main/README.md"
   },
