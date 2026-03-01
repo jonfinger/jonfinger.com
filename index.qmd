@@ -42,6 +42,12 @@ Featured Projects
     "url": "/useless-tools/"
   },
   {
+    "title": "Stackscenes",
+    "summary": "In development: an attempt at creating a cinematic experience from human-created TCG stories.",
+    "tags": ["In Development", "Data Science", "Python"],
+    "url": "https://github.com/jonfinger/stackscenes/blob/main/README.md"
+  },
+  {
     "title": "Biology Masters Thesis",
     "summary": "Graduate thesis on modeling range expansion of an invasive species.",
     "tags": ["Paper"],
