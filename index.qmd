@@ -39,7 +39,7 @@ Featured Projects
     "title": "Useless Tools",
     "summary": "Retro web toys, starting with a URL Lengthener that makes normal links absurdly long.",
     "tags": ["JavaScript", "Web"],
-    "url": "/useless-tools/"
+    "url": "https://uselesstools.jonfinger.com/"
   },
   {
     "title": "Stackscenes",

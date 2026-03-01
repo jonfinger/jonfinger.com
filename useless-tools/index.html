@@ -3,128 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Useless Tools</title>
-    <meta name="description" content="A retro collection of intentionally impractical tools.">
-    <link rel="stylesheet" href="./styles.css">
+    <title>Redirecting to Useless Tools</title>
+    <meta http-equiv="refresh" content="0; url=https://uselesstools.jonfinger.com/">
+    <link rel="canonical" href="https://uselesstools.jonfinger.com/">
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Space Mono", "IBM Plex Sans", monospace;
+        background: #0b0a16;
+        color: #f5f2ff;
+      }
+      main {
+        width: min(92vw, 640px);
+        border: 2px solid #cfc5f4;
+        padding: 1rem;
+        background: #15122a;
+      }
+      a {
+        color: #ece6ff;
+      }
+    </style>
   </head>
   <body>
-    <main class="page-shell">
-      <header class="app-header">
-        <nav class="crumbs" aria-label="Breadcrumb">
-          <a href="https://jonfinger.com">jonfinger.com</a>
-          <span class="crumb-sep">/</span>
-          <span aria-current="page">useless-tools</span>
-        </nav>
-
-        <div class="title-strip" aria-hidden="true">
-          <span class="title-strip__label">SELECT TOOL</span>
-          <span class="title-strip__hint">choose one // run on right panel</span>
-        </div>
-
-        <h1>Useless Tools</h1>
-        <p class="subtitle">DDR-style selector on the left. Active tool console on the right.</p>
-      </header>
-
-      <section class="ddr-layout" aria-label="Useless Tools application">
-        <aside class="selector-column" aria-label="Tool selector">
-          <div class="selector-shell">
-            <div class="selector-shell__header">
-              <span>Tool Roster</span>
-              <span class="selector-shell__counter" id="tool-counter">01 / 03</span>
-            </div>
-
-            <div class="song-list" role="listbox" aria-label="Tool list">
-              <button class="song-row is-selected" type="button" role="option" aria-selected="true" data-tool-select="url-lengthener">
-                <span class="song-row__title">URL Lengthener</span>
-                <span class="song-row__meta">Route Utility // 125 BPM</span>
-              </button>
-              <button class="song-row" type="button" role="option" aria-selected="false" data-tool-select="useless-facts">
-                <span class="song-row__title">Useless Facts</span>
-                <span class="song-row__meta">Info Noise // 140 BPM</span>
-              </button>
-              <button class="song-row" type="button" role="option" aria-selected="false" data-tool-select="obtuse-helper">
-                <span class="song-row__title">Obtuse Helper</span>
-                <span class="song-row__meta">Confusion Engine // 150 BPM</span>
-              </button>
-            </div>
-
-            <div class="selector-shell__footer">
-              <p id="active-tool-readout" class="active-readout">Now selecting: URL Lengthener</p>
-              <p class="control-readout">Controls: click, arrow keys, mouse wheel</p>
-            </div>
-          </div>
-        </aside>
-
-        <section class="panel-column" aria-live="polite">
-          <article class="tool-panel is-active" data-panel="url-lengthener">
-            <div class="tool-panel__header">
-              <span class="tool-panel__status">ACTIVE TOOL</span>
-              <h2>URL Lengthener</h2>
-            </div>
-            <p>
-              Turn short links into absurd links. This tool wraps a target URL in a long
-              redirect URL under <code>jonfinger.com/useless-tools/</code>.
-            </p>
-
-            <form id="url-form" class="url-form" novalidate>
-              <label for="target-url">Target URL</label>
-              <input id="target-url" name="target-url" type="url" required placeholder="https://example.com">
-
-              <fieldset class="length-fieldset">
-                <legend>Target Length</legend>
-                <div class="preset-row" role="group" aria-label="Length presets">
-                  <button class="preset-button" type="button" data-length="512">512</button>
-                  <button class="preset-button is-selected" type="button" data-length="1024">1024</button>
-                  <button class="preset-button" type="button" data-length="2048">2048</button>
-                </div>
-              </fieldset>
-
-              <div class="seed-row">
-                <label for="seed-input">Seed</label>
-                <div class="seed-controls">
-                  <input id="seed-input" type="text" readonly>
-                  <button id="new-seed" type="button">New seed</button>
-                </div>
-                <label class="checkbox-inline" for="randomize-seed">
-                  <input id="randomize-seed" type="checkbox">
-                  Randomize seed on generate
-                </label>
-              </div>
-
-              <button class="generate-button" type="submit">Generate long URL</button>
-            </form>
-
-            <p id="form-error" class="form-error" role="alert"></p>
-            <p id="form-status" class="form-status" role="status"></p>
-
-            <label for="long-url-output">Generated URL</label>
-            <textarea id="long-url-output" rows="4" readonly placeholder="Generated URL appears here"></textarea>
-
-            <div class="output-actions">
-              <button id="copy-url" type="button">Copy URL</button>
-              <a id="open-url" class="open-link is-disabled" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true">Open URL</a>
-            </div>
-          </article>
-
-          <article class="tool-panel tool-panel--coming" data-panel="useless-facts">
-            <div class="tool-panel__header">
-              <span class="tool-panel__status">COMING SOON</span>
-              <h2>Useless Facts</h2>
-            </div>
-            <p>This lane will dump perfectly true facts with zero practical value.</p>
-          </article>
-
-          <article class="tool-panel tool-panel--coming" data-panel="obtuse-helper">
-            <div class="tool-panel__header">
-              <span class="tool-panel__status">COMING SOON</span>
-              <h2>Obtuse Helper</h2>
-            </div>
-            <p>This lane will answer simple questions in increasingly indirect ways.</p>
-          </article>
-        </section>
-      </section>
+    <main>
+      <h1>Redirecting to Useless Tools</h1>
+      <p>
+        This path has moved. Continue to
+        <a href="https://uselesstools.jonfinger.com/">uselesstools.jonfinger.com</a>.
+      </p>
     </main>
-
-    <script src="./app.js" defer></script>
+    <script>
+      window.location.replace("https://uselesstools.jonfinger.com/");
+    </script>
   </body>
 </html>
