@@ -18,27 +18,10 @@ Serve locally:
 Optional live preview:
 - `quarto preview`
 
-## Draft post workflow
+## Drafts
 
-Create a draft:
-- `bin/new-draft.sh "Your post title"`
-
-Drafts are saved in `.drafts/`.
-`.drafts/` is gitignored and never deployed.
-
-Preview a draft locally:
-- `quarto preview .drafts/YYYY-MM-DD-your-post-title.qmd`
-
-Publish a draft:
-- `bin/publish-draft.sh .drafts/YYYY-MM-DD-your-post-title.qmd`
-
-The publish script moves the file into `posts/` and removes `draft: true`.
-
-List local drafts:
-- `bin/list-drafts.sh`
-
-Safety check before committing:
-- `bin/check-no-drafts.sh`
+Drafts are managed outside this repository.
+Only publish-ready posts should be added to `posts/`.
 
 ## Deployment
 
