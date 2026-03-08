@@ -10,32 +10,9 @@ body-classes: page-projects
 ::: {.trainer-hero__scene}
 ::: {.trainer-hero__panel}
 ::: {.trainer-hero__screen}
-::: {.trainer-hero__spark .trainer-hero__spark--one}
-:::
-
-::: {.trainer-hero__spark .trainer-hero__spark--two}
-:::
-
-::: {.trainer-hero__terminal}
-:::
-
 ::: {.trainer-hero__sprite}
 :::
 :::
-:::
-:::
-
-::: {.trainer-hero__copy}
-::: {.hero-label}
-Trainer Encounter
-:::
-
-::: {.hero-lead}
-Sprite-version Jon is running data science in tall grass: modeling signals, training odd tools, and shipping experiments into the wild.
-:::
-
-::: {.trainer-hero__caption}
-Pokedex: Typical human data scientist // Habitat: terminals, notebooks, coffee
 :::
 :::
 :::
@@ -46,10 +23,11 @@ Pokedex: Typical human data scientist // Habitat: terminals, notebooks, coffee
 Stats
 :::
 
-- Type: Data Scientist
-- Category: Coder
-- Region: USA
-- Weakness: Gluten
+<p>&gt; Type: Data Scientist</p>
+<p>&gt; Category: Coder</p>
+<p>&gt; Region: USA</p>
+<p>&gt; Strength: Professing</p>
+<p>&gt; Weakness: Gluten</p>
 :::
 
 ::: {.section-label}
@@ -63,7 +41,7 @@ Current Skills
 [
   {
     "title": "Useless Tools",
-    "summary": "A collection of unusual tools that approach shareholder-value generation with excessive literalism.",
+    "summary": "A collection of useless tools that approach generating insights and shareholder value with malicious compliance.",
     "tags": ["JavaScript", "Web"],
     "url": "https://uselesstools.jonfinger.com/"
   },
