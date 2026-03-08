@@ -9,40 +9,37 @@ body-classes: page-about
 ::: {.hud-grid}
 ::: {.hero-block}
 ::: {.hero-label}
-Trainer Profile
+About Trainer
 :::
 
 ::: {.hero-lead}
-Data scientist. Builder. Recovering academic. I work at the edge where messy real-world constraints meet practical AI execution.
+Data scientist. Builder. Recovering academic. I work at the edge where the determinism of the lab meets the stochasticism of the real world.
 :::
 :::
 
 ::: {.status-panel}
 ::: {.status-panel__title}
-Build Stats
+History
 :::
 
-- Main Skill: Applied Data Science
-- Secondary Skill: Production AI Workflows
-- Bias: Practical over performative
-- Weakness: Unclear goals and vague metrics
+- 2016-2018: Washington State University - M.S. Biology
+- 2019-2020: BloomTech - Data Science
+- 2020-2022: District 300 Schools - Data Information Specialist
+- 2022-2023: Geotab - Data Analyst
+- 2023-Present: Geotab - Data Scientist
 :::
 
 ::: {.dispatch-panel}
 ::: {.dispatch-panel__label}
-Operating Rules
+Strategy
 :::
 
-1. Solve for outcomes, not status.
-2. Keep tradeoffs visible.
-3. Protect quality while moving quickly.
-4. Treat AI as a tool, not a belief system.
+1. Impact over assumption.
+2. Collaboration over legacy.
+3. Empirical over theory.
+4. Every anything is possible.
 :::
 
-I care about outcomes, not theater.
-
-Most of my work sits at the intersection of science, education, and production AI workflows. I like systems that are honest about tradeoffs: speed versus rigor, scale versus trust, novelty versus reliability.
-
-This site is where I share field notes from that work.
+Don't panic -- it's all gluten-free here.
 
 :::

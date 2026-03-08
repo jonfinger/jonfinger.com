@@ -6,10 +6,6 @@ body-classes: page-projects
 
 ::: {.hud-grid}
 ::: {.hero-block}
-::: {.hero-label}
-Trainer Notes
-:::
-
 ::: {.hero-lead}
 A workshop notebook from a data scientist shipping real things in public. Practical experiments, strange tools, and working prototypes.
 :::
@@ -17,17 +13,17 @@ A workshop notebook from a data scientist shipping real things in public. Practi
 
 ::: {.status-panel}
 ::: {.status-panel__title}
-Field Status
+Developer Notes
 :::
 
-- Role: Data Scientist
-- Mode: Build + Test + Ship
-- Region: Biology, AI, Education
-- Current Build: Useless Tools
+- Type: Data Scientist
+- Category: Coder
+- Region: USA
+- Weakness: Gluten
 :::
 
 ::: {.section-label}
-Featured Projects
+Current Skills
 :::
 
 ::: {#project-grid .project-grid}
@@ -37,7 +33,7 @@ Featured Projects
 [
   {
     "title": "Useless Tools",
-    "summary": "Retro web toys, starting with a URL Lengthener that makes normal links absurdly long.",
+    "summary": "A collection of unusual tools that approach shareholder-value generation with excessive literalism.",
     "tags": ["JavaScript", "Web"],
     "url": "https://uselesstools.jonfinger.com/"
   },
@@ -58,12 +54,12 @@ Featured Projects
 
 ::: {.dispatch-panel}
 ::: {.dispatch-panel__label}
-Command Menu
+Party Options
 :::
 
 ::: {.dispatch-grid}
 ::: {.dispatch-item}
-[Open Blog Archive](blog.qmd)
+[Open Trainer Notes](blog.qmd)
 :::
 
 ::: {.dispatch-item}
