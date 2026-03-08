@@ -12,13 +12,6 @@ Date: 2026-02-28
 
 AI labor may not become universally cheap. As demand and reliability expectations rise, high-quality AI work could become premium and rationed.
 
-```text
-+----------------------------------------------------+
-|  LOG :: AI / COST CURVES                          |
-| NODE: JONFINGER.COM :: ENTRY DATE 2026-02-28      |
-+----------------------------------------------------+
-```
-
 > "It also takes a lot of energy to train a human."
 > -- Sam Altman
 

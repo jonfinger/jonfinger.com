@@ -5,21 +5,29 @@ body-classes: page-projects
 ---
 
 ::: {.hud-grid}
-::: {.hero-block}
-::: {.hero-lead}
-A workshop notebook from a data scientist shipping real things in public. Practical experiments, strange tools, and working prototypes.
+::: {.hero-block .hero-block--trainer}
+::: {.trainer-hero}
+::: {.trainer-hero__scene}
+::: {.trainer-hero__panel}
+::: {.trainer-hero__screen}
+::: {.trainer-hero__sprite}
+:::
+:::
+:::
+:::
 :::
 :::
 
 ::: {.status-panel}
 ::: {.status-panel__title}
-Developer Notes
+Stats
 :::
 
-- Type: Data Scientist
-- Category: Coder
-- Region: USA
-- Weakness: Gluten
+<p>&gt; Type: Data Scientist</p>
+<p>&gt; Category: Coder</p>
+<p>&gt; Region: USA</p>
+<p>&gt; Strength: Professing</p>
+<p>&gt; Weakness: Gluten</p>
 :::
 
 ::: {.section-label}
@@ -33,7 +41,7 @@ Current Skills
 [
   {
     "title": "Useless Tools",
-    "summary": "A collection of unusual tools that approach shareholder-value generation with excessive literalism.",
+    "summary": "A collection of useless tools that approach generating insights and shareholder value with malicious compliance.",
     "tags": ["JavaScript", "Web"],
     "url": "https://uselesstools.jonfinger.com/"
   },
@@ -63,7 +71,7 @@ Party Options
 :::
 
 ::: {.dispatch-item}
-[Read: Python Portfolio](posts/2026-02-08-building-python-portfolio.qmd)
+[Read: Cost Curves](posts/2026-02-28-maybe-we-didnt-think-about-cost-enough.qmd)
 :::
 
 ::: {.dispatch-item}
