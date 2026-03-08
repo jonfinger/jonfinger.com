@@ -43,7 +43,7 @@ Quick Commands
 
 ::: {.dispatch-grid}
 ::: {.dispatch-item}
-[Read Latest Published](posts/2026-02-23-ai-is-accelerating-productivity-and-angst.qmd)
+[Read Latest Published](posts/2026-02-28-maybe-we-didnt-think-about-cost-enough.qmd)
 :::
 
 ::: {.dispatch-item}

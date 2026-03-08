@@ -495,6 +495,182 @@ main.content > * {
     radial-gradient(circle at 86% 6%, rgba(214, 220, 234, 0.16), transparent 40%);
 }
 
+.hero-block--trainer {
+  padding: 1rem 1.06rem;
+}
+
+.trainer-hero {
+  display: grid;
+  grid-template-columns: minmax(200px, 232px) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.trainer-hero__scene {
+  position: relative;
+  min-height: 220px;
+  border: 3px solid rgba(240, 235, 255, 0.55);
+  border-radius: 6px;
+  padding: 0.82rem;
+  background:
+    linear-gradient(180deg, rgba(24, 20, 48, 0.95), rgba(12, 11, 27, 0.98)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(240, 235, 255, 0.04) 0,
+      rgba(240, 235, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 14px
+    );
+  box-shadow:
+    inset 0 0 0 2px rgba(240, 235, 255, 0.12),
+    3px 3px 0 0 rgba(13, 11, 25, 0.95);
+}
+
+.trainer-hero__panel {
+  position: relative;
+  height: 100%;
+  min-height: 180px;
+  border: 2px solid rgba(240, 235, 255, 0.26);
+  border-radius: 4px;
+  padding: 0.88rem;
+  background:
+    linear-gradient(180deg, rgba(26, 21, 51, 0.86), rgba(16, 14, 32, 0.94)),
+    radial-gradient(circle at 20% 0%, rgba(240, 235, 255, 0.12), transparent 34%);
+}
+
+.trainer-hero__screen {
+  position: absolute;
+  inset: 0.88rem;
+  border-radius: 2px;
+  background:
+    linear-gradient(180deg, rgba(46, 116, 104, 0.18), rgba(25, 71, 86, 0.08)),
+    linear-gradient(180deg, rgba(16, 20, 38, 0.12), transparent 60%);
+}
+
+.trainer-hero__screen::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 26%;
+  border-top: 2px solid rgba(240, 235, 255, 0.18);
+  background: linear-gradient(180deg, rgba(54, 107, 71, 0.86), rgba(40, 78, 56, 0.94));
+}
+
+.trainer-hero__terminal,
+.trainer-hero__sprite,
+.trainer-hero__spark {
+  position: absolute;
+  z-index: 1;
+  image-rendering: pixelated;
+}
+
+.trainer-hero__terminal {
+  left: 1.18rem;
+  bottom: 2.42rem;
+  width: 3.25rem;
+  height: 2.18rem;
+  border: 2px solid rgba(240, 235, 255, 0.4);
+  background: linear-gradient(180deg, rgba(106, 235, 213, 0.58), rgba(28, 77, 88, 0.92));
+  box-shadow:
+    inset 0 0 0 2px rgba(13, 11, 25, 0.5),
+    2px 2px 0 0 rgba(13, 11, 25, 0.95);
+}
+
+.trainer-hero__terminal::before {
+  content: "";
+  position: absolute;
+  left: 0.38rem;
+  top: 0.46rem;
+  width: 2.1rem;
+  height: 0.18rem;
+  background: rgba(9, 15, 23, 0.82);
+  box-shadow:
+    0 0.42rem 0 rgba(9, 15, 23, 0.82),
+    0.7rem 0.84rem 0 rgba(9, 15, 23, 0.82);
+}
+
+.trainer-hero__terminal::after {
+  content: "";
+  position: absolute;
+  left: 1.16rem;
+  bottom: -0.72rem;
+  width: 0.96rem;
+  height: 0.72rem;
+  background: rgba(56, 56, 80, 0.96);
+  box-shadow: 0.2rem 0 0 rgba(25, 24, 36, 0.82);
+}
+
+.trainer-hero__sprite {
+  left: 5.28rem;
+  bottom: 2.18rem;
+  width: 1rem;
+  height: 1rem;
+  background: #f6d3b2;
+  box-shadow:
+    0 1rem 0 #f6d3b2,
+    1rem 0 0 #1b1830,
+    2rem 0 0 #1b1830,
+    -1rem 1rem 0 #1b1830,
+    2rem 1rem 0 #1b1830,
+    -1rem 2rem 0 #1b1830,
+    0 2rem 0 #ffffff,
+    1rem 2rem 0 #ffffff,
+    2rem 2rem 0 #1b1830,
+    -1rem 3rem 0 #3b8ad9,
+    0 3rem 0 #3b8ad9,
+    1rem 3rem 0 #d5ecff,
+    2rem 3rem 0 #3b8ad9,
+    -1rem 4rem 0 #3b8ad9,
+    0 4rem 0 #3b8ad9,
+    1rem 4rem 0 #0d0b19,
+    2rem 4rem 0 #3b8ad9,
+    -1rem 5rem 0 #0d0b19,
+    0 5rem 0 #0d0b19,
+    1rem 5rem 0 #c9ccd8,
+    2rem 5rem 0 #0d0b19,
+    -1rem 6rem 0 #7a4f2c,
+    2rem 6rem 0 #7a4f2c,
+    -1rem 7rem 0 #7a4f2c,
+    2rem 7rem 0 #7a4f2c;
+}
+
+.trainer-hero__spark {
+  width: 0.34rem;
+  height: 0.34rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow:
+    0.34rem 0 0 rgba(255, 255, 255, 0.42),
+    -0.34rem 0 0 rgba(255, 255, 255, 0.42),
+    0 0.34rem 0 rgba(255, 255, 255, 0.42),
+    0 -0.34rem 0 rgba(255, 255, 255, 0.42);
+}
+
+.trainer-hero__spark--one {
+  left: 1.6rem;
+  top: 1.5rem;
+}
+
+.trainer-hero__spark--two {
+  right: 1.7rem;
+  top: 2.1rem;
+}
+
+.trainer-hero__copy {
+  display: grid;
+  gap: 0.52rem;
+}
+
+.trainer-hero__caption {
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.34rem;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
 .hero-lead {
   margin: 0;
   max-width: 72ch;
@@ -516,7 +692,8 @@ main.content > * {
   color: var(--text-dim);
 }
 
-.status-panel ul {
+.status-panel ul,
+.status-panel ol {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -528,11 +705,16 @@ main.content > * {
   color: var(--text-muted);
 }
 
-.status-panel li::before {
+.status-panel ul li::before {
   content: ">";
   display: inline-block;
   width: 0.88rem;
   color: rgba(240, 235, 255, 0.7);
+}
+
+.status-panel ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
 }
 
 .blog-header {
@@ -677,6 +859,18 @@ main.content > * {
   color: var(--text-dim);
 }
 
+.dispatch-panel ul,
+.dispatch-panel ol {
+  margin: 0;
+  padding-left: 1.3rem;
+  display: grid;
+  gap: 0.32rem;
+}
+
+.dispatch-panel li {
+  color: var(--text-muted);
+}
+
 .dispatch-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -715,7 +909,7 @@ main.content > * {
 
 #listing-listing .list.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.04rem;
   align-items: stretch;
 }
@@ -724,6 +918,10 @@ main.content > * {
   width: auto !important;
   max-width: none;
   min-width: 0;
+}
+
+#listing-listing .list.grid > .g-col-1:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 #listing-listing .quarto-grid-item.card {
@@ -824,6 +1022,10 @@ footer {
     padding: 1.86rem 1.68rem;
   }
 
+  .trainer-hero {
+    grid-template-columns: 1fr;
+  }
+
   .dispatch-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -905,6 +1107,16 @@ footer {
   .dispatch-grid {
     grid-template-columns: 1fr;
     gap: 0.86rem;
+  }
+
+  .trainer-hero__scene {
+    min-height: 200px;
+  }
+
+  .trainer-hero__sprite {
+    left: 4.6rem;
+    transform: scale(0.88);
+    transform-origin: bottom left;
   }
 
   .blog-header {

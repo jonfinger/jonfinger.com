@@ -5,15 +5,45 @@ body-classes: page-projects
 ---
 
 ::: {.hud-grid}
-::: {.hero-block}
+::: {.hero-block .hero-block--trainer}
+::: {.trainer-hero}
+::: {.trainer-hero__scene}
+::: {.trainer-hero__panel}
+::: {.trainer-hero__screen}
+::: {.trainer-hero__spark .trainer-hero__spark--one}
+:::
+
+::: {.trainer-hero__spark .trainer-hero__spark--two}
+:::
+
+::: {.trainer-hero__terminal}
+:::
+
+::: {.trainer-hero__sprite}
+:::
+:::
+:::
+:::
+
+::: {.trainer-hero__copy}
+::: {.hero-label}
+Trainer Encounter
+:::
+
 ::: {.hero-lead}
-A workshop notebook from a data scientist shipping real things in public. Practical experiments, strange tools, and working prototypes.
+Sprite-version Jon is running data science in tall grass: modeling signals, training odd tools, and shipping experiments into the wild.
+:::
+
+::: {.trainer-hero__caption}
+Pokedex: Typical human data scientist // Habitat: terminals, notebooks, coffee
+:::
+:::
 :::
 :::
 
 ::: {.status-panel}
 ::: {.status-panel__title}
-Developer Notes
+Stats
 :::
 
 - Type: Data Scientist
@@ -63,7 +93,7 @@ Party Options
 :::
 
 ::: {.dispatch-item}
-[Read: Python Portfolio](posts/2026-02-08-building-python-portfolio.qmd)
+[Read: Cost Curves](posts/2026-02-28-maybe-we-didnt-think-about-cost-enough.qmd)
 :::
 
 ::: {.dispatch-item}

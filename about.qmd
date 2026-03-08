@@ -9,16 +9,27 @@ body-classes: page-about
 ::: {.hud-grid}
 ::: {.hero-block}
 ::: {.hero-label}
-About Trainer
+Notes
 :::
 
 ::: {.hero-lead}
-Data scientist. Builder. Recovering academic. I work at the edge where the determinism of the lab meets the stochasticism of the real world.
+Typical human data scientist. Recovering academic. Find me outside -- or where the determinism of the lab meets the stochasticism of the real world.
 :::
 :::
 
 ::: {.status-panel}
 ::: {.status-panel__title}
+Strategy
+:::
+
+1. Impact over assumption.
+2. Collaboration over legacy.
+3. Empirical over theory.
+4. Every anything is possible.
+:::
+
+::: {.dispatch-panel}
+::: {.dispatch-panel__label}
 History
 :::
 
@@ -29,17 +40,6 @@ History
 - 2023-Present: Geotab - Data Scientist
 :::
 
-::: {.dispatch-panel}
-::: {.dispatch-panel__label}
-Strategy
-:::
-
-1. Impact over assumption.
-2. Collaboration over legacy.
-3. Empirical over theory.
-4. Every anything is possible.
-:::
-
-Don't panic -- it's all gluten-free here.
+Don't panic 👍🏻
 
 :::
