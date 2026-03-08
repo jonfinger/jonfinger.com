@@ -406,6 +406,10 @@ main.content > * {
   display: none;
 }
 
+.page-post-cost-curves #title-block-header.quarto-title-block {
+  display: none;
+}
+
 .quarto-title-meta {
   color: var(--text-dim);
   font-size: 0.38rem;

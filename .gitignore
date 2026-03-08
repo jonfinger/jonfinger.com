@@ -7,7 +7,6 @@ _site
 # quarto outputs
 /.quarto/
 **/*.quarto_ipynb
-.drafts/
 
 # secrets
 .env

@@ -47,10 +47,6 @@ Quick Commands
 :::
 
 ::: {.dispatch-item}
-[Open Draft Folder](posts/drafts/)
-:::
-
-::: {.dispatch-item}
 [Back To Projects](index.qmd)
 :::
 :::

@@ -1,0 +1,69 @@
+---
+title: "Maybe It Was All About The Benjamins After All"
+date: 2026-02-28
+description: "AI labor may not become universally cheap. As demand and reliability expectations rise, high-quality AI work could become premium and rationed."
+body-classes: page-post page-post-cost-curves
+title-block-style: none
+---
+
+# Maybe It Was All About The Benjamins After All
+
+Date: 2026-02-28
+
+AI labor may not become universally cheap. As demand and reliability expectations rise, high-quality AI work could become premium and rationed.
+
+```text
++----------------------------------------------------+
+|  LOG :: AI / COST CURVES                          |
+| NODE: JONFINGER.COM :: ENTRY DATE 2026-02-28      |
++----------------------------------------------------+
+```
+
+> "It also takes a lot of energy to train a human."
+> -- Sam Altman
+
+For a while, the story we've all been seeing is pressing run on Claude/ChatGPT/Gemini is so cheap and so powerful, that it will be a no-brainer to use it for everything. The cost of AI labor is negligible compared to the value it creates,  we will use it everywhere. So much so that eventually we're all going to be out of jobs.
+
+They had me in the first half -- not gonna lie. 
+
+But we may be waking in a different reality. Not a world where AI is free and ubiquitous -- a world where everyone *wants* the output of high-performance AI but due to cost constraints one must decide which can actuallay *afford* it. You can't hire senior+ staff for every task, and you can't use the most expensive model for every task. 
+
+---
+
+Now, now. now, stop ✋🏻 I know what you're gonna say. Everyone's already talking about how AI is energy-intensive and now we have to launch our data centers into space. But this comparison is a cartoon version of human labor... I mean biologically speaking, humans are not somehow energy-free. We all require outside energy just to live. We require it for  schooling, growing food, job training, healthcare systems, commercial buildings, pubic transportation, and daily maintenance just to keep things running. For some reason we're pointing out the obvious that machines require energy and new, more complex111 machines often require more energy. What I'm saying is that we need to stop pretending that human labor is somehow not energy costly. 
+
+So, what was once "oh hey have you tried this AI thing?" has turned into "how can i make this ai thing work for me." And, everyone is out there slaughtering trees with a wave of a prompt. Similarly, as context windows grow, reliability requirements increase, and higher-end reasoning models become the default expectation, the average cost of AI per user increases. As users increase their demand for AI, the per-person cost also increases -- which means our own demand for AI might curb our own capabilities to use it.
+
+---
+
+What used to be apples (engineers) trying to talk to oranges (stakeholders), has now become apple-oranges talking to orange-apples. Both sides are using AI to increase their own capability, reach, and scope. But that also means both sides are increasing their own demand for AI. This increase is multiplicative:
+
+- More users
+- More usage per user
+- More expensive model tiers
+- More governance overhead
+
+That is not a flat cost curve. That is a bottleneck forming.
+
+---
+
+If we are being serious and not chicken-little about "AI replacing human labor" in any meaningful way, we cannot ignore the future cost of the maintaining the landscape we're building.
+
+Production AI needs compliance controls, auditability, policy enforcement, data boundaries, legal review, incident response, and retraining loops. Those are not optional if outcomes matter. They are the equivalent of professional standards in human systems: training, licensing, supervision, accountability.
+
+None of this is free.
+
+Which raises an uncomfortable possibility: we may not end up with universal low-cost AI labor. We may end up with a split system.
+
+- Cheap, flexible human labor where risk tolerance is high
+- Premium, cleaner AI labor where reliability and compliance are non-negotiable
+
+If that sounds familiar, it should. Society often knows which option is cleaner and still optimizes for convenience and short-term cost. How many people do you know use solar even though it's cleaner? How many people do you know use public transportation even though it's cheaper all the time? How many people do you know use reusable water bottles even though it's cheaper than single-use? We have a long history of choosing the more expensive option when it is more convenient, even if it is not better for us or the world.
+
+---
+
+This is not an argument against AI or to stop whinging engineers. It is an argument for checking our assumptions.
+
+AI is a real force multiplier. It can raise the ceiling for individuals and teams. But force multipliers also amplify constraints. If you scale adoption faster than you scale cost discipline and governance, you do not get liberation. You get a budget fire and a trust problem.
+
+If we want AI to be durable infrastructure instead of a short-lived productivity sugar high, we need to think about cost with the same seriousness we do to performance.
