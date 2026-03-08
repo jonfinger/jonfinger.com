@@ -382,7 +382,7 @@ main.content::before {
 }
 
 main.content::after {
-  content: "SYSTEM LOG // JONFINGER.COM";
+  content: none;
   position: absolute;
   right: 1rem;
   top: 0.58rem;
@@ -544,6 +544,26 @@ main.content > * {
   justify-content: center;
   isolation: isolate;
   background: none;
+}
+
+.trainer-hero__name {
+  position: absolute;
+  left: 50%;
+  top: 1.15rem;
+  z-index: 2;
+  transform: translateX(-50%);
+  margin: 0;
+  font-family: "Press Start 2P", "Space Mono", monospace;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.98);
+  text-shadow:
+    0 0 0.18rem rgba(255, 255, 255, 0.92),
+    0 0 0.55rem rgba(244, 239, 255, 0.74),
+    0 0 1.1rem rgba(169, 154, 255, 0.32);
 }
 
 .trainer-hero__screen::before {
@@ -1068,6 +1088,11 @@ footer {
   .trainer-hero__sprite {
     width: 5.1rem;
     height: 12.5rem;
+  }
+
+  .trainer-hero__name {
+    top: 0.86rem;
+    font-size: 0.58rem;
   }
 
   .blog-header {
