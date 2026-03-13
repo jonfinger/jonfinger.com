@@ -1,7 +1,12 @@
 ---
-title: "Unique Backgrounds Build Better Coders"
+title: "The Geometry of Thought Between Biology, Teaching, and Code"
 date: 2026-02-18
 description: "Why the intersection of biology, AI, and education creates stronger engineering judgment and more valuable coders."
+image: ../assets/img/blog-battles/literal-poodle.png
+image-alt: "Pixel sprite of a grayscale poodle wearing a bandana."
+battle-name: "Scholar Poodle"
+battle-label: "HYBRID BUILD"
+battle-quote: "Note 02.23.2026: This was an experiment in AI writing. I beg the reader forgive me this silly and lazy experiment. -- Jon"
 body-classes: page-post
 ---
 
