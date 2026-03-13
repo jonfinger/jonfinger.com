@@ -5,7 +5,9 @@ body-classes: page-blog
 listing:
   contents: posts/*.qmd
   sort: "date desc"
-  type: grid
-  fields: [image, title, date, description]
+  type: custom
+  template: templates/blog-battle-listing.ejs.md
+  grid-columns: 2
+  fields: [image, title, date, description, battle-name, battle-label, battle-quote]
   categories: false
 ---
