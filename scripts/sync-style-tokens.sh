@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
-SOURCE_TOKENS="${REPO_ROOT}/design-system/pixel-theme-tokens.css"
+SOURCE_TOKENS="${REPO_ROOT}/design-system/theme-tokens.css"
 TARGETS_FILE="${REPO_ROOT}/design-system/style-sync-targets.txt"
 
 if [[ ! -f "${SOURCE_TOKENS}" ]]; then

@@ -5,7 +5,7 @@ This workflow keeps the main site and app surfaces visually aligned.
 ## Source Files
 
 1. Shared token source
-- `/Users/jaef/things/jonfinger.com/design-system/pixel-theme-tokens.css`
+- `/Users/jaef/things/jonfinger.com/design-system/theme-tokens.css`
 
 2. Sync target list
 - `/Users/jaef/things/jonfinger.com/design-system/style-sync-targets.txt`
@@ -15,7 +15,7 @@ This workflow keeps the main site and app surfaces visually aligned.
 
 ## Standard Update Flow
 
-1. Edit shared tokens in `design-system/pixel-theme-tokens.css`.
+1. Edit shared tokens in `design-system/theme-tokens.css`.
 2. Sync shared style tokens:
 
 ```bash
