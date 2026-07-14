@@ -6,7 +6,7 @@ const fallbackScene = {
 };
 %>
 
-::: {.list .grid .battle-card-list}
+::: {.list .grid .battle-card-list .column-page}
 
 <% for (const item of items) {
 const battleLabel = item["battle-label"] || fallbackScene.label;

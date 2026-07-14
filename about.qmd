@@ -4,8 +4,6 @@ page-layout: full
 body-classes: page-about
 ---
 
-## Jon Finger
-
 ::: {.hud-grid}
 ::: {.hero-block}
 ::: {.hero-label}
