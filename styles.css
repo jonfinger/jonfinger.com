@@ -719,6 +719,21 @@ body.page-world {
   padding-top: 0 !important;
 }
 
+/* Quarto emits a minimal title header even under `title-block-style: none`.
+   Keep its h1 for assistive tech but remove it from flow so nothing sits
+   above #world (in-flow content there shifts the engine's track start). */
+.page-world #title-block-header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Navbar floats transparent over the world; solidifies once scrolled. */
 body.page-world #quarto-header .navbar {
   background: linear-gradient(180deg, rgba(12, 11, 22, 0.6), rgba(12, 11, 22, 0));
@@ -740,6 +755,8 @@ body.page-world #quarto-header.is-scrolled .navbar {
   --sw-ink: var(--text-strong);
   --sw-ink-soft: var(--text-muted);
   --sw-accent: var(--accent);
+  --sw-font-display: var(--font-display);
+  --sw-font-body: var(--font-body);
 }
 
 /* Everything after the track slides OVER the engine's pinned chrome (z 0-60). */

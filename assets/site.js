@@ -57,61 +57,9 @@
     });
   }
 
-  function renderProjectCards() {
-    var container = document.getElementById("project-grid");
-    var dataEl = document.getElementById("project-data");
-
-    if (!container || !dataEl || container.children.length > 0) {
-      return;
-    }
-
-    var projects;
-    try {
-      projects = JSON.parse(dataEl.textContent || "[]");
-    } catch (_error) {
-      return;
-    }
-
-    var fragment = document.createDocumentFragment();
-
-    projects.forEach(function (project) {
-      var card = document.createElement("a");
-      var url = project.url || "#";
-      card.className = "project-card";
-      card.href = url;
-      card.setAttribute("aria-label", (project.title || "Project") + " link");
-
-      var title = document.createElement("h3");
-      title.className = "project-card__title";
-      title.textContent = project.title || "Untitled project";
-
-      var summary = document.createElement("p");
-      summary.className = "project-card__summary";
-      summary.textContent = project.summary || "";
-
-      var tags = document.createElement("div");
-      tags.className = "project-card__tags";
-
-      (project.tags || []).forEach(function (tag) {
-        var tagEl = document.createElement("span");
-        tagEl.className = "project-tag";
-        tagEl.textContent = tag;
-        tags.appendChild(tagEl);
-      });
-
-      card.appendChild(title);
-      card.appendChild(summary);
-      card.appendChild(tags);
-      fragment.appendChild(card);
-    });
-
-    container.appendChild(fragment);
-  }
-
   window.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("has-js");
     setActiveNavLink();
     updateNavbarProgress();
-    renderProjectCards();
   });
 })();

@@ -1,70 +1,69 @@
 ---
-title: "JonFinger Home"
-page-layout: full
-body-classes: page-projects
+title: "Jon Finger"
+description: "Fly through the life of Jon Finger — data scientist, recovering academic, found outside."
+page-layout: custom
+title-block-style: none
+body-classes: page-world
+include-in-header:
+  - text: |
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 ---
 
-::: {.hud-grid}
-::: {.hero-block .hero-block--trainer}
-::: {.trainer-hero}
-::: {.trainer-hero__scene}
-::: {.trainer-hero__panel}
-::: {.trainer-hero__screen}
-::: {.trainer-hero__name}
-Jon
-:::
-::: {.trainer-hero__sprite}
-:::
-:::
-:::
-:::
-:::
+```{=html}
+<div id="world" aria-label="Scroll-driven flight through the life of Jon Finger"></div>
+```
+
+::: {.world-outro}
+::: {.world-outro__inner}
+
+::: {.section-label}
+Trainer Card
 :::
 
-::: {.status-panel}
-::: {.status-panel__title}
-Stats
-:::
-
-<p>&gt; Type: Data Scientist</p>
-<p>&gt; Category: Coder</p>
-<p>&gt; Region: USA</p>
-<p>&gt; Strength: Professing</p>
-<p>&gt; Weakness: Gluten</p>
-:::
+```{=html}
+<div class="trainer-card">
+  <div class="trainer-card__portrait">
+    <img class="trainer-card__sprite" src="assets/img/jon-sprite-transparent.png"
+         alt="Pixel-art sprite of Jon in a jacket and lanyard" width="458" height="1122">
+  </div>
+  <div class="trainer-card__stats">
+    <div class="trainer-card__name">Jon</div>
+    <dl>
+      <div class="stat-row"><dt>Type</dt><dd>Data Scientist</dd></div>
+      <div class="stat-row"><dt>Category</dt><dd>Coder</dd></div>
+      <div class="stat-row"><dt>Region</dt><dd>USA</dd></div>
+      <div class="stat-row"><dt>Strength</dt><dd>Professing</dd></div>
+      <div class="stat-row"><dt>Weakness</dt><dd>Gluten</dd></div>
+    </dl>
+  </div>
+</div>
+```
 
 ::: {.section-label}
 Current Skills
 :::
 
-::: {#project-grid .project-grid}
-:::
+```{=html}
+<div class="project-grid">
+  <a class="project-card" href="https://uselesstools.jonfinger.com/">
+    <h3 class="project-card__title">Useless Tools</h3>
+    <p class="project-card__summary">A collection of useless tools that approach generating insights and shareholder value with malicious compliance.</p>
+    <div class="project-card__tags"><span class="project-tag">JavaScript</span><span class="project-tag">Web</span></div>
+  </a>
+  <a class="project-card" href="https://github.com/jonfinger/stackscenes/blob/main/README.md">
+    <h3 class="project-card__title">Stackscenes</h3>
+    <p class="project-card__summary">In development: an attempt at creating a cinematic experience from human-created TCG stories.</p>
+    <div class="project-card__tags"><span class="project-tag">In Development</span><span class="project-tag">Data Science</span><span class="project-tag">Python</span></div>
+  </a>
+  <a class="project-card" href="https://www.dissertations.wsu.edu/Thesis/Spring2018/J_Finger_041718.pdf">
+    <h3 class="project-card__title">Biology Masters Thesis</h3>
+    <p class="project-card__summary">Graduate thesis on modeling range expansion of an invasive species.</p>
+    <div class="project-card__tags"><span class="project-tag">Paper</span></div>
+  </a>
+</div>
+```
 
-<script type="application/json" id="project-data">
-[
-  {
-    "title": "Useless Tools",
-    "summary": "A collection of useless tools that approach generating insights and shareholder value with malicious compliance.",
-    "tags": ["JavaScript", "Web"],
-    "url": "https://uselesstools.jonfinger.com/"
-  },
-  {
-    "title": "Stackscenes",
-    "summary": "In development: an attempt at creating a cinematic experience from human-created TCG stories.",
-    "tags": ["In Development", "Data Science", "Python"],
-    "url": "https://github.com/jonfinger/stackscenes/blob/main/README.md"
-  },
-  {
-    "title": "Biology Masters Thesis",
-    "summary": "Graduate thesis on modeling range expansion of an invasive species.",
-    "tags": ["Paper"],
-    "url": "https://www.dissertations.wsu.edu/Thesis/Spring2018/J_Finger_041718.pdf"
-  }
-]
-</script>
-
-::: {.dispatch-panel}
-::: {.dispatch-panel__label}
+::: {.section-label}
 Party Options
 :::
 
@@ -81,6 +80,111 @@ Party Options
 [Read: Productivity & Angst](posts/2026-02-23-ai-is-accelerating-productivity-and-angst.qmd)
 :::
 :::
-:::
+
+```{=html}
+<div class="world-outro__cta">
+  <a class="btn-signal" href="https://www.linkedin.com/in/jae-finger/">Connect on LinkedIn</a>
+  <a class="btn-ghost" href="https://bsky.app/profile/jonfinger.com">Bluesky</a>
+</div>
+```
 
 :::
+:::
+
+```{=html}
+<script src="assets/world/scrub-engine.js"></script>
+<script>
+  (function () {
+    var world = document.getElementById('world');
+    if (!world || typeof mountScrollWorld !== 'function') return;
+    mountScrollWorld(world, {
+      nav: false,                 // the Quarto navbar is the site nav
+      hint: 'scroll to begin',
+      diveScroll: 1.3,
+      connScroll: 0.9,
+      sections: [
+        {
+          id: 'spawn', label: 'Spawn Point',
+          still: 'assets/world/spawn.webp',
+          clip: 'assets/world/vid/spawn.mp4', clipMobile: 'assets/world/vid/spawn-m.mp4',
+          accent: '#97a8ff',
+          scroll: 1.5, linger: 0.35,
+          eyebrow: 'Route 00 — Origin',
+          title: 'Every save file starts somewhere.',
+          body: 'CRT glow, cartridge dust, and a shoebox of trading cards — the first systems I ever studied.',
+          tags: ['8-bit', 'TCG', 'Curiosity']
+        },
+        {
+          id: 'field', label: 'The Field Years',
+          still: 'assets/world/field.webp',
+          clip: 'assets/world/vid/field.mp4', clipMobile: 'assets/world/vid/field-m.mp4',
+          accent: '#7fe6a3',
+          eyebrow: 'LVL 2016–2018 — Washington State',
+          title: 'Science is a contact sport.',
+          body: 'M.S. Biology: modeling an invasive species’ range expansion — quadrats, weather, and gloriously stubborn data.',
+          tags: ['Biology', 'Research', 'Outside']
+        },
+        {
+          id: 'classroom', label: 'The Classroom',
+          still: 'assets/world/classroom.webp',
+          clip: 'assets/world/vid/classroom.mp4', clipMobile: 'assets/world/vid/classroom-m.mp4',
+          accent: '#ffc46b',
+          eyebrow: 'LVL 2019–2022 — Reinvention',
+          title: 'Teaching by day, training by night.',
+          body: 'School-district data systems on the clock, data-science bootcamp after hours — pedagogy meets pipelines.',
+          tags: ['District 300', 'BloomTech', 'Education']
+        },
+        {
+          id: 'highway', label: 'The Data Highway',
+          still: 'assets/world/highway.webp',
+          clip: 'assets/world/vid/highway.mp4', clipMobile: 'assets/world/vid/highway-m.mp4',
+          accent: '#8fd0ff',
+          eyebrow: 'LVL 2022–Now — Geotab',
+          title: 'Where the models meet the road.',
+          body: 'Data scientist on telematics: fleet-scale signals, production models, and dashboards that ride along.',
+          tags: ['Telematics', 'ML', 'Production']
+        },
+        {
+          id: 'workshop', label: 'The Workshop',
+          still: 'assets/world/workshop.webp',
+          clip: 'assets/world/vid/workshop.mp4', clipMobile: 'assets/world/vid/workshop-m.mp4',
+          accent: '#ff9ecf',
+          eyebrow: 'Side Quests',
+          title: 'Useless tools, priceless lessons.',
+          body: 'Malicious-compliance web toys, and Stackscenes — turning trading-card stories into cinema.',
+          tags: ['Useless Tools', 'Stackscenes', 'Play']
+        },
+        {
+          id: 'summit', label: 'The Summit',
+          still: 'assets/world/summit.webp',
+          clip: 'assets/world/vid/summit.mp4', clipMobile: 'assets/world/vid/summit-m.mp4',
+          accent: '#edff85',
+          scroll: 1.6, linger: 0.4,
+          eyebrow: 'Present Day — Outside',
+          title: 'Don’t panic.',
+          body: 'Typical human data scientist. Recovering academic. The journey continues — come say hi.',
+          tags: [],
+          cta: {
+            primary: { label: 'Connect on LinkedIn', href: 'https://www.linkedin.com/in/jae-finger/' },
+            secondary: { label: 'Read the trainer notes', href: 'blog.html' }
+          }
+        }
+      ],
+      connectors: [
+        'assets/world/vid/conn1.mp4',
+        'assets/world/vid/conn2.mp4',
+        'assets/world/vid/conn3.mp4',
+        'assets/world/vid/conn4.mp4',
+        'assets/world/vid/conn5.mp4'
+      ],
+      connectorsMobile: [
+        'assets/world/vid/conn1-m.mp4',
+        'assets/world/vid/conn2-m.mp4',
+        'assets/world/vid/conn3-m.mp4',
+        'assets/world/vid/conn4-m.mp4',
+        'assets/world/vid/conn5-m.mp4'
+      ]
+    });
+  })();
+</script>
+```
