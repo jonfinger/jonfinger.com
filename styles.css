@@ -1005,6 +1005,51 @@ body.page-world #quarto-header.is-scrolled .navbar {
   }
 }
 
+@media (max-width: 560px) {
+  .battle-card__scene {
+    aspect-ratio: 4 / 3;
+  }
+
+  .battle-card__arena-tag {
+    font-size: 0.5rem;
+    padding: 0.3rem 0.4rem;
+    max-width: 42%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .battle-card__status {
+    min-width: 0;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .battle-card__status-name {
+    font-size: 0.68rem;
+  }
+
+  .battle-card__status-bars span {
+    width: 12px;
+  }
+
+  .battle-card__foe {
+    bottom: 30%;
+  }
+
+  .battle-card__trainer {
+    bottom: 29%;
+  }
+
+  .battle-card__foe-img {
+    max-height: 110px;
+  }
+
+  .battle-card__hook {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
 /* ---------------------------------------------------------------------------
  * Reduced motion
  * ------------------------------------------------------------------------- */
