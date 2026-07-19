@@ -34,9 +34,10 @@ body-classes: page-home
           <span class="gauge__value">Next Lv.</span>
         </div>
         <dl class="hero-card__rows">
-          <div class="stat-row"><dt>Type</dt><dd>Data Scientist</dd></div>
-          <div class="stat-row"><dt>Category</dt><dd>Coder</dd></div>
-          <div class="stat-row"><dt>Region</dt><dd>USA</dd></div>
+          <div class="stat-row"><dt>Type</dt><dd>Biology / Data</dd></div>
+          <div class="stat-row"><dt>Origin</dt><dd>Chicago, IL</dd></div>
+          <div class="stat-row"><dt>Region</dt><dd>Las Vegas, NV</dd></div>
+          <div class="stat-row"><dt>Party</dt><dd>One miniature poodle</dd></div>
           <div class="stat-row"><dt>Strength</dt><dd>Professing</dd></div>
           <div class="stat-row"><dt>Weakness</dt><dd>Gluten</dd></div>
         </dl>
@@ -44,7 +45,7 @@ body-classes: page-home
     </div>
 
     <div class="dialog-box reveal" data-reveal-order="2" data-typewriter>
-      <p class="dialog-box__text">A wild JON appeared! Typical human data scientist. Recovering academic. Found outside.</p>
+      <p class="dialog-box__text">A wild JON appeared! Evolutionary biologist turned data scientist. Chased invasive snails through national parks; now chases signal through data. Found outside.</p>
       <span class="dialog-box__cursor" aria-hidden="true">&#9660;</span>
     </div>
 
@@ -75,15 +76,10 @@ body-classes: page-home
         <p class="project-card__summary">A collection of useless tools that approach generating insights and shareholder value with malicious compliance.</p>
         <div class="project-card__tags"><span class="project-tag">JavaScript</span><span class="project-tag">Web</span></div>
       </a>
-      <a class="project-card" href="https://github.com/jonfinger/stackscenes/blob/main/README.md">
-        <h3 class="project-card__title">Stackscenes</h3>
-        <p class="project-card__summary">In development: an attempt at creating a cinematic experience from human-created TCG stories.</p>
-        <div class="project-card__tags"><span class="project-tag">In Development</span><span class="project-tag">Data Science</span><span class="project-tag">Python</span></div>
-      </a>
       <a class="project-card" href="https://www.dissertations.wsu.edu/Thesis/Spring2018/J_Finger_041718.pdf">
         <h3 class="project-card__title">Biology Masters Thesis</h3>
-        <p class="project-card__summary">Graduate thesis on modeling range expansion of an invasive species.</p>
-        <div class="project-card__tags"><span class="project-tag">Paper</span></div>
+        <p class="project-card__summary">Modeling the range expansion of the New Zealand mudsnail — an invasive species spreading through Western waterways.</p>
+        <div class="project-card__tags"><span class="project-tag">Invasion Biology</span><span class="project-tag">Population Genetics</span><span class="project-tag">Paper</span></div>
       </a>
       <a class="project-card" href="about.html">
         <h3 class="project-card__title">This Website</h3>

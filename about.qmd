@@ -11,7 +11,9 @@ Notes
 :::
 
 ::: {.hero-lead}
-Typical human data scientist. Recovering academic. Find me outside -- or where the determinism of the lab meets the stochasticism of the real world.
+Evolutionary biologist turned data scientist. I spent years on population genetics and invasion biology -- tracking New Zealand mudsnails through national park waterways -- and I still think about problems the same way: observe carefully, model the uncertainty, explain it plainly.
+
+Chicago-raised, Las Vegas-based, usually planning the next move. Find me outside with my miniature poodle -- or where the determinism of the lab meets the stochasticism of the real world.
 :::
 :::
 
@@ -34,8 +36,8 @@ History
 - 2016-2018: Washington State University - M.S. Biology
 - 2019-2020: BloomTech - Data Science
 - 2020-2022: District 300 Schools - Data Information Specialist
-- 2022-2023: Geotab - Data Analyst
-- 2023-Present: Geotab - Data Scientist
+- 2022-2023: Data Analyst
+- 2023-Present: Data Scientist
 :::
 
 Don't panic 👍🏻
