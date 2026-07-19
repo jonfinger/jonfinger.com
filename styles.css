@@ -476,9 +476,13 @@ main pre code {
   box-shadow: var(--shadow-md);
 }
 
+/* The scene is a battle stage: sprites stand on --stage-floor, and the quote
+   box occupies a reserved band below it so nothing is ever clipped by it. */
 .battle-card__scene {
+  --hook-band: 5.6rem;
+  --stage-floor: 6.3rem;
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 3 / 2;
   background:
     radial-gradient(120% 90% at 50% 108%, rgba(151, 168, 255, 0.16), transparent 60%),
     linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
@@ -518,8 +522,8 @@ main pre code {
 }
 
 .battle-card__status--trainer {
-  bottom: 30%;
-  left: clamp(70px, 22%, 140px);
+  bottom: calc(var(--stage-floor) + 6rem);
+  left: 0.8rem;
 }
 
 .battle-card__status-name {
@@ -551,16 +555,17 @@ main pre code {
 .battle-card__foe {
   position: absolute;
   right: 6%;
-  bottom: 26%;
+  bottom: var(--stage-floor);
   width: 38%;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
   z-index: 2;
 }
 
 .battle-card__foe-img {
   max-width: 100%;
-  max-height: 150px;
+  max-height: 116px;
   width: auto;
   image-rendering: pixelated;
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.55));
@@ -581,13 +586,13 @@ main pre code {
 .battle-card__trainer {
   position: absolute;
   left: 8%;
-  bottom: 25%;
+  bottom: var(--stage-floor);
   z-index: 2;
 }
 
 .battle-card__trainer-sprite {
-  width: 44px;
-  height: 108px;
+  width: 40px;
+  height: 98px;
   background: url("assets/img/jon-sprite-transparent.png") center / contain no-repeat;
   image-rendering: pixelated;
   filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.55));
@@ -597,7 +602,7 @@ main pre code {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 24%;
+  bottom: var(--stage-floor);
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(151, 168, 255, 0.7), transparent);
   z-index: 1;
@@ -608,6 +613,9 @@ main pre code {
   left: 0.8rem;
   right: 0.8rem;
   bottom: 0.8rem;
+  /* Fixed band: a 1-line quote must occupy the same height as a 2-line one,
+     so the stage floor lands identically on every card in the rail. */
+  height: calc(var(--hook-band) - 0.8rem);
   z-index: 3;
   background: var(--panel-bg-strong);
   border: 1px solid var(--line-soft);
@@ -1315,15 +1323,19 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
     right: 8%;
     width: 44%;
   }
-
-  .battle-card__foe-img {
-    max-height: 120px;
-  }
 }
 
 @media (max-width: 560px) {
   .battle-card__scene {
+    /* Shorter cards: pull the floor up and cap sprites so heads clear the
+       HP panels; the quote band shrinks to match. */
+    --hook-band: 5.1rem;
+    --stage-floor: 5.4rem;
     aspect-ratio: 4 / 3;
+  }
+
+  .battle-card__foe-img {
+    max-height: 78px;
   }
 
   .battle-card__arena-tag {
@@ -1346,18 +1358,6 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
 
   .battle-card__status-bars span {
     width: 12px;
-  }
-
-  .battle-card__foe {
-    bottom: 30%;
-  }
-
-  .battle-card__trainer {
-    bottom: 29%;
-  }
-
-  .battle-card__foe-img {
-    max-height: 110px;
   }
 
   .battle-card__hook {
