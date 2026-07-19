@@ -21,7 +21,7 @@ body-classes: page-home
       <div class="hero-card__stats">
         <div class="hero-card__titlebar">
           <span class="hero-card__name">Jon</span>
-          <span class="hero-card__level">Lv. 42 &middot; Data Scientist</span>
+          <span class="hero-card__level">Lv. 99 &middot; Data Scientist</span>
         </div>
         <div class="gauge gauge--hp">
           <span class="gauge__label">HP</span>
