@@ -2,11 +2,11 @@
 
 /*
  * jonfinger.com — modern game-world theme.
- * Same metaphors (trainer card, battle cards, party options), new console:
+ * Same metaphors (trainer card, battle cards, side quests), new console:
  * voxel-dusk ground, hairline edges, phosphor signal accent, motion with intent.
  *
- * Element selectors are scoped to `main` and `.world-outro` so nothing leaks
- * into the scroll-world engine's DOM on the homepage (see assets/world/).
+ * Element selectors are scoped to `main` so nothing leaks into the
+ * class-styled homepage sections (page-layout: custom renders outside main).
  */
 
 /* ---------------------------------------------------------------------------
@@ -179,9 +179,7 @@ body {
 main h1,
 main h2,
 main h3,
-main h4,
-.world-outro h2,
-.world-outro h3 {
+main h4 {
   font-family: var(--font-display);
   font-weight: 600;
   color: var(--text-strong);
@@ -205,13 +203,11 @@ main h3 {
 
 main p,
 main ul,
-main ol,
-.world-outro p {
+main ol {
   max-width: 70ch;
 }
 
-main a,
-.world-outro a {
+main a {
   color: var(--accent-2);
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -221,9 +217,7 @@ main a,
 }
 
 main a:hover,
-main a:focus-visible,
-.world-outro a:hover,
-.world-outro a:focus-visible {
+main a:focus-visible {
   color: var(--text-strong);
   text-decoration-color: var(--accent);
 }
@@ -710,19 +704,13 @@ main pre code {
 }
 
 /* ---------------------------------------------------------------------------
- * World homepage (scroll-world engine + outro)
- * Structural contracts — see assets/world/scrub-engine.js
+ * Homepage — turn-based portfolio
+ * Trainer card hero -> project rail -> battle-log rail -> continue prompt
  * ------------------------------------------------------------------------- */
 
-/* The engine's track math assumes the page starts at scrollY 0. */
-body.page-world {
-  padding-top: 0 !important;
-}
-
-/* Quarto emits a minimal title header even under `title-block-style: none`.
-   Keep its h1 for assistive tech but remove it from flow so nothing sits
-   above #world (in-flow content there shifts the engine's track start). */
-.page-world #title-block-header {
+/* Quarto emits a minimal title header even under `title-block-style: none`;
+   keep its h1 for assistive tech but remove it from flow. */
+.page-home #title-block-header {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -734,56 +722,53 @@ body.page-world {
   border: 0;
 }
 
-/* Navbar floats transparent over the world; solidifies once scrolled. */
-body.page-world #quarto-header .navbar {
-  background: linear-gradient(180deg, rgba(12, 11, 22, 0.6), rgba(12, 11, 22, 0));
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
-  border-bottom-color: transparent;
+/* Scroll-driven entrances (JS adds .is-visible; no-JS shows everything) */
+body.has-js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s var(--ease-out), transform 0.55s var(--ease-out);
 }
 
-body.page-world #quarto-header.is-scrolled .navbar {
-  background: rgba(12, 11, 22, 0.9);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  border-bottom-color: var(--line-soft);
+body.has-js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
-/* Bridge site tokens into the engine's theme variables. */
-.page-world .sw-root {
-  --sw-bg: var(--bg-0);
-  --sw-ink: var(--text-strong);
-  --sw-ink-soft: var(--text-muted);
-  --sw-accent: var(--accent);
-  --sw-font-display: var(--font-display);
-  --sw-font-body: var(--font-body);
+body.has-js .reveal.is-visible[data-reveal-order="1"] {
+  transition-delay: 90ms;
 }
 
-/* Everything after the track slides OVER the engine's pinned chrome (z 0-60). */
-.page-world .world-outro,
-.page-world .nav-footer {
-  position: relative;
-  z-index: 200;
-  background: var(--bg-0);
+body.has-js .reveal.is-visible[data-reveal-order="2"] {
+  transition-delay: 220ms;
 }
 
-.world-outro {
-  border-top: 1px solid var(--line-soft);
-  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 3vw, 2rem) 4rem;
+body.has-js .reveal.is-visible[data-reveal-order="3"] {
+  transition-delay: 340ms;
 }
 
-.world-outro__inner {
-  max-width: 72rem;
+/* Hero — the trainer card */
+.home-hero {
+  background:
+    radial-gradient(90% 60% at 50% -10%, rgba(151, 168, 255, 0.12), transparent 65%),
+    var(--bg-0);
+  padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem) clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.home-hero__inner {
+  max-width: 64rem;
   margin: 0 auto;
   display: grid;
-  gap: clamp(1.5rem, 3.5vw, 2.5rem);
+  gap: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-/* Trainer card: sprite + stats, modern stat-sheet treatment */
-.trainer-card {
+.home-hero .section-label {
+  margin-bottom: 0;
+}
+
+.hero-card {
   display: grid;
-  grid-template-columns: minmax(120px, 180px) 1fr;
-  gap: clamp(1.25rem, 3vw, 2rem);
+  grid-template-columns: minmax(130px, 200px) 1fr;
+  gap: clamp(1.25rem, 3.5vw, 2.5rem);
   align-items: end;
   background: var(--panel-bg);
   border: 1px solid var(--line-soft);
@@ -791,13 +776,13 @@ body.page-world #quarto-header.is-scrolled .navbar {
   padding: clamp(1.25rem, 3vw, 2rem);
 }
 
-.trainer-card__portrait {
+.hero-card__portrait {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.trainer-card__portrait::after {
+.hero-card__portrait::after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -809,26 +794,349 @@ body.page-world #quarto-header.is-scrolled .navbar {
   background: radial-gradient(50% 50% at 50% 50%, rgba(151, 168, 255, 0.35), transparent 70%);
 }
 
-.trainer-card__sprite {
-  height: clamp(150px, 18vw, 210px);
+.hero-card__sprite {
+  height: clamp(170px, 20vw, 240px);
   width: auto;
   image-rendering: pixelated;
   filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.6));
+  animation: sprite-idle 3.6s ease-in-out infinite;
 }
 
-.trainer-card__stats {
+@keyframes sprite-idle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.hero-card__stats {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.hero-card__titlebar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--line-soft);
+  padding-bottom: 0.55rem;
+  margin-bottom: 0.2rem;
+}
+
+.hero-card__name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-strong);
+  line-height: 1;
+}
+
+.hero-card__level {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* HP / EXP gauges */
+.gauge {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.gauge__label {
+  font-family: var(--font-pixel);
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.gauge__track {
+  display: block;
+  height: 10px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-2);
+  border: 1px solid var(--line-soft);
+  overflow: hidden;
+}
+
+.gauge__fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--ok), #a9f0c4);
+  transform: scaleX(var(--fill, 1));
+  transform-origin: left center;
+  transition: transform 0.9s var(--ease-out) 0.45s;
+}
+
+.gauge__fill--xp {
+  background: linear-gradient(90deg, var(--accent-2), #c3cdff);
+}
+
+body.has-js .reveal:not(.is-visible) .gauge__fill {
+  transform: scaleX(0);
+}
+
+.gauge__value {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.hero-card__rows {
+  margin: 0.4rem 0 0;
   display: grid;
   gap: 0.1rem;
 }
 
-.trainer-card__name {
+/* RPG dialog box */
+.dialog-box {
+  position: relative;
+  background: var(--panel-bg-strong);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  padding: 1rem 3rem 1rem 1.2rem;
+  min-height: 3.6em;
+}
+
+.dialog-box__text {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-strong);
+}
+
+.dialog-box__cursor {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.7rem;
+  font-size: 0.7rem;
+  color: var(--accent);
+  animation: cursor-bob 1.1s steps(2, jump-none) infinite;
+}
+
+/* The advance cursor only appears once the line has finished typing. */
+.dialog-box.is-typing .dialog-box__cursor {
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes cursor-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(3px);
+    opacity: 0.35;
+  }
+}
+
+/* FF-style command menu */
+.command-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+}
+
+.command-menu__item {
+  position: relative;
+  display: block;
+  background: var(--card-bg);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem 0.85rem 2rem;
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
-  letter-spacing: 0.03em;
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-strong);
-  margin-bottom: 0.5rem;
+  text-decoration: none !important;
+  transition: border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.command-menu__item::before {
+  content: "\25B6";
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translate(-4px, -50%);
+  font-size: 0.6rem;
+  color: var(--accent);
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.command-menu__item:hover,
+.command-menu__item:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.command-menu__item:hover::before,
+.command-menu__item:focus-visible::before {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.command-menu__item:first-child {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.command-menu__item:first-child::before {
+  color: var(--accent-ink);
+}
+
+.command-menu__item:first-child:hover,
+.command-menu__item:first-child:focus-visible {
+  color: var(--accent-ink);
+  box-shadow: 0 8px 24px -8px rgba(237, 255, 133, 0.45);
+}
+
+/* Card rails — slide through projects and posts */
+.home-rail-section {
+  padding: clamp(1.25rem, 3.5vw, 2rem) 0;
+}
+
+.home-rail-section__inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+.rail-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.rail-head .section-label {
+  margin-bottom: 0.35rem;
+}
+
+.rail-head__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  color: var(--text-strong);
+  margin: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.rail-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rail-view-all {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  text-decoration: none;
+  margin-right: 0.4rem;
+}
+
+.rail-view-all:hover,
+.rail-view-all:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.rail-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--panel-bg);
+  color: var(--text-strong);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.rail-btn:hover:not(:disabled),
+.rail-btn:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.rail-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.rail {
+  display: grid;
+  grid-auto-flow: column;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.35rem 0.35rem 1rem;
+  margin: -0.35rem -0.35rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+.rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.rail::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 3px;
+}
+
+.rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rail > * {
+  scroll-snap-align: start;
+}
+
+.rail--projects {
+  grid-auto-columns: min(320px, 84%);
+}
+
+.rail--battles {
+  grid-auto-columns: min(440px, 90%);
 }
 
 .stat-row {
@@ -859,13 +1167,7 @@ body.page-world #quarto-header.is-scrolled .navbar {
   color: var(--text-strong);
 }
 
-/* Projects — "Current Skills" */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-  gap: clamp(1rem, 2.5vw, 1.5rem);
-}
-
+/* Project cards (side quests) */
 .project-card {
   display: block;
   background: var(--card-bg);
@@ -921,48 +1223,44 @@ body.page-world #quarto-header.is-scrolled .navbar {
   padding: 0.2rem 0.45rem;
 }
 
-/* Party options — quick links */
-.dispatch-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-  gap: 0.75rem;
+/* Continue? — outro CTA */
+.home-continue {
+  border-top: 1px solid var(--line-soft);
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(2.5rem, 6vw, 4rem) 1rem 4.5rem;
+  text-align: center;
 }
 
-.dispatch-item a {
-  display: block;
-  background: var(--card-bg);
-  border: 1px solid var(--line-soft);
-  border-radius: var(--radius-md);
-  padding: 0.85rem 1.1rem;
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 0.92rem;
-  letter-spacing: 0.04em;
+.home-continue__prompt {
+  font-family: var(--font-pixel);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--text-strong);
-  text-decoration: none;
-  transition: border-color var(--dur-fast) var(--ease-out),
-    color var(--dur-fast) var(--ease-out),
-    transform var(--dur-fast) var(--ease-out);
+  margin: 0 0 1.4rem;
 }
 
-.dispatch-item a::after {
-  content: " \2192";
+.home-continue__blink {
   color: var(--accent);
+  animation: blink 1.1s steps(2, jump-none) infinite;
 }
 
-.dispatch-item a:hover,
-.dispatch-item a:focus-visible {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateX(3px);
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
-.world-outro__cta {
+.home-continue__cta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  align-items: center;
+  justify-content: center;
 }
 
 /* ---------------------------------------------------------------------------
@@ -974,19 +1272,37 @@ body.page-world #quarto-header.is-scrolled .navbar {
     grid-template-columns: 1fr;
   }
 
-  .trainer-card {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-
-  .trainer-card__stats {
-    width: 100%;
-    max-width: 26rem;
+  .command-menu {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .stat-row dt {
     min-width: 5.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .hero-card__portrait {
+    order: -1;
+  }
+
+  .hero-card__sprite {
+    height: clamp(150px, 34vw, 190px);
+  }
+
+  .hero-card__stats {
+    width: 100%;
+    max-width: 28rem;
+  }
+
+  .rail-head {
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
