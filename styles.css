@@ -482,7 +482,7 @@ main pre code {
   --hook-band: 5.6rem;
   --stage-floor: 6.3rem;
   position: relative;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 7 / 5;
   background:
     radial-gradient(120% 90% at 50% 108%, rgba(151, 168, 255, 0.16), transparent 60%),
     linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
@@ -1331,11 +1331,11 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
        HP panels; the quote band shrinks to match. */
     --hook-band: 5.1rem;
     --stage-floor: 5.4rem;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 5 / 4;
   }
 
   .battle-card__foe-img {
-    max-height: 78px;
+    max-height: 74px;
   }
 
   .battle-card__arena-tag {

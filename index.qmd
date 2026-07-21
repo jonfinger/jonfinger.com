@@ -7,8 +7,6 @@ body-classes: page-home
 ---
 
 ```{=html}
-<h1 class="visually-hidden">Jon Finger — Data Scientist</h1>
-
 <section class="home-hero" aria-label="Trainer card">
   <div class="home-hero__inner">
     <p class="section-label reveal">Trainer Card</p>
