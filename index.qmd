@@ -1,6 +1,6 @@
 ---
 title: "Jon Finger"
-description: "Jon Finger — data scientist, recovering academic, found outside. A portfolio played like a turn-based RPG."
+description: "Jon Finger — evolutionary biologist turned data scientist. A portfolio played like a turn-based RPG."
 page-layout: custom
 title-block-style: none
 body-classes: page-home
@@ -19,7 +19,7 @@ body-classes: page-home
       <div class="hero-card__stats">
         <div class="hero-card__titlebar">
           <span class="hero-card__name">Jon</span>
-          <span class="hero-card__level">Lv. 99 &middot; Data Scientist</span>
+          <span class="hero-card__level">Lv. 99 &middot; Biologist / Data Scientist</span>
         </div>
         <div class="gauge gauge--hp">
           <span class="gauge__label">HP</span>
