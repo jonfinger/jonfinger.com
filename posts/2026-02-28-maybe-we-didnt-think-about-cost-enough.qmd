@@ -8,14 +8,7 @@ battle-name: "Benjamin Bruiser"
 battle-label: "COST PRESSURE"
 battle-quote: "It also takes a lot of energy to train a human. - Sam Altman"
 body-classes: page-post page-post-cost-curves
-title-block-style: none
 ---
-
-# Maybe It Was All About The Benjamins After All
-
-Date: 2026-02-28
-
-AI labor may not become universally cheap. As demand and reliability expectations rise, high-quality AI work could become premium and rationed.
 
 > "It also takes a lot of energy to train a human."
 > -- Sam Altman

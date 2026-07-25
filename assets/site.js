@@ -57,61 +57,122 @@
     });
   }
 
-  function renderProjectCards() {
-    var container = document.getElementById("project-grid");
-    var dataEl = document.getElementById("project-data");
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-    if (!container || !dataEl || container.children.length > 0) {
+  function setupReveals() {
+    var targets = document.querySelectorAll(".reveal");
+    if (!targets.length) {
       return;
     }
 
-    var projects;
-    try {
-      projects = JSON.parse(dataEl.textContent || "[]");
-    } catch (_error) {
+    if (reducedMotion.matches || !("IntersectionObserver" in window)) {
+      targets.forEach(function (el) {
+        el.classList.add("is-visible");
+      });
       return;
     }
 
-    var fragment = document.createDocumentFragment();
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+    );
 
-    projects.forEach(function (project) {
-      var card = document.createElement("a");
-      var url = project.url || "#";
-      card.className = "project-card";
-      card.href = url;
-      card.setAttribute("aria-label", (project.title || "Project") + " link");
+    targets.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
 
-      var title = document.createElement("h3");
-      title.className = "project-card__title";
-      title.textContent = project.title || "Untitled project";
+  function setupRails() {
+    document.querySelectorAll("[data-rail]").forEach(function (rail) {
+      var section = rail.closest("section");
+      if (!section) {
+        return;
+      }
 
-      var summary = document.createElement("p");
-      summary.className = "project-card__summary";
-      summary.textContent = project.summary || "";
+      var prev = section.querySelector("[data-rail-prev]");
+      var next = section.querySelector("[data-rail-next]");
+      if (!prev || !next) {
+        return;
+      }
 
-      var tags = document.createElement("div");
-      tags.className = "project-card__tags";
+      function step() {
+        var card = rail.firstElementChild;
+        var gap = parseFloat(window.getComputedStyle(rail).columnGap) || 16;
+        return card ? card.getBoundingClientRect().width + gap : rail.clientWidth * 0.8;
+      }
 
-      (project.tags || []).forEach(function (tag) {
-        var tagEl = document.createElement("span");
-        tagEl.className = "project-tag";
-        tagEl.textContent = tag;
-        tags.appendChild(tagEl);
+      function updateButtons() {
+        var max = rail.scrollWidth - rail.clientWidth - 1;
+        prev.disabled = rail.scrollLeft <= 1;
+        next.disabled = rail.scrollLeft >= max;
+      }
+
+      prev.addEventListener("click", function () {
+        rail.scrollBy({ left: -step(), behavior: reducedMotion.matches ? "auto" : "smooth" });
       });
 
-      card.appendChild(title);
-      card.appendChild(summary);
-      card.appendChild(tags);
-      fragment.appendChild(card);
-    });
+      next.addEventListener("click", function () {
+        rail.scrollBy({ left: step(), behavior: reducedMotion.matches ? "auto" : "smooth" });
+      });
 
-    container.appendChild(fragment);
+      rail.addEventListener("scroll", updateButtons, { passive: true });
+      window.addEventListener("resize", updateButtons);
+      updateButtons();
+    });
+  }
+
+  function setupTypewriter() {
+    var box = document.querySelector("[data-typewriter]");
+    if (!box || reducedMotion.matches) {
+      return;
+    }
+
+    var text = box.querySelector(".dialog-box__text");
+    if (!text) {
+      return;
+    }
+
+    var full = text.textContent;
+    var index = 0;
+    var timer = null;
+
+    text.textContent = "";
+    box.classList.add("is-typing");
+
+    function finish() {
+      window.clearInterval(timer);
+      text.textContent = full;
+      box.classList.remove("is-typing");
+      box.removeEventListener("click", finish);
+    }
+
+    box.addEventListener("click", finish);
+
+    // Let the box's entrance animation land before the text starts typing.
+    window.setTimeout(function () {
+      timer = window.setInterval(function () {
+        index += 1;
+        text.textContent = full.slice(0, index);
+        if (index >= full.length) {
+          finish();
+        }
+      }, 22);
+    }, 600);
   }
 
   window.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("has-js");
     setActiveNavLink();
     updateNavbarProgress();
-    renderProjectCards();
+    setupReveals();
+    setupRails();
+    setupTypewriter();
   });
 })();

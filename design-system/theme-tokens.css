@@ -1,0 +1,66 @@
+/*
+ * theme-tokens.css — shared design tokens for jonfinger.com and chained apps.
+ * Synced verbatim to targets in design-system/style-sync-targets.txt via
+ * scripts/sync-style-tokens.sh. Keep palette/typography tokens here; keep
+ * layout/component rules in each project's own stylesheet.
+ *
+ * Chain compatibility contract: downstream apps (useless-tools) consume
+ * --accent, --bg-1, --danger, --ok, --panel-bg, --text-dim, --text-muted,
+ * --text-strong. Those names must stay defined; values may evolve.
+ *
+ * Font import is the union of current + legacy families: Space Mono and
+ * IBM Plex Sans remain until useless-tools migrates to the --font-* tokens.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /* Ground: voxel-dusk indigo */
+  --bg-0: #0c0b16;
+  --bg-1: #14131f;
+  --bg-2: #1d1b2c;
+  --panel-bg: rgba(20, 19, 31, 0.9);
+  --panel-bg-strong: rgba(14, 13, 24, 0.96);
+  --card-bg: rgba(23, 21, 38, 0.92);
+  --card-bg-strong: rgba(16, 15, 28, 0.96);
+
+  /* Lines & edges: hairline, not chunky */
+  --line-soft: rgba(245, 244, 250, 0.14);
+  --line-strong: rgba(245, 244, 250, 0.38);
+
+  /* Ink */
+  --text-strong: #f5f4fa;
+  --text-muted: #c9c6da;
+  --text-dim: #918da8;
+
+  /* Accents: signal = arcade phosphor (primary), cool = secondary */
+  --accent: #edff85;
+  --accent-2: #97a8ff;
+  --accent-ink: #0c0b16; /* text color on accent fills */
+  --danger: #ff8f8f;
+  --ok: #7fe6a3;
+
+  /* Typography roles */
+  --font-display: "Chakra Petch", "IBM Plex Sans", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "IBM Plex Sans", system-ui, sans-serif;
+  --font-pixel: "Press Start 2P", "Space Mono", monospace;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Space Mono", monospace;
+
+  /* Shape */
+  --radius-sm: 2px;
+  --radius-md: 6px;
+  --radius-lg: 12px;
+
+  /* Depth: layered softs + focus glow (pixel offset shadows retired) */
+  --shadow-lg: 0 32px 64px -28px rgba(0, 0, 0, 0.85);
+  --shadow-md: 0 18px 40px -22px rgba(0, 0, 0, 0.75);
+  --glow-focus: 0 0 0 2px var(--bg-0), 0 0 0 4px var(--accent-2);
+
+  /* Motion */
+  --dur-fast: 160ms;
+  --dur-med: 260ms;
+  --ease-main: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  /* Live scroll progress (set by site.js) */
+  --scroll-progress: 0;
+}
