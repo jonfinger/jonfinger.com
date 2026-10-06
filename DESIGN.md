@@ -60,7 +60,7 @@ components:
 
 ## Overview
 
-A data scientist's personal site rebuilt as a modern turn-based game. The register is brand — design IS the product. Personality: playful, empirical, literary (see PRODUCT.md). The homepage plays like an RPG menu screen: trainer-card hero (stats, HP/EXP gauges, dialog box, command menu), then a "Side Quests" project rail and a "Battle Log" post rail you slide through. The rest of the site keeps the trainer-card and battle-card metaphors in a contemporary skin. Emotional target: delight + "what a simple, sharp site."
+An AI engineer and data scientist's personal site rebuilt as a modern turn-based game. The register is brand — design IS the product. Personality: playful, empirical, literary (see PRODUCT.md). The homepage plays like an RPG menu screen: trainer-card hero (stats, HP/EXP gauges, dialog box, command menu), then a "Side Quests" project rail and a "Battle Log" post rail you slide through. The rest of the site keeps the trainer-card and battle-card metaphors in a contemporary skin. Emotional target: delight + "what a simple, sharp site."
 
 ## Colors
 
@@ -71,8 +71,8 @@ Strategy: **committed dark**. Neutral charcoal base, near-white ink, and a purpl
 - `signal` — rich purple, sampled from the approved screenshot and mapped to `--accent`. Primary buttons, filled command items, arena tags and selection backgrounds. Text on signal fills is `ink-strong` (`--accent-ink` aliases `--text-strong`).
 - `signal-text` — readable violet, mapped to `--accent-text`. Standalone accent text, hover labels, active nav underlines and the scroll-progress line; keep dark `signal` out of these text roles.
 - `cool` — pale lavender, mapped to `--accent-2`. Secondary links, data-flavored details and focus outlines.
-- `danger #ff8f8f` / `ok #7fe6a3` — HP-bar semantics, error/success.
-- Page chrome stays quiet — sprites, gauges, and the signal accent carry the color.
+- `danger #ff8f8f` / `ok #7fe6a3` — reserved for error/success states. Decorative HP/EXP gauges and battle status bars use neutral `ink-dim`.
+- Page chrome stays quiet — sprites and action accents carry the color; decorative gauges stay neutral.
 
 ## Typography
 
@@ -97,8 +97,8 @@ Crisp and voxel-adjacent: radius 2px on chips/tags, 6px on cards/panels, 12px on
 ## Components
 
 - **Navbar**: translucent blur `bg-0` with a `signal-text` scroll-progress line; active link marked with a `signal-text` underline bar. Focus-visible outlines use `cool`, including the brand and mobile toggle; Bootstrap's blue focus halo is overridden.
-- **Trainer card (home hero + about)**: modern stat sheet — Chakra Petch labels, Atkinson values, Press Start 2P micro-tags; animated HP/EXP gauge fills; sprite rendered crisp with a soft platform glow and a subtle idle bob.
-- **Dialog box + command menu (home hero)**: RPG text box with a typewriter line and advance cursor; FF-style command grid (Connect / Projects / Battle Log / Trainer Info) with a ▶ hover cursor.
+- **Trainer card (home hero + about)**: modern stat sheet — Chakra Petch labels, Atkinson values, Press Start 2P micro-tags; animated neutral HP/EXP gauge fills; sprite rendered crisp with a soft platform glow and a subtle idle bob.
+- **Dialog box + command menu (home hero)**: RPG text box with a typewriter line and advance cursor; FF-style command grid (Connect / Projects / Battle Log / About Jon) with a ▶ hover cursor.
 - **Card rails (home)**: horizontal scroll-snap rows with prev/next buttons; next card peeks at the edge as the slide affordance.
 - **Battle card (blog listing)**: keeps composition (arena tag, foe sprite, trainer sprite, HP bars, quote box) — restyled with hairline borders, layered charcoal panels, smooth hover lift + sprite parallax (transform/opacity only, 200ms ease-out-quart).
 - **Buttons**: primary = `signal` fill with `ink-strong` text; secondary = hairline outline with `ink-strong` text, shifting to `signal-text` on hover/focus; both with 2px radius and focus-visible outline in `cool`.

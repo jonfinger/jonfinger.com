@@ -558,11 +558,10 @@ main pre code {
   width: 16px;
   height: 5px;
   border-radius: var(--radius-sm);
-  background: var(--ok);
+  background: var(--text-dim);
 }
 
 .battle-card__status--foe .battle-card__status-bars span:last-child {
-  background: var(--danger);
   opacity: 0.55;
 }
 
@@ -897,14 +896,10 @@ body.has-js .reveal.is-visible[data-reveal-order="3"] {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--ok), var(--ok-light));
+  background: var(--text-dim);
   transform: scaleX(var(--fill, 1));
   transform-origin: left center;
   transition: transform 0.9s var(--ease-out) 0.45s;
-}
-
-.gauge__fill--xp {
-  background: linear-gradient(90deg, var(--accent-text), var(--accent-2));
 }
 
 body.has-js .reveal:not(.is-visible) .gauge__fill {
@@ -1246,7 +1241,8 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
 }
 
 /* Continue? — outro CTA */
-.home-continue {
+/* Beat Quarto's #quarto-content > * padding override at every viewport. */
+#quarto-content > .home-continue {
   border-top: 1px solid var(--line-soft);
   margin-top: clamp(1.5rem, 4vw, 2.5rem);
   padding: clamp(2.5rem, 6vw, 4rem) 1rem 4.5rem;

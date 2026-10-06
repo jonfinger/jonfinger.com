@@ -1,6 +1,6 @@
 ---
 title: "Jon Finger"
-description: "Jon Finger — evolutionary biologist turned data scientist. A portfolio played like a turn-based RPG."
+description: "Jon Finger — AI engineer and data scientist. Previous evolved form: evolutionary biologist."
 page-layout: custom
 title-block-style: none
 body-classes: page-home
@@ -19,7 +19,7 @@ body-classes: page-home
       <div class="hero-card__stats">
         <div class="hero-card__titlebar">
           <span class="hero-card__name">Jon</span>
-          <span class="hero-card__level">Lv. 99 &middot; Biologist / Data Scientist</span>
+          <span class="hero-card__level">Lv. 99 &middot; AI Engineer / Data Scientist</span>
         </div>
         <div class="gauge gauge--hp">
           <span class="gauge__label">HP</span>
@@ -28,14 +28,14 @@ body-classes: page-home
         </div>
         <div class="gauge gauge--xp">
           <span class="gauge__label">EXP</span>
-          <span class="gauge__track"><span class="gauge__fill gauge__fill--xp" style="--fill: 0.76"></span></span>
+          <span class="gauge__track"><span class="gauge__fill" style="--fill: 0.76"></span></span>
           <span class="gauge__value">Next Lv.</span>
         </div>
         <dl class="hero-card__rows">
-          <div class="stat-row"><dt>Type</dt><dd>Biology / Data</dd></div>
+          <div class="stat-row"><dt>Type</dt><dd>AI / Data</dd></div>
           <div class="stat-row"><dt>Origin</dt><dd>Chicago, IL</dd></div>
           <div class="stat-row"><dt>Region</dt><dd>Las Vegas, NV</dd></div>
-          <div class="stat-row"><dt>Party</dt><dd>One miniature poodle</dd></div>
+          <div class="stat-row"><dt>Party</dt><dd>Allie (Lv. 99) &amp; Augie (Lv. 6)</dd></div>
           <div class="stat-row"><dt>Strength</dt><dd>Professing</dd></div>
           <div class="stat-row"><dt>Weakness</dt><dd>Gluten</dd></div>
         </dl>
@@ -43,7 +43,7 @@ body-classes: page-home
     </div>
 
     <div class="dialog-box reveal" data-reveal-order="2" data-typewriter>
-      <p class="dialog-box__text">A wild JON appeared! Evolutionary biologist turned data scientist. Chased invasive snails through national parks; now chases signal through data. Found outside.</p>
+      <p class="dialog-box__text">I debug, therefore I am. Building AI and increasing entropy one browser tab at a time.</p>
       <span class="dialog-box__cursor" aria-hidden="true">&#9660;</span>
     </div>
 
@@ -51,7 +51,7 @@ body-classes: page-home
       <a class="command-menu__item" href="https://www.linkedin.com/in/jae-finger/">Connect</a>
       <a class="command-menu__item" href="#side-quests">Projects</a>
       <a class="command-menu__item" href="blog.html">Battle Log</a>
-      <a class="command-menu__item" href="about.html">Trainer Info</a>
+      <a class="command-menu__item" href="about.html">About Jon</a>
     </nav>
   </div>
 </section>
@@ -159,36 +159,6 @@ body-classes: page-home
           <div class="battle-card__body">
             <div class="battle-card__meta"><div class="battle-card__date">Feb 23, 2026</div></div>
             <h3 class="battle-card__title">AI Is Accelerating Productivity &amp; Angst</h3>
-          </div>
-        </article>
-      </a>
-
-      <a href="posts/2026-02-08-building-python-portfolio.html" class="battle-card">
-        <article class="battle-card__frame">
-          <div class="battle-card__scene">
-            <div class="battle-card__arena-tag" aria-hidden="true">HYBRID BUILD</div>
-            <div class="battle-card__status battle-card__status--foe" aria-hidden="true">
-              <span class="battle-card__status-name">Scholar Poodle</span>
-              <span class="battle-card__status-bars"><span></span><span></span><span></span><span></span></span>
-            </div>
-            <div class="battle-card__status battle-card__status--trainer" aria-hidden="true">
-              <span class="battle-card__status-name">Jon</span>
-              <span class="battle-card__status-bars"><span></span><span></span><span></span></span>
-            </div>
-            <div class="battle-card__foe">
-              <img loading="lazy" src="assets/img/blog-battles/literal-poodle.png" class="battle-card__foe-img"
-                   alt="Pixel sprite of a grayscale poodle wearing a bandana.">
-            </div>
-            <div class="battle-card__trainer" aria-hidden="true"><div class="battle-card__trainer-sprite"></div></div>
-            <div class="battle-card__terrain" aria-hidden="true"></div>
-            <div class="battle-card__hook" aria-hidden="true">
-              <span class="battle-card__hook-label">Quote</span>
-              <strong>Biology trained me to think in systems. Education trained me to explain them.</strong>
-            </div>
-          </div>
-          <div class="battle-card__body">
-            <div class="battle-card__meta"><div class="battle-card__date">Feb 18, 2026</div></div>
-            <h3 class="battle-card__title">The Geometry of Thought Between Biology, Teaching, and Code</h3>
           </div>
         </article>
       </a>

@@ -188,7 +188,7 @@
     }
   ],
   "narrative": {
-    "overview": "A data scientist's personal site rebuilt as a modern turn-based game. The register is brand — design IS the product. Personality: playful, empirical, literary (see PRODUCT.md). The homepage plays like an RPG menu screen: trainer-card hero (stats, HP/EXP gauges, dialog box, command menu), then a \"Side Quests\" project rail and a \"Battle Log\" post rail you slide through. The rest of the site keeps the trainer-card and battle-card metaphors in a contemporary skin. Emotional target: delight + \"what a simple, sharp site.\"",
+    "overview": "An AI engineer and data scientist's personal site rebuilt as a modern turn-based game. The register is brand — design IS the product. Personality: playful, empirical, literary (see PRODUCT.md). The homepage plays like an RPG menu screen: trainer-card hero (stats, HP/EXP gauges, dialog box, command menu), then a \"Side Quests\" project rail and a \"Battle Log\" post rail you slide through. The rest of the site keeps the trainer-card and battle-card metaphors in a contemporary skin. Emotional target: delight + \"what a simple, sharp site.\"",
     "dos": [
       "DO keep game metaphors structural (stats, HP, party, routes) and their execution modern.",
       "DO drive all motion with transform/opacity; 150–300ms micro-interactions, ease-out-quart; every animation has a reduced-motion alternative.",
