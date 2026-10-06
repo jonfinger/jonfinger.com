@@ -14,30 +14,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap");
 
 :root {
-  /* Ground: voxel-dusk indigo */
-  --bg-0: #0c0b16;
-  --bg-1: #14131f;
-  --bg-2: #1d1b2c;
-  --panel-bg: rgba(20, 19, 31, 0.9);
-  --panel-bg-strong: rgba(14, 13, 24, 0.96);
-  --card-bg: rgba(23, 21, 38, 0.92);
-  --card-bg-strong: rgba(16, 15, 28, 0.96);
+  /* Ground: neutral charcoal */
+  --bg-0: #111111;
+  --bg-1: #191919;
+  --bg-2: #242424;
+  --bg-0-rgb: 17, 17, 17;
+  --panel-bg: rgba(25, 25, 25, 0.9);
+  --panel-bg-strong: rgba(17, 17, 17, 0.96);
+  --card-bg: rgba(30, 30, 30, 0.92);
+  --card-bg-strong: rgba(22, 22, 22, 0.96);
 
   /* Lines & edges: hairline, not chunky */
-  --line-soft: rgba(245, 244, 250, 0.14);
-  --line-strong: rgba(245, 244, 250, 0.38);
+  --line-soft: rgba(245, 245, 245, 0.14);
+  --line-strong: rgba(245, 245, 245, 0.38);
 
   /* Ink */
-  --text-strong: #f5f4fa;
-  --text-muted: #c9c6da;
-  --text-dim: #918da8;
+  --text-strong: #f5f5f5;
+  --text-muted: #d0d0d0;
+  --text-dim: #9d9d9d;
 
-  /* Accents: signal = arcade phosphor (primary), cool = secondary */
-  --accent: #edff85;
-  --accent-2: #97a8ff;
-  --accent-ink: #0c0b16; /* text color on accent fills */
+  /* Accents: rich purple fills, readable violet text and focus.
+     Keep RGB companions aligned for translucent chrome and glows. */
+  --accent: #4a3083;
+  --accent-text: #b184ed;
+  --accent-2: #d1a3ff;
+  --accent-rgb: 74, 48, 131;
+  --accent-ink: var(--text-strong); /* light text on rich purple fills */
   --danger: #ff8f8f;
   --ok: #7fe6a3;
+  --ok-light: #a9f0c4;
 
   /* Typography roles */
   --font-display: "Chakra Petch", "IBM Plex Sans", system-ui, sans-serif;
