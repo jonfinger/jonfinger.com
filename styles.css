@@ -3,7 +3,7 @@
 /*
  * jonfinger.com — modern game-world theme.
  * Same metaphors (trainer card, battle cards, side quests), new console:
- * voxel-dusk ground, hairline edges, phosphor signal accent, motion with intent.
+ * charcoal ground, hairline edges, rich violet accent, motion with intent.
  *
  * Element selectors are scoped to `main` so nothing leaks into the
  * class-styled homepage sections (page-layout: custom renders outside main).
@@ -67,7 +67,7 @@ body {
 
 #quarto-header .navbar {
   position: relative;
-  background: rgba(12, 11, 22, 0.78);
+  background: rgba(var(--bg-0-rgb), 0.78);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line-soft);
@@ -77,7 +77,7 @@ body {
 }
 
 #quarto-header.is-scrolled .navbar {
-  background: rgba(12, 11, 22, 0.94);
+  background: rgba(var(--bg-0-rgb), 0.94);
   border-bottom-color: var(--line-strong);
 }
 
@@ -89,7 +89,7 @@ body {
   right: 0;
   bottom: -1px;
   height: 2px;
-  background: var(--accent);
+  background: var(--accent-text);
   transform: scaleX(var(--scroll-progress));
   transform-origin: left center;
   pointer-events: none;
@@ -106,7 +106,7 @@ body {
 
 #quarto-header .navbar-brand:hover,
 #quarto-header .navbar-brand:focus-visible {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 #quarto-header .navbar .nav-link {
@@ -129,7 +129,7 @@ body {
   bottom: 0.2rem;
   height: 2px;
   border-radius: 1px;
-  background: var(--accent);
+  background: var(--accent-text);
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform var(--dur-fast) var(--ease-out);
@@ -156,6 +156,15 @@ body {
   border: 1px solid var(--line-soft);
   border-radius: var(--radius-sm);
   color: var(--text-strong);
+}
+
+/* Keep Bootstrap's default blue focus halo out of the site navigation. */
+#quarto-header .navbar .nav-link:focus-visible,
+#quarto-header .navbar-brand:focus-visible,
+#quarto-header .navbar-toggler:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+  box-shadow: none;
 }
 
 #quarto-header .quarto-search-button {
@@ -219,7 +228,7 @@ main a {
 main a:hover,
 main a:focus-visible {
   color: var(--text-strong);
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--accent-text);
 }
 
 main strong {
@@ -234,6 +243,11 @@ main blockquote {
   background: var(--panel-bg);
   font-style: italic;
   font-size: 1.06rem;
+  color: var(--text-strong);
+}
+
+/* Override Quarto's higher-specificity Bootstrap quote color. */
+main .blockquote {
   color: var(--text-strong);
 }
 
@@ -334,7 +348,7 @@ main pre code {
 .btn-signal:hover,
 .btn-signal:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px -8px rgba(237, 255, 133, 0.45);
+  box-shadow: 0 8px 24px -8px rgba(var(--accent-rgb), 0.45);
 }
 
 .btn-ghost {
@@ -345,8 +359,8 @@ main pre code {
 
 .btn-ghost:hover,
 .btn-ghost:focus-visible {
-  border-color: var(--accent);
-  color: var(--accent) !important;
+  border-color: var(--accent-text);
+  color: var(--accent-text) !important;
 }
 
 /* ---------------------------------------------------------------------------
@@ -393,7 +407,7 @@ main pre code {
   content: counter(strategy, decimal-leading-zero);
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-right: 0.75rem;
 }
 
@@ -484,7 +498,7 @@ main pre code {
   position: relative;
   aspect-ratio: 7 / 5;
   background:
-    radial-gradient(120% 90% at 50% 108%, rgba(151, 168, 255, 0.16), transparent 60%),
+    radial-gradient(120% 90% at 50% 108%, rgba(var(--accent-rgb), 0.16), transparent 60%),
     linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 100%);
   overflow: hidden;
 }
@@ -544,11 +558,10 @@ main pre code {
   width: 16px;
   height: 5px;
   border-radius: var(--radius-sm);
-  background: var(--ok);
+  background: var(--text-dim);
 }
 
 .battle-card__status--foe .battle-card__status-bars span:last-child {
-  background: var(--danger);
   opacity: 0.55;
 }
 
@@ -604,7 +617,7 @@ main pre code {
   right: 0;
   bottom: var(--stage-floor);
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(151, 168, 255, 0.7), transparent);
+  background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.7), transparent);
   z-index: 1;
 }
 
@@ -670,7 +683,7 @@ main pre code {
 }
 
 .battle-card:hover .battle-card__title {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* ---------------------------------------------------------------------------
@@ -757,7 +770,7 @@ body.has-js .reveal.is-visible[data-reveal-order="3"] {
 /* Hero — the trainer card */
 .home-hero {
   background:
-    radial-gradient(90% 60% at 50% -10%, rgba(151, 168, 255, 0.12), transparent 65%),
+    radial-gradient(90% 60% at 50% -10%, rgba(var(--accent-rgb), 0.12), transparent 65%),
     var(--bg-0);
   padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 3vw, 2rem) clamp(1.5rem, 4vw, 2.5rem);
 }
@@ -799,7 +812,7 @@ body.has-js .reveal.is-visible[data-reveal-order="3"] {
   width: 70%;
   height: 14px;
   border-radius: 50%;
-  background: radial-gradient(50% 50% at 50% 50%, rgba(151, 168, 255, 0.35), transparent 70%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(var(--accent-rgb), 0.35), transparent 70%);
 }
 
 .hero-card__sprite {
@@ -883,14 +896,10 @@ body.has-js .reveal.is-visible[data-reveal-order="3"] {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--ok), #a9f0c4);
+  background: var(--text-dim);
   transform: scaleX(var(--fill, 1));
   transform-origin: left center;
   transition: transform 0.9s var(--ease-out) 0.45s;
-}
-
-.gauge__fill--xp {
-  background: linear-gradient(90deg, var(--accent-2), #c3cdff);
 }
 
 body.has-js .reveal:not(.is-visible) .gauge__fill {
@@ -933,7 +942,7 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
   right: 1rem;
   bottom: 0.7rem;
   font-size: 0.7rem;
-  color: var(--accent);
+  color: var(--accent-text);
   animation: cursor-bob 1.1s steps(2, jump-none) infinite;
 }
 
@@ -990,7 +999,7 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
   top: 50%;
   transform: translate(-4px, -50%);
   font-size: 0.6rem;
-  color: var(--accent);
+  color: var(--accent-text);
   opacity: 0;
   transition: opacity var(--dur-fast) var(--ease-out),
     transform var(--dur-fast) var(--ease-out);
@@ -998,8 +1007,8 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
 
 .command-menu__item:hover,
 .command-menu__item:focus-visible {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-text);
+  color: var(--accent-text);
   transform: translateY(-2px);
 }
 
@@ -1022,7 +1031,7 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
 .command-menu__item:first-child:hover,
 .command-menu__item:first-child:focus-visible {
   color: var(--accent-ink);
-  box-shadow: 0 8px 24px -8px rgba(237, 255, 133, 0.45);
+  box-shadow: 0 8px 24px -8px rgba(var(--accent-rgb), 0.45);
 }
 
 /* Card rails — slide through projects and posts */
@@ -1076,7 +1085,7 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
 
 .rail-view-all:hover,
 .rail-view-all:focus-visible {
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -1100,8 +1109,8 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
 
 .rail-btn:hover:not(:disabled),
 .rail-btn:focus-visible {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-text);
+  color: var(--accent-text);
 }
 
 .rail-btn:disabled {
@@ -1204,7 +1213,7 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
 }
 
 .project-card:hover .project-card__title {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .project-card__summary {
@@ -1232,7 +1241,8 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
 }
 
 /* Continue? — outro CTA */
-.home-continue {
+/* Beat Quarto's #quarto-content > * padding override at every viewport. */
+#quarto-content > .home-continue {
   border-top: 1px solid var(--line-soft);
   margin-top: clamp(1.5rem, 4vw, 2.5rem);
   padding: clamp(2.5rem, 6vw, 4rem) 1rem 4.5rem;
@@ -1249,7 +1259,7 @@ body.has-js .reveal:not(.is-visible) .gauge__fill {
 }
 
 .home-continue__blink {
-  color: var(--accent);
+  color: var(--accent-text);
   animation: blink 1.1s steps(2, jump-none) infinite;
 }
 

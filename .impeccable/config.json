@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "design-system-font",
+        "value": "ibm plex sans",
+        "files": [
+          "design-system/theme-tokens.css"
+        ],
+        "createdAt": "2026-10-06T04:15:38.696Z",
+        "reason": "The approved palette-only update preserves the existing legacy fallback font import documented by the theme-token compatibility contract."
+      },
+      {
+        "rule": "design-system-font",
+        "value": "space mono",
+        "files": [
+          "design-system/theme-tokens.css"
+        ],
+        "createdAt": "2026-10-06T04:15:38.765Z",
+        "reason": "The approved palette-only update preserves the existing legacy monospace font import documented by the theme-token compatibility contract."
+      }
+    ]
+  }
+}
