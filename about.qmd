@@ -28,16 +28,16 @@ Strategy
 4. Every anything is possible.
 :::
 
-::: {.dispatch-panel}
-::: {.dispatch-panel__label}
+::: {.status-panel}
+::: {.status-panel__title}
 History
 :::
 
-- 2016-2018: Washington State University - M.S. Biology
-- 2019-2020: BloomTech - Data Science
-- 2020-2022: District 300 Schools - Data Information Specialist
-- 2022-2023: Data Analyst
-- 2023-Present: Data Scientist
+1. 2023-Present: Data Scientist
+2. 2022-2023: Data Analyst
+3. 2020-2022: District 300 Schools - Data Information Specialist
+4. 2019-2020: BloomTech - Data Science
+5. 2016-2018: Washington State University - M.S. Biology
 :::
 
 Don't panic 👍🏻

@@ -375,9 +375,9 @@ main pre code {
 
 .page-about .hud-grid {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(1rem, 2.5vw, 1.75rem);
-  align-items: start;
+  align-items: stretch;
 }
 
 .page-about .hero-block {
@@ -393,6 +393,9 @@ main pre code {
 
 .page-about .status-panel ol li {
   counter-increment: strategy;
+  display: grid;
+  grid-template-columns: 1.5rem minmax(0, 1fr);
+  gap: 0.25rem;
   padding: 0.55rem 0;
   border-bottom: 1px solid var(--line-soft);
   color: var(--text-strong);
@@ -408,38 +411,6 @@ main pre code {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--accent-text);
-  margin-right: 0.75rem;
-}
-
-.page-about .dispatch-panel ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.page-about .dispatch-panel ul li {
-  position: relative;
-  padding: 0.55rem 0 0.55rem 1.15rem;
-  border-bottom: 1px solid var(--line-soft);
-}
-
-.page-about .dispatch-panel ul li:last-child {
-  border-bottom: 0;
-}
-
-.page-about .dispatch-panel ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 1.05rem;
-  width: 7px;
-  height: 7px;
-  border-radius: var(--radius-sm);
-  background: var(--accent-2);
-}
-
-.page-about .dispatch-panel ul li:last-child::before {
-  background: var(--accent);
 }
 
 /* ---------------------------------------------------------------------------
